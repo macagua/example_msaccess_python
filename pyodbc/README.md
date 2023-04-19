@@ -13,58 +13,44 @@ pip install -r requirements.txt
 
 ## Run Exmaples
 
-- Create database file.
+### Create database file
 
-  ```console
-  cd pyodbc
-  python create_database.py
-  cd ..
-  ```
+```console
+python create_database.py
+```
 
-- Create structures (tables).
+### Create structures (tables)
 
-  ```console
-  cd pyodbc
-  python create_structures.py
-  cd ..
-  ```
+```console
+python create_structures.py
+```
 
-- Insert rows.
+### Insert rows
 
-  ```console
-  cd pyodbc
-  python insert_rows.py
-  cd ..
-  ```
+```console
+python insert_rows.py
+```
 
-- Select rows.
+### Select rows
 
-  ```console
-  cd pyodbc
-  python select_rows.py
-  cd ..
-  ```
+```console
+python select_rows.py
+```
 
-- Update rows.
+### Update rows
 
-  ```console
-  cd pyodbc
-  python update_rows.py
-  cd ..
-  ```
+```console
+python update_rows.py
+```
 
-- Delete rows.
+### Delete rows
 
-  ```console
-  cd pyodbc
-  python delete_rows.py
-  cd ..
-  ```
+```console
+python delete_rows.py
+```
 
-- Delete database file.
+### Delete database file
 
-  ```console
-  cd pyodbc
-  python delete_database.py
-  cd ..
-  ```
+```console
+python delete_database.py
+```
