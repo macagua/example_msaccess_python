@@ -1,0 +1,4 @@
+SQLAlchemy>=1.4.36
+sqlalchemy-access==2.0.1
+msaccessdb==1.0.0
+pyodbc==4.0.35
