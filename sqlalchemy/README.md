@@ -1,6 +1,6 @@
 # SQLAlchemy Examples
 
-Examples for Microsoft Access databases with [sqlalchemy](https://www.sqlalchemy.org) library in Python.
+Examples for [Microsoft Access](https://en.wikipedia.org/wiki/Microsoft_Access) databases with [sqlalchemy](https://www.sqlalchemy.org) library in Python.
 
 ## Install
 

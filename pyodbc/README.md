@@ -1,6 +1,6 @@
 # pyODBC Examples
 
-Examples for Microsoft Access databases with [pyODBC](https://pypi.org/project/pyodbc/) library in Python.
+Examples for [Microsoft Access](https://en.wikipedia.org/wiki/Microsoft_Access) databases with [pyODBC](https://pypi.org/project/pyodbc/) library in Python.
 
 ## Install
 
