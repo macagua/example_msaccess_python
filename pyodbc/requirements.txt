@@ -1,0 +1,2 @@
+pyodbc==4.0.35
+msaccessdb==1.0.0
