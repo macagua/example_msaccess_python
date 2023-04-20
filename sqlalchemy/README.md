@@ -25,6 +25,12 @@ python create_database.py
 python create_structures.py
 ```
 
+### Delete structures (tables)
+
+```console
+python delete_structures.py
+```
+
 ### Delete database file
 
 ```console
