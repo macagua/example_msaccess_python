@@ -1,3 +1,5 @@
+""" Program to create the database """
+
 import msaccessdb
 import os
 import pyodbc
