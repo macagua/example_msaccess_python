@@ -10,6 +10,10 @@ There are the following libraries supported:
 
 - [SQLAlchemy](sqlalchemy/) Examples.
 
+## Entity–relationship model
+
+![Entity-relationship Diagram](./doc/database_er_diagram.png)
+
 ## Tested it with
 
 - Microsoft Access 2010.
