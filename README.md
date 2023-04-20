@@ -18,6 +18,10 @@ There are the following libraries supported:
 
 Download the database documentation [here](./doc/doc_rptObjects.pdf).
 
+## Requirements previous
+
+- Install the [Microsoft Access Database Engine 2010 Redistributable (Drivers)](https://www.microsoft.com/en-us/download/details.aspx?id=13255) or Microsoft Access Professional 2010.
+
 ## Tested it with
 
-- Microsoft Access 2010.
+- Microsoft Access Professional 2010.
