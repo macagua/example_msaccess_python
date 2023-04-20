@@ -27,9 +27,13 @@ metadata = MetaData()
 # Get all of the tables
 tables = inspect(engine).get_table_names()
 
-# Start transaction to commit DDL to database
-with engine.begin() as conn:
-    metadata.drop_all(conn)
+# Reflect metadata/schema from existing database to bring in existing tables
+with engine.connect() as conn:
+    metadata.reflect(conn)
+    metadata.drop_all(engine)
+    print()
 
     for table in tables:
-        print(f"{table} table successfully deleted")
+        print(f"the '{table}' table successfully deleted!")
+
+print(f"'{len(tables)}' table(s) successfully deleted!")
