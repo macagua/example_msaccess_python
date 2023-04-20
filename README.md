@@ -14,7 +14,7 @@ There are the following libraries supported:
 
 ![Entity-relationship Diagram](./doc/database_er_diagram.png)
 
-## Documentation
+### Documentation
 
 Download the database documentation [here](./doc/doc_rptObjects.pdf).
 
