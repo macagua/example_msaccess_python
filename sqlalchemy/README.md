@@ -7,7 +7,7 @@ Examples for [Microsoft Access](https://en.wikipedia.org/wiki/Microsoft_Access) 
 ```console
 virtualenv venv
 source venv/bin/activate
-cd pyodbc
+cd sqlalchemy
 pip install -r requirements.txt
 ```
 
