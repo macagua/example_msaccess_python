@@ -83,9 +83,12 @@ pedidos_tbl = Table(
     Column("status", Boolean, nullable=True)
 )
 
+# Get all of the tables
+tables = metadata.tables.keys()
+
 # Start transaction to commit DDL to database
 with engine.begin() as conn:
     metadata.create_all(conn)
 
-    for table in metadata.tables.keys():
+    for table in tables:
         print(f"{table} table successfully created")
