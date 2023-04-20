@@ -89,6 +89,9 @@ tables = metadata.tables.keys()
 # Start transaction to commit DDL to database
 with engine.begin() as conn:
     metadata.create_all(conn)
+    print()
 
     for table in tables:
-        print(f"{table} table successfully created")
+        print(f"the '{table}' table successfully created!")
+
+print(f"'{len(tables)}' table(s) successfully created!")

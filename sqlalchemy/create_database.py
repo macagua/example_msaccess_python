@@ -15,7 +15,8 @@ DB = DB_PATH + DB_FILE
 
 # Create Microsoft Access file
 msaccessdb.create(DB)
-print(f"{DB_FILE} database successfully created")
+print()
+print(f"the '{DB_FILE}' database successfully created!")
 
 # Make DNS string
 CONNECTION_STRING = (
@@ -30,7 +31,7 @@ engine = create_engine(f"access+pyodbc:///?odbc_connect={urllib.parse.quote(CONN
 
 try:
     with engine.connect() as connection:
-        print(f"Connection to the {DB} database file created successfully.")
+        print(f"Connection to the '{DB_FILE}' database file created successfully.")
 except Exception as ex:
     print("Connection could not be made due to the following error: ", ex)
     connection.rollback()
