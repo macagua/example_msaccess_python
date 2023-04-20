@@ -11,7 +11,7 @@ DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
 ) + os.sep + "data" + os.sep
-DB_FILE = 'sistema_fake.accdb'
+DB_FILE = 'database.accdb'
 DB = DB_PATH + DB_FILE
 
 # Make DNS string
