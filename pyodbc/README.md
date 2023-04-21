@@ -25,28 +25,28 @@ python create_database.py
 python create_structures.py
 ```
 
-### Insert rows
+### Insert records
 
 ```console
-python insert_rows.py
+python insert_records.py
 ```
 
-### Select rows
+### Select records
 
 ```console
-python select_rows.py
+python select_records.py
 ```
 
-### Update rows
+### Update records
 
 ```console
-python update_rows.py
+python update_records.py
 ```
 
-### Delete rows
+### Delete records
 
 ```console
-python delete_rows.py
+python delete_records.py
 ```
 
 ### Delete database file
