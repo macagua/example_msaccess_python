@@ -16,6 +16,15 @@ import random
 import sys
 
 
+# locales faker object
+locales = OrderedDict([
+    ('es_AR', 1),
+    ('es_CL', 2),
+    ('es_MX', 3)
+])
+# Instantiate faker object
+fake = Faker(locales)
+
 # Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
@@ -35,15 +44,6 @@ CONNECTION_STRING = (
 # Instantiate metadate object
 engine = create_engine(f"access+pyodbc:///?odbc_connect={urllib.parse.quote(CONNECTION_STRING)}")
 metadata = MetaData()
-
-# locales faker object
-locales = OrderedDict([
-    ('es_AR', 1),
-    ('es_CL', 2),
-    ('es_MX', 3)
-])
-# Instantiate faker object
-fake = Faker(locales)
 
 # Reflect metadata/schema from existing database to bring in existing tables
 with engine.connect() as conn:
