@@ -659,7 +659,7 @@ class GenerateData:
                         iso_3166_2=fila[2],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(ESTADOS_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(ESTADOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
@@ -673,7 +673,7 @@ class GenerateData:
                         capital=fila[3],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(CIUDADES_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(CIUDADES_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
@@ -686,7 +686,7 @@ class GenerateData:
                         status=fila[2],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(CATEGORIAS_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(CATEGORIAS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
@@ -702,7 +702,7 @@ class GenerateData:
                         status=fila[5],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(PRODUCTOS_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(PRODUCTOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         elif self.table_name == "productos" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
@@ -725,7 +725,7 @@ class GenerateData:
                         status=random.choice([True, False]),
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{self.num_records}' row(s) inserted!")
+                print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
@@ -740,7 +740,7 @@ class GenerateData:
                         telefono=fila[4],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(CLIENTES_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(CLIENTES_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         elif self.table_name == "clientes" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
@@ -762,7 +762,7 @@ class GenerateData:
                         telefono=fake.unique.phone_number(),
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{self.num_records}' row(s) inserted!")
+                print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
@@ -777,7 +777,7 @@ class GenerateData:
                         status=fila[4],
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{len(PEDIDOS_MULTIPLE_ROWS)}' row(s) inserted!")
+                print(f"\n'{len(PEDIDOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         elif self.table_name == "pedidos" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
@@ -803,7 +803,7 @@ class GenerateData:
                         status=fake.pybool(),
                     )
                     conn.execute(insert_stmt)
-                print(f"\n'{self.num_records}' row(s) inserted!")
+                print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
