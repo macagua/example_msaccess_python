@@ -638,6 +638,19 @@ class GenerateData:
         self.num_records = int(sys.argv[2])
 
 
+    def __str__(self):
+        """
+        Informal Representation Class
+        """
+        return f"Table: '{self.table_name}' and Number Records: '{self.num_records}'."
+
+
+    def __repr__(self):
+        """
+        Official Representation Class
+        """
+        return f"Table: '{self.table_name}'."
+
     def capitalize_list(self, list):
         return [l.capitalize() for l in list]
 
