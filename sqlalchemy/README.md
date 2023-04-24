@@ -63,6 +63,12 @@ python insert_records.py pedidos 10
 python select_records.py
 ```
 
+### Delete records
+
+```console
+python delete_records.py
+```
+
 ### Delete structures (tables)
 
 ```console
