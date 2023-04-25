@@ -106,34 +106,41 @@ def delete_records(rows=[], size="all", table=""):
 
     try:
         tables = metadata.tables.keys()
+        id_param = [bindparam('id', value=item) for item in rows]
         with engine.begin() as conn:
             # Delete a simple record
             if size == "one":
                 if table in tables:
                     result = 0
                     if table == "pedidos":
-                        where_clause = pedidos.columns.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = pedidos.columns.id.in_(id_param)
                         statement = pedidos.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "clientes":
-                        where_clause = clientes.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = clientes.c.id.in_(id_param)
                         statement = clientes.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "productos":
-                        where_clause = productos.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = productos.c.id.in_(id_param)
                         statement = productos.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "categorias":
-                        where_clause = categorias.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = categorias.c.id.in_(id_param)
                         statement = categorias.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "ciudades":
-                        where_clause = ciudades.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = ciudades.c.id.in_(id_param)
                         statement = ciudades.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "estados":
-                        where_clause = estados.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = estados.c.id.in_(id_param)
                         statement = estados.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     logging.info(f"'{result.rowcount}' row(s) deleted successfully from '{table}' table!")
 
@@ -142,29 +149,34 @@ def delete_records(rows=[], size="all", table=""):
                 if table in tables:
                     result = 0
                     if table == "pedidos":
-                        where_clause = pedidos.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = pedidos.c.id.in_(id_param)
                         statement = pedidos.delete().where(where_clause)
                         print(statement)
                         result = connection.execute(statement, rows)
                     if table == "clientes":
-                        where_clause = clientes.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = clientes.c.id.in_(id_param)
                         statement = clientes.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "productos":
-                        where_clause = productos.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = productos.c.id.in_(id_param)
                         statement = productos.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "categorias":
-                        where_clause = categorias.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = categorias.c.id.in_(id_param)
                         statement = categorias.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "ciudades":
-                        where_clause = ciudades.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = ciudades.c.id.in_(id_param)
                         statement = ciudades.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     if table == "estados":
-                        where_clause = estados.c.id.in_([bindparam('id', value=item) for item in rows])
+                        where_clause = estados.c.id.in_(id_param)
                         statement = estados.delete().where(where_clause)
+                        print(statement)
                         result = connection.execute(statement, rows)
                     logging.info(f"'Many' row(s) deleted successfully from '{table}' table!")
 
@@ -174,21 +186,27 @@ def delete_records(rows=[], size="all", table=""):
                     result = 0
                     if table == "pedidos":
                         statement = pedidos.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     if table == "clientes":
                         statement = clientes.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     if table == "productos":
                         statement = productos.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     if table == "categorias":
                         statement = categorias.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     if table == "ciudades":
                         statement = ciudades.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     if table == "estados":
                         statement = estados.delete()
+                        print(statement)
                         result = connection.execute(statement)
                     logging.info(f"All '{result.rowcount}' record(s) deleted successfully from '{table}' table!")
 
@@ -197,8 +215,8 @@ def delete_records(rows=[], size="all", table=""):
     except exc.IntegrityError as error:
         print("Delete record(s) not possible for id!", error)
     finally:
-        if conn:
-            conn.close()
+        if connection:
+            connection.close()
             logging.info(
                 "The connection to the Microsoft Access database '{}' was closed!\n".format(
                     DB_FILE
