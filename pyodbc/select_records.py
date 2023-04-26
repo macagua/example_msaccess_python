@@ -78,7 +78,7 @@ PEDIDOS_SQL_SCRIPTS = """
     ORDER BY ped.fecha;
 """
 
-def select_row(sql=""):
+def select_records(sql=""):
     """Function to query the record(s) of the table
 
     Args:
@@ -120,9 +120,9 @@ def select_row(sql=""):
             logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    select_row(sql=ESTADOS_SQL_SCRIPTS)
-    select_row(sql=CIUDADES_SQL_SCRIPTS)
-    select_row(sql=CATEGORIAS_SQL_SCRIPTS)
-    select_row(sql=PRODUCTOS_SQL_SCRIPTS)
-    select_row(sql=CLIENTES_SQL_SCRIPTS)
-    select_row(sql=PEDIDOS_SQL_SCRIPTS)
+    select_records(sql=ESTADOS_SQL_SCRIPTS)
+    select_records(sql=CIUDADES_SQL_SCRIPTS)
+    select_records(sql=CATEGORIAS_SQL_SCRIPTS)
+    select_records(sql=PRODUCTOS_SQL_SCRIPTS)
+    select_records(sql=CLIENTES_SQL_SCRIPTS)
+    select_records(sql=PEDIDOS_SQL_SCRIPTS)
