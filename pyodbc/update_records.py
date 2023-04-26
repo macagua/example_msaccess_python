@@ -98,9 +98,13 @@ PEDIDOS_MULTIPLE_ROWS = [
     ("03/12/2023 12:26:54 AM", False, 5)
 ]
 
-def update_row(sql, rows, size):
-    """
-    Function to perform the update of several records from the table
+def update_records(sql=[], rows=[], size=""):
+    """Function to perform the update of several records from the table
+
+    Args:
+        sql (list, optional): The SQL UPDATE statement. Defaults to [].
+        rows (list, optional): The rows to update. Defaults to [].
+        size (str, optional): How many record to update. Defaults to "".
     """
 
     try:
@@ -120,33 +124,31 @@ def update_row(sql, rows, size):
         if size == "many":
             cursor.executemany(sql, rows)
             connection.commit()
-            logging.info(
-                "{} record(s) were successfully updated into the table!\n".format(
-                    len(rows)
-                )
-            )
+            logging.info(f"{len(rows)} record(s) were successfully updated into the table!\n")
 
         cursor.close()
 
     except pyodbc.Error as error:
-        print("Update of record(s) in table failed!", error)
+        sqlstate = error.args[1]
+        sqlstate = sqlstate.split(".")
+        print("Update of record(s) in table failed!", sqlstate)
     finally:
         if connection:
             connection.close()
             print("\n")
-            logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!\n")
+            logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 
 if __name__ == "__main__":
-    update_row(ESTADOS_SQL_SCRIPTS, ESTADOS_ONE_ROW, size="one")
-    update_row(ESTADOS_SQL_SCRIPTS, ESTADOS_MULTIPLE_ROWS, size="many")
-    update_row(CIUDADES_SQL_SCRIPTS, CIUDADES_ONE_ROW, size="one")
-    update_row(CIUDADES_SQL_SCRIPTS, CIUDADES_MULTIPLE_ROWS, size="many")
-    update_row(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_ONE_ROW, size="one")
-    update_row(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_MULTIPLE_ROWS, size="many")
-    update_row(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_ONE_ROW, size="one")
-    update_row(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_MULTIPLE_ROWS, size="many")
-    update_row(CLIENTES_SQL_SCRIPTS, CLIENTES_ONE_ROW, size="one")
-    update_row(CLIENTES_SQL_SCRIPTS, CLIENTES_MULTIPLE_ROWS, size="many")
-    update_row(PEDIDOS_SQL_SCRIPTS, PEDIDOS_ONE_ROW, size="one")
-    update_row(PEDIDOS_SQL_SCRIPTS, PEDIDOS_MULTIPLE_ROWS, size="many")
+    update_records(ESTADOS_SQL_SCRIPTS, ESTADOS_ONE_ROW, size="one")
+    update_records(ESTADOS_SQL_SCRIPTS, ESTADOS_MULTIPLE_ROWS, size="many")
+    update_records(CIUDADES_SQL_SCRIPTS, CIUDADES_ONE_ROW, size="one")
+    update_records(CIUDADES_SQL_SCRIPTS, CIUDADES_MULTIPLE_ROWS, size="many")
+    update_records(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_ONE_ROW, size="one")
+    update_records(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_MULTIPLE_ROWS, size="many")
+    update_records(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_ONE_ROW, size="one")
+    update_records(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_MULTIPLE_ROWS, size="many")
+    update_records(CLIENTES_SQL_SCRIPTS, CLIENTES_ONE_ROW, size="one")
+    update_records(CLIENTES_SQL_SCRIPTS, CLIENTES_MULTIPLE_ROWS, size="many")
+    update_records(PEDIDOS_SQL_SCRIPTS, PEDIDOS_ONE_ROW, size="one")
+    update_records(PEDIDOS_SQL_SCRIPTS, PEDIDOS_MULTIPLE_ROWS, size="many")
