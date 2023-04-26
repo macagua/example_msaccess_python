@@ -40,13 +40,13 @@ python insert_records.py table_name num_records
 #### Insert default records
 
 ```console
-python insert_records.py estados 0
-python insert_records.py estados 0
-python insert_records.py ciudades 0
-python insert_records.py categorias 0
-python insert_records.py productos 0
-python insert_records.py clientes 0
-python insert_records.py pedidos 0
+python insert_records.py estados
+python insert_records.py estados
+python insert_records.py ciudades
+python insert_records.py categorias
+python insert_records.py productos
+python insert_records.py clientes
+python insert_records.py pedidos
 ```
 
 #### Insert Faker records

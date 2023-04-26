@@ -630,12 +630,12 @@ class GenerateData:
     the database
     """
 
-    def __init__(self):
+    def __init__(self, table="", numbers=0):
         """
         initialize command line arguments
         """
-        self.table_name = sys.argv[1]
-        self.num_records = int(sys.argv[2])
+        self.table_name = table
+        self.num_records = numbers
 
 
     def __str__(self):
@@ -822,5 +822,25 @@ class GenerateData:
 
 
 if __name__ == "__main__":
-    generate_data = GenerateData()
-    generate_data.create_data()
+    table_name = ""
+    num_records = 0
+
+    if len(sys.argv) == 2:
+        if sys.argv[1]:
+            table_name = sys.argv[1]
+            num_records = 0
+
+    if len(sys.argv) == 3:
+        if sys.argv[1]:
+            table_name = sys.argv[1]
+        if int(sys.argv[2]) > 0:
+            num_records = int(sys.argv[2])
+        else:
+            num_records = 0
+
+    if table_name in ['estados', 'cuidades', 'categorias']:
+        generate_data = GenerateData(table_name)
+        generate_data.create_data()
+    else:
+        generate_data = GenerateData(table_name, num_records)
+        generate_data.create_data()
