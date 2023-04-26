@@ -100,8 +100,12 @@ pedidos = metadata.tables["pedidos"]
 
 
 def delete_records(rows=[], size="all", table=""):
-    """
-    Function to perform table record deletion
+    """Function to perform table record deletion
+
+    Args:
+        rows (list, optional): The rows to delete. Defaults to [].
+        size (str, optional): How many record to delete. Defaults to "all".
+        table (str, optional): The table name to manipulate. Defaults to "".
     """
 
     try:
@@ -236,21 +240,21 @@ def delete_records(rows=[], size="all", table=""):
             )
 
 if __name__ == "__main__":
-    delete_records(PEDIDOS_ONE_ROW, size="one", table="pedidos")
-    delete_records(PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
+    delete_records(rows=PEDIDOS_ONE_ROW, size="one", table="pedidos")
+    delete_records(rows=PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
     delete_records(size="all", table="pedidos")
-    delete_records(CLIENTES_ONE_ROW, size="one", table="clientes")
-    delete_records(CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
+    delete_records(rows=CLIENTES_ONE_ROW, size="one", table="clientes")
+    delete_records(rows=CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
     delete_records(size="all", table="clientes")
-    delete_records(PRODUCTOS_ONE_ROW, size="one", table="productos")
-    delete_records(PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
+    delete_records(rows=PRODUCTOS_ONE_ROW, size="one", table="productos")
+    delete_records(rows=PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
     delete_records(size="all", table="productos")
-    delete_records(CATEGORIAS_ONE_ROW, size="one", table="categorias")
-    delete_records(CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
+    delete_records(rows=CATEGORIAS_ONE_ROW, size="one", table="categorias")
+    delete_records(rows=CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
     delete_records(size="all", table="categorias")
-    delete_records(CIUDADES_ONE_ROW, size="one", table="ciudades")
-    delete_records(CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
+    delete_records(rows=CIUDADES_ONE_ROW, size="one", table="ciudades")
+    delete_records(rows=CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
     delete_records(size="all", table="ciudades")
-    delete_records(ESTADOS_ONE_ROW, size="one", table="estados")
-    delete_records(ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
+    delete_records(rows=ESTADOS_ONE_ROW, size="one", table="estados")
+    delete_records(rows=ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
     delete_records(size="all", table="estados")
