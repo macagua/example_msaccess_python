@@ -17,7 +17,8 @@ DB = DB_PATH + DB_FILE
 
 # Create Microsoft Access file
 msaccessdb.create(DB)
-logging.info(f"Created the Microsoft Access file called '{DB_FILE}'!\n")
+print()
+logging.info(f"Created the Microsoft Access file as '{DB_FILE}'!\n")
 
 # Make DNS string
 CONNECTION_STRING = (
@@ -30,4 +31,4 @@ logging.info(f"Connected to Microsoft Access database file called '{DB_FILE}'!\n
 
 if connection:
     connection.close()
-    logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!\n")
+    logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!")
