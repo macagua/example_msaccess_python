@@ -581,7 +581,7 @@ PEDIDOS_MULTIPLE_ROWS = [
 ]
 
 
-def insert_row(sql=[], rows=[], file_name=None):
+def insert_records(sql=[], rows=[], file_name=None):
     """Function to perform the insertion of several records from the table
 
     Args:
@@ -633,9 +633,9 @@ def insert_row(sql=[], rows=[], file_name=None):
 
 
 if __name__ == "__main__":
-    insert_row(sql=ESTADOS_SQL_SCRIPTS, file_name=ESTADOS)
-    insert_row(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS)
-    insert_row(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS)
-    insert_row(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS)
-    insert_row(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS)
-    insert_row(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS)
+    insert_records(sql=ESTADOS_SQL_SCRIPTS, file_name=ESTADOS)
+    insert_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS)
+    insert_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS)
+    insert_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS)
+    insert_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS)
+    insert_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS)
