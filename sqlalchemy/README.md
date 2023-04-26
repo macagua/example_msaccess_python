@@ -49,7 +49,9 @@ python insert_records.py clientes
 python insert_records.py pedidos
 ```
 
-#### Insert Faker records
+#### Insert fake records
+
+For generate the fake records use the [Faker](https://pypi.org/project/Faker/) library.
 
 ```console
 python insert_records.py productos 10
