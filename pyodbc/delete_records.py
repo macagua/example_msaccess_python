@@ -78,9 +78,14 @@ PEDIDOS_MULTIPLE_ROWS = [
 ]
 
 
-def delete_row(sql, rows=[], size="all", table=""):
-    """
-    Function to perform table record deletion
+def delete_row(sql=[], rows=[], size="all", table=""):
+    """Function to perform table record deletion
+
+    Args:
+        sql (list, optional): The SQL DELETE statement. Defaults to [].
+        rows (list, optional): The rows to delete. Defaults to [].
+        size (str, optional): How many record to delete. Defaults to "all".
+        table (str, optional): The table name to manipulate. Defaults to "".
     """
 
     try:
@@ -110,32 +115,30 @@ def delete_row(sql, rows=[], size="all", table=""):
         cursor.close()
 
     except pyodbc.Error as error:
-        print("Delete record(s) in table failed!", error)
+        sqlstate = error.args[1]
+        sqlstate = sqlstate.split(".")
+        print("Delete record(s) in table failed!", sqlstate)
     finally:
         if connection:
             connection.close()
-            logging.info(
-                "The connection to the Microsoft Access database '{}' was closed!\n".format(
-                    DB_FILE
-                )
-            )
+            logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    delete_row(PEDIDOS_SQL_SCRIPTS, PEDIDOS_ONE_ROW, size="one")
-    delete_row(PEDIDOS_SQL_SCRIPTS, PEDIDOS_MULTIPLE_ROWS, size="many")
-    delete_row(PEDIDOS_SQL_SCRIPTS, size="all", table="pedidos")
-    delete_row(CLIENTES_SQL_SCRIPTS, CLIENTES_ONE_ROW, size="one")
-    delete_row(CLIENTES_SQL_SCRIPTS, CLIENTES_MULTIPLE_ROWS, size="many")
-    delete_row(CLIENTES_SQL_SCRIPTS, size="all", table="clientes")
-    delete_row(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_ONE_ROW, size="one")
-    delete_row(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_MULTIPLE_ROWS, size="many")
-    delete_row(PRODUCTOS_SQL_SCRIPTS, size="all", table="productos")
-    delete_row(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_ONE_ROW, size="one")
-    delete_row(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_MULTIPLE_ROWS, size="many")
-    delete_row(CATEGORIAS_SQL_SCRIPTS, size="all", table="categorias")
-    delete_row(CIUDADES_SQL_SCRIPTS, CIUDADES_ONE_ROW, size="one")
-    delete_row(CIUDADES_SQL_SCRIPTS, CIUDADES_MULTIPLE_ROWS, size="many")
-    delete_row(CIUDADES_SQL_SCRIPTS, size="all", table="ciudades")
-    delete_row(ESTADOS_SQL_SCRIPTS, ESTADOS_ONE_ROW, size="one")
-    delete_row(ESTADOS_SQL_SCRIPTS, ESTADOS_MULTIPLE_ROWS, size="many")
-    delete_row(ESTADOS_SQL_SCRIPTS, size="all", table="estados")
+    delete_row(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_ONE_ROW, size="one")
+    delete_row(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS, size="many")
+    delete_row(sql=PEDIDOS_SQL_SCRIPTS, size="all", table="pedidos")
+    delete_row(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_ONE_ROW, size="one")
+    delete_row(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS, size="many")
+    delete_row(sql=CLIENTES_SQL_SCRIPTS, size="all", table="clientes")
+    delete_row(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_ONE_ROW, size="one")
+    delete_row(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS, size="many")
+    delete_row(sql=PRODUCTOS_SQL_SCRIPTS, size="all", table="productos")
+    delete_row(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_ONE_ROW, size="one")
+    delete_row(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS, size="many")
+    delete_row(sql=CATEGORIAS_SQL_SCRIPTS, size="all", table="categorias")
+    delete_row(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_ONE_ROW, size="one")
+    delete_row(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS, size="many")
+    delete_row(sql=CIUDADES_SQL_SCRIPTS, size="all", table="ciudades")
+    delete_row(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_ONE_ROW, size="one")
+    delete_row(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_MULTIPLE_ROWS, size="many")
+    delete_row(sql=ESTADOS_SQL_SCRIPTS, size="all", table="estados")
