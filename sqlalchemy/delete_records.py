@@ -4,7 +4,7 @@ import logging
 import os
 import pyodbc
 import urllib
-from sqlalchemy import create_engine, bindparam, exc, func, text, MetaData
+from sqlalchemy import create_engine, bindparam, exc, MetaData
 
 logging.basicConfig(level=logging.INFO)
 
@@ -116,33 +116,39 @@ def delete_records(rows=[], size="all", table=""):
                         where_clause = pedidos.columns.id.in_(id_param)
                         statement = pedidos.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "clientes":
                         where_clause = clientes.c.id.in_(id_param)
                         statement = clientes.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "productos":
                         where_clause = productos.c.id.in_(id_param)
                         statement = productos.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "categorias":
                         where_clause = categorias.c.id.in_(id_param)
                         statement = categorias.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "ciudades":
                         where_clause = ciudades.c.id.in_(id_param)
                         statement = ciudades.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "estados":
                         where_clause = estados.c.id.in_(id_param)
                         statement = estados.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
-                    logging.info(f"'{result.rowcount}' row(s) deleted successfully from '{table}' table!")
+                    logging.info(f"'{result.rowcount}' row(s) deleted successfully from '{table}' table!\n")
 
             # Delete a many records
             if size == "many" and len(rows) > 0:
@@ -152,33 +158,39 @@ def delete_records(rows=[], size="all", table=""):
                         where_clause = pedidos.c.id.in_(id_param)
                         statement = pedidos.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "clientes":
                         where_clause = clientes.c.id.in_(id_param)
                         statement = clientes.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "productos":
                         where_clause = productos.c.id.in_(id_param)
                         statement = productos.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "categorias":
                         where_clause = categorias.c.id.in_(id_param)
                         statement = categorias.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "ciudades":
                         where_clause = ciudades.c.id.in_(id_param)
                         statement = ciudades.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
                     if table == "estados":
                         where_clause = estados.c.id.in_(id_param)
                         statement = estados.delete().where(where_clause)
                         print(statement)
+                        print()
                         result = connection.execute(statement, rows)
-                    logging.info(f"'Many' row(s) deleted successfully from '{table}' table!")
+                    logging.info(f"'Many' row(s) deleted successfully from '{table}' table!\n")
 
             # Delete all records
             if size == "all":
