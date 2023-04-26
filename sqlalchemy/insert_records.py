@@ -625,30 +625,27 @@ PEDIDOS_MULTIPLE_ROWS = [
 
 
 class GenerateData:
-    """
-    generate a specific number of records to a target table in
-    the database
-    """
+    """Generate a specific number of records to a target table in
+    the database"""
 
     def __init__(self, table="", numbers=0):
-        """
-        initialize command line arguments
+        """Initialize command line arguments
+
+        Args:
+            table (str, optional): The table name to manipulate. Defaults to "".
+            numbers (int, optional): The rows number to insert into the table. Defaults to 0.
         """
         self.table_name = table
         self.num_records = numbers
 
 
     def __str__(self):
-        """
-        Informal Representation Class
-        """
+        """Informal Representation Class"""
         return f"Table: '{self.table_name}' and Number Records: '{self.num_records}'."
 
 
     def __repr__(self):
-        """
-        Official Representation Class
-        """
+        """Official Representation Class"""
         return f"Table: '{self.table_name}'."
 
     def capitalize_list(self, list):
@@ -656,9 +653,7 @@ class GenerateData:
 
 
     def create_data(self):
-        """
-        using faker library, generate data and execute DML
-        """
+        """Using faker library, generate data and execute DML"""
 
         if self.table_name not in metadata.tables.keys():
             return print(f"{self.table_name} does not exist")
