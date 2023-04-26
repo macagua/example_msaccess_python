@@ -78,9 +78,11 @@ PEDIDOS_SQL_SCRIPTS = """
     ORDER BY ped.fecha;
 """
 
-def select_row(sql):
-    """
-    Function to query the record(s) of the table
+def select_row(sql=""):
+    """Function to query the record(s) of the table
+
+    Args:
+        sql (str, optional): The SQL SELECT statement. Defaults to "".
     """
 
     try:
@@ -103,27 +105,24 @@ def select_row(sql):
             print(row)
         print("All Rows Seleted!\n")
 
-        logging.info(
-            "Query(s) {} record(s) in table successfully!\n".format(
-                len(rows) + 1
-            )
-        )
+        logging.info(f"Query(s) {len(rows) + 1} record(s) in table successfully!\n")
 
         cursor.close()
 
     except pyodbc.Error as error:
-        print("Query for record(s) in table failed!", error)
+        sqlstate = error.args[1]
+        sqlstate = sqlstate.split(".")
+        print("Query for record(s) in table failed!", sqlstate)
     finally:
         if connection:
             connection.close()
             print("\n")
-            logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!\n")
-
+            logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    select_row(ESTADOS_SQL_SCRIPTS)
-    select_row(CIUDADES_SQL_SCRIPTS)
-    select_row(CATEGORIAS_SQL_SCRIPTS)
-    select_row(PRODUCTOS_SQL_SCRIPTS)
-    select_row(CLIENTES_SQL_SCRIPTS)
-    select_row(PEDIDOS_SQL_SCRIPTS)
+    select_row(sql=ESTADOS_SQL_SCRIPTS)
+    select_row(sql=CIUDADES_SQL_SCRIPTS)
+    select_row(sql=CATEGORIAS_SQL_SCRIPTS)
+    select_row(sql=PRODUCTOS_SQL_SCRIPTS)
+    select_row(sql=CLIENTES_SQL_SCRIPTS)
+    select_row(sql=PEDIDOS_SQL_SCRIPTS)
