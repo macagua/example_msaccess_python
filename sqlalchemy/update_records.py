@@ -120,9 +120,14 @@ clientes = metadata.tables["clientes"]
 pedidos = metadata.tables["pedidos"]
 
 
-def update_records(values=[], rows=[], size="all", table=""):
-    """
-    Function to update table records
+def update_records(values={}, rows=[], size="all", table=""):
+    """Function to update table records
+
+    Args:
+        values (dict, optional): The bind param values. Defaults to {}.
+        rows (list, optional): The rows to update. Defaults to [].
+        size (str, optional): How many record to update. Defaults to "all".
+        table (str, optional): The table name to manipulate. Defaults to "".
     """
 
     try:
@@ -227,15 +232,15 @@ def update_records(values=[], rows=[], size="all", table=""):
     #         )
 
 if __name__ == "__main__":
-    update_records(PEDIDOS_VALUES, PEDIDOS_ONE_ROW, size="one", table="pedidos")
-    update_records(PEDIDOS_VALUES, PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
-    update_records(CLIENTES_VALUES, CLIENTES_ONE_ROW, size="one", table="clientes")
-    update_records(CLIENTES_VALUES, CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
-    update_records(PRODUCTOS_VALUES, PRODUCTOS_ONE_ROW, size="one", table="productos")
-    update_records(PRODUCTOS_VALUES, PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
-    update_records(CATEGORIAS_VALUES, CATEGORIAS_ONE_ROW, size="one", table="categorias")
-    update_records(CATEGORIAS_VALUES, CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
-    update_records(CIUDADES_VALUES, CIUDADES_ONE_ROW, size="one", table="ciudades")
-    update_records(CIUDADES_VALUES, CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
-    update_records(ESTADOS_VALUES, ESTADOS_ONE_ROW, size="one", table="estados")
-    update_records(ESTADOS_VALUES, ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
+    update_records(values=PEDIDOS_VALUES, rows=PEDIDOS_ONE_ROW, size="one", table="pedidos")
+    update_records(values=PEDIDOS_VALUES, rows=PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
+    update_records(values=CLIENTES_VALUES, rows=CLIENTES_ONE_ROW, size="one", table="clientes")
+    update_records(values=CLIENTES_VALUES, rows=CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
+    update_records(values=PRODUCTOS_VALUES, rows=PRODUCTOS_ONE_ROW, size="one", table="productos")
+    update_records(values=PRODUCTOS_VALUES, rows=PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
+    update_records(values=CATEGORIAS_VALUES, rows=CATEGORIAS_ONE_ROW, size="one", table="categorias")
+    update_records(values=CATEGORIAS_VALUES, rows=CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
+    update_records(values=CIUDADES_VALUES, rows=CIUDADES_ONE_ROW, size="one", table="ciudades")
+    update_records(values=CIUDADES_VALUES, rows=CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
+    update_records(values=ESTADOS_VALUES, rows=ESTADOS_ONE_ROW, size="one", table="estados")
+    update_records(values=ESTADOS_VALUES, rows=ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
