@@ -1,5 +1,6 @@
 """ Program to perform the insertion of the record(s) of the table """
 
+import csv
 import logging
 import os
 import pyodbc
@@ -11,7 +12,9 @@ DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
 ) + os.sep + "data" + os.sep
 DB_FILE = 'database.accdb'
+ESTADOS_FILE = 'estados.csv'
 DB = DB_PATH + DB_FILE
+ESTADOS = DB_PATH + ESTADOS_FILE
 
 # Make DNS string
 CONNECTION_STRING = (
@@ -23,33 +26,6 @@ ESTADOS_SQL_SCRIPTS = """
     INSERT INTO estados (id, nombre, iso_3166_2)
     VALUES (?, ?, ?);
 """
-ESTADOS_MULTIPLE_ROWS = [
-    (1, 'Amazonas', 'VE-X'),
-    (2, 'Anzoátegui', 'VE-B'),
-    (3, 'Apure', 'VE-C'),
-    (4, 'Aragua', 'VE-D'),
-    (5, 'Barinas', 'VE-E'),
-    (6, 'Bolívar', 'VE-F'),
-    (7, 'Carabobo', 'VE-G'),
-    (8, 'Cojedes', 'VE-H'),
-    (9, 'Delta Amacuro', 'VE-Y'),
-    (10, 'Falcón', 'VE-I'),
-    (11, 'Guárico', 'VE-J'),
-    (12, 'Lara', 'VE-K'),
-    (13, 'Mérida', 'VE-L'),
-    (14, 'Miranda', 'VE-M'),
-    (15, 'Monagas', 'VE-N'),
-    (16, 'Nueva Esparta', 'VE-O'),
-    (17, 'Portuguesa', 'VE-P'),
-    (18, 'Sucre', 'VE-R'),
-    (19, 'Táchira', 'VE-S'),
-    (20, 'Trujillo', 'VE-T'),
-    (21, 'La Guaira', 'VE-W'),
-    (22, 'Yaracuy', 'VE-U'),
-    (23, 'Zulia', 'VE-V'),
-    (24, 'Distrito Capital', 'VE-A'),
-    (25, 'Dependencias Federales', 'VE-Z')
-]
 
 CIUDADES_SQL_SCRIPTS = """
     INSERT INTO ciudades (id, estado_id, nombre, capital)
@@ -605,9 +581,13 @@ PEDIDOS_MULTIPLE_ROWS = [
 ]
 
 
-def insert_row(sql, rows):
-    """
-    Function to perform the insertion of several records from the table
+def insert_row(sql=[], rows=[], file_name=None):
+    """Function to perform the insertion of several records from the table
+
+    Args:
+        sql (list, optional): The SQL INSERT statement. Defaults to [].
+        rows (list, optional): The rows to inserts. Defaults to [].
+        file_name (_type_, optional): The file name full path. Defaults to None.
     """
 
     try:
@@ -616,34 +596,46 @@ def insert_row(sql, rows):
         print("\n")
         logging.info(f"Connected to Microsoft Access database {DB_FILE}!\n")
 
-        if len(rows) == 1:
-            count = cursor.execute(sql, rows).rowcount
-            connection.commit()
-            logging.info(
-                "{} record(s) were successfully inserted into the table!\n".format(
-                    count
-                )
-            )
+        if 'estados' not in sql:
+            if 'rows' in vars() and len(rows) == 1:
+                count = cursor.execute(sql, rows).rowcount
+                connection.commit()
+                logging.info(f"{len(count)} record(s) were successfully inserted into the table!\n")
 
-        if len(rows) > 1:
-            cursor.executemany(sql, rows)
+            if 'rows' in vars() and len(rows) > 1:
+                cursor.executemany(sql, rows)
+                connection.commit()
+                logging.info(f"{len(rows)} record(s) were successfully inserted into the table!\n")
+
+        if 'estados' in sql:
+
+            with open(file_name, 'r', encoding='utf-8') as csv_file:
+                rows = csv.reader(csv_file, delimiter=',')
+                next(rows)
+                records_total = 0
+                for row in rows:
+                    cursor.execute(sql, row)
+                    records_total = records_total + 1
+
             connection.commit()
-            logging.info(f"{len(rows)} record(s) were successfully inserted into the table!\n")
+            logging.info(f"{records_total} record(s) were successfully inserted into the table!\n")
 
         cursor.close()
 
     except pyodbc.Error as error:
-        print("Insertion of record(s) into table failed!", error)
+        sqlstate = error.args[1]
+        sqlstate = sqlstate.split(".")
+        print("Insertion of record(s) into table failed!", sqlstate)
     finally:
         if connection:
             connection.close()
-            logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!\n")
+            logging.info(f"The Microsoft Access connection to database '{DB_FILE}' was closed!")
 
 
 if __name__ == "__main__":
-    insert_row(ESTADOS_SQL_SCRIPTS, ESTADOS_MULTIPLE_ROWS)
-    insert_row(CIUDADES_SQL_SCRIPTS, CIUDADES_MULTIPLE_ROWS)
-    insert_row(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_MULTIPLE_ROWS)
-    insert_row(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_MULTIPLE_ROWS)
-    insert_row(CLIENTES_SQL_SCRIPTS, CLIENTES_MULTIPLE_ROWS)
-    insert_row(PEDIDOS_SQL_SCRIPTS, PEDIDOS_MULTIPLE_ROWS)
+    insert_row(sql=ESTADOS_SQL_SCRIPTS, file_name=ESTADOS)
+    insert_row(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS)
+    insert_row(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS)
+    insert_row(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS)
+    insert_row(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS)
+    insert_row(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS)
