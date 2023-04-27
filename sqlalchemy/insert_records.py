@@ -648,7 +648,15 @@ class GenerateData:
         """Official Representation Class"""
         return f"Table: '{self.table_name}'."
 
-    def capitalize_list(self, list):
+    def capitalize_list(self, list=[]):
+        """Capitalize the values of a list
+
+        Args:
+            list (list, optional): A list values for Capitalize. Defaults to [].
+
+        Returns:
+            list: A list values capitalized
+        """
         return [l.capitalize() for l in list]
 
 
