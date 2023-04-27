@@ -98,11 +98,11 @@ PEDIDOS_MULTIPLE_ROWS = [
     ("03/12/2023 12:26:54 AM", False, 5)
 ]
 
-def update_records(sql=[], rows=[], size=""):
+def update_records(sql="", rows=[], size=""):
     """Function to perform the update of several records from the table
 
     Args:
-        sql (list, optional): The SQL UPDATE statement. Defaults to [].
+        sql (str, optional): The SQL UPDATE statement. Defaults to "".
         rows (list, optional): The rows to update. Defaults to [].
         size (str, optional): How many record to update. Defaults to "".
     """
@@ -140,15 +140,15 @@ def update_records(sql=[], rows=[], size=""):
 
 
 if __name__ == "__main__":
-    update_records(ESTADOS_SQL_SCRIPTS, ESTADOS_ONE_ROW, size="one")
-    update_records(ESTADOS_SQL_SCRIPTS, ESTADOS_MULTIPLE_ROWS, size="many")
-    update_records(CIUDADES_SQL_SCRIPTS, CIUDADES_ONE_ROW, size="one")
-    update_records(CIUDADES_SQL_SCRIPTS, CIUDADES_MULTIPLE_ROWS, size="many")
-    update_records(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_ONE_ROW, size="one")
-    update_records(CATEGORIAS_SQL_SCRIPTS, CATEGORIAS_MULTIPLE_ROWS, size="many")
-    update_records(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_ONE_ROW, size="one")
-    update_records(PRODUCTOS_SQL_SCRIPTS, PRODUCTOS_MULTIPLE_ROWS, size="many")
-    update_records(CLIENTES_SQL_SCRIPTS, CLIENTES_ONE_ROW, size="one")
-    update_records(CLIENTES_SQL_SCRIPTS, CLIENTES_MULTIPLE_ROWS, size="many")
-    update_records(PEDIDOS_SQL_SCRIPTS, PEDIDOS_ONE_ROW, size="one")
-    update_records(PEDIDOS_SQL_SCRIPTS, PEDIDOS_MULTIPLE_ROWS, size="many")
+    update_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_ONE_ROW, size="one")
+    update_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_MULTIPLE_ROWS, size="many")
+    update_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_ONE_ROW, size="one")
+    update_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS, size="many")
+    update_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_ONE_ROW, size="one")
+    update_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS, size="many")
+    update_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_ONE_ROW, size="one")
+    update_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS, size="many")
+    update_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_ONE_ROW, size="one")
+    update_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS, size="many")
+    update_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_ONE_ROW, size="one")
+    update_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS, size="many")
