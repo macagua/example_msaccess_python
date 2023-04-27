@@ -581,11 +581,11 @@ PEDIDOS_MULTIPLE_ROWS = [
 ]
 
 
-def insert_records(sql=[], rows=[], file_name=None):
+def insert_records(sql="", rows=[], file_name=None):
     """Function to perform the insertion of several records from the table
 
     Args:
-        sql (list, optional): The SQL INSERT statement. Defaults to [].
+        sql (str, optional): The SQL INSERT statement. Defaults to "".
         rows (list, optional): The rows to inserts. Defaults to [].
         file_name (_type_, optional): The file name full path. Defaults to None.
     """
@@ -600,7 +600,7 @@ def insert_records(sql=[], rows=[], file_name=None):
             if 'rows' in vars() and len(rows) == 1:
                 count = cursor.execute(sql, rows).rowcount
                 connection.commit()
-                logging.info(f"{len(count)} record(s) were successfully inserted into the table!\n")
+                logging.info(f"{count} record(s) were successfully inserted into the table!\n")
 
             if 'rows' in vars() and len(rows) > 1:
                 cursor.executemany(sql, rows)
@@ -608,7 +608,6 @@ def insert_records(sql=[], rows=[], file_name=None):
                 logging.info(f"{len(rows)} record(s) were successfully inserted into the table!\n")
 
         if 'estados' in sql:
-
             with open(file_name, 'r', encoding='utf-8') as csv_file:
                 rows = csv.reader(csv_file, delimiter=',')
                 next(rows)
