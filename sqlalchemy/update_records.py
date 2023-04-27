@@ -225,11 +225,7 @@ def update_records(values={}, rows=[], size="all", table=""):
     # finally:
     #     if connection:
     #         connection.close()
-    #         logging.info(
-    #             "The connection to the Microsoft Access database '{}' was closed!\n".format(
-    #                 DB_FILE
-    #             )
-    #         )
+    #         logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
     update_records(values=PEDIDOS_VALUES, rows=PEDIDOS_ONE_ROW, size="one", table="pedidos")
