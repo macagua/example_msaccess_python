@@ -94,6 +94,6 @@ with engine.begin() as conn:
     print()
 
     for table in tables:
-        print(f"the '{table}' table successfully created!")
+        print(f"The '{table}' table successfully created!")
 
 print(f"'{len(tables)}' table(s) successfully created!")

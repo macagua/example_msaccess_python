@@ -18,7 +18,7 @@ DB = DB_PATH + DB_FILE
 # Create Microsoft Access file
 msaccessdb.create(DB)
 print()
-print(f"the '{DB_FILE}' database successfully created!")
+print(f"The '{DB_FILE}' database successfully created!")
 
 # Make DNS string
 CONNECTION_STRING = (
