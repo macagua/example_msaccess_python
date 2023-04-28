@@ -1,0 +1,2990 @@
+[
+    {
+      "id": 1,
+      "state_id": 1,
+      "name": "Maroa",
+      "capital": 0
+    },
+    {
+      "id": 2,
+      "state_id": 1,
+      "name": "Puerto Ayacucho",
+      "capital": 1
+    },
+    {
+      "id": 3,
+      "state_id": 1,
+      "name": "San Fernando de Atabapo",
+      "capital": 0
+    },
+    {
+      "id": 4,
+      "state_id": 2,
+      "name": "Anaco",
+      "capital": 0
+    },
+    {
+      "id": 5,
+      "state_id": 2,
+      "name": "Aragua de Barcelona",
+      "capital": 0
+    },
+    {
+      "id": 6,
+      "state_id": 2,
+      "name": "Barcelona",
+      "capital": 1
+    },
+    {
+      "id": 7,
+      "state_id": 2,
+      "name": "Boca de Uchire",
+      "capital": 0
+    },
+    {
+      "id": 8,
+      "state_id": 2,
+      "name": "Cantaura",
+      "capital": 0
+    },
+    {
+      "id": 9,
+      "state_id": 2,
+      "name": "Clarines",
+      "capital": 0
+    },
+    {
+      "id": 10,
+      "state_id": 2,
+      "name": "El Chaparro",
+      "capital": 0
+    },
+    {
+      "id": 11,
+      "state_id": 2,
+      "name": "El Pao Anzoátegui",
+      "capital": 0
+    },
+    {
+      "id": 12,
+      "state_id": 2,
+      "name": "El Tigre",
+      "capital": 0
+    },
+    {
+      "id": 13,
+      "state_id": 2,
+      "name": "El Tigrito",
+      "capital": 0
+    },
+    {
+      "id": 14,
+      "state_id": 2,
+      "name": "Guanape",
+      "capital": 0
+    },
+    {
+      "id": 15,
+      "state_id": 2,
+      "name": "Guanta",
+      "capital": 0
+    },
+    {
+      "id": 16,
+      "state_id": 2,
+      "name": "Lechería",
+      "capital": 0
+    },
+    {
+      "id": 17,
+      "state_id": 2,
+      "name": "Onoto",
+      "capital": 0
+    },
+    {
+      "id": 18,
+      "state_id": 2,
+      "name": "Pariaguán",
+      "capital": 0
+    },
+    {
+      "id": 19,
+      "state_id": 2,
+      "name": "Píritu",
+      "capital": 0
+    },
+    {
+      "id": 20,
+      "state_id": 2,
+      "name": "Puerto La Cruz",
+      "capital": 0
+    },
+    {
+      "id": 21,
+      "state_id": 2,
+      "name": "Puerto Píritu",
+      "capital": 0
+    },
+    {
+      "id": 22,
+      "state_id": 2,
+      "name": "Sabana de Uchire",
+      "capital": 0
+    },
+    {
+      "id": 23,
+      "state_id": 2,
+      "name": "San Mateo Anzoátegui",
+      "capital": 0
+    },
+    {
+      "id": 24,
+      "state_id": 2,
+      "name": "San Pablo Anzoátegui",
+      "capital": 0
+    },
+    {
+      "id": 25,
+      "state_id": 2,
+      "name": "San Tomé",
+      "capital": 0
+    },
+    {
+      "id": 26,
+      "state_id": 2,
+      "name": "Santa Ana de Anzoátegui",
+      "capital": 0
+    },
+    {
+      "id": 27,
+      "state_id": 2,
+      "name": "Santa Fe Anzoátegui",
+      "capital": 0
+    },
+    {
+      "id": 28,
+      "state_id": 2,
+      "name": "Santa Rosa",
+      "capital": 0
+    },
+    {
+      "id": 29,
+      "state_id": 2,
+      "name": "Soledad",
+      "capital": 0
+    },
+    {
+      "id": 30,
+      "state_id": 2,
+      "name": "Urica",
+      "capital": 0
+    },
+    {
+      "id": 31,
+      "state_id": 2,
+      "name": "Valle de Guanape",
+      "capital": 0
+    },
+    {
+      "id": 43,
+      "state_id": 3,
+      "name": "Achaguas",
+      "capital": 0
+    },
+    {
+      "id": 44,
+      "state_id": 3,
+      "name": "Biruaca",
+      "capital": 0
+    },
+    {
+      "id": 45,
+      "state_id": 3,
+      "name": "Bruzual",
+      "capital": 0
+    },
+    {
+      "id": 46,
+      "state_id": 3,
+      "name": "El Amparo",
+      "capital": 0
+    },
+    {
+      "id": 47,
+      "state_id": 3,
+      "name": "El Nula",
+      "capital": 0
+    },
+    {
+      "id": 48,
+      "state_id": 3,
+      "name": "Elorza",
+      "capital": 0
+    },
+    {
+      "id": 49,
+      "state_id": 3,
+      "name": "Guasdualito",
+      "capital": 0
+    },
+    {
+      "id": 50,
+      "state_id": 3,
+      "name": "Mantecal",
+      "capital": 0
+    },
+    {
+      "id": 51,
+      "state_id": 3,
+      "name": "Puerto Páez",
+      "capital": 0
+    },
+    {
+      "id": 52,
+      "state_id": 3,
+      "name": "San Fernando de Apure",
+      "capital": 1
+    },
+    {
+      "id": 53,
+      "state_id": 3,
+      "name": "San Juan de Payara",
+      "capital": 0
+    },
+    {
+      "id": 54,
+      "state_id": 4,
+      "name": "Barbacoas",
+      "capital": 0
+    },
+    {
+      "id": 55,
+      "state_id": 4,
+      "name": "Cagua",
+      "capital": 0
+    },
+    {
+      "id": 56,
+      "state_id": 4,
+      "name": "Camatagua",
+      "capital": 0
+    },
+    {
+      "id": 58,
+      "state_id": 4,
+      "name": "Choroní",
+      "capital": 0
+    },
+    {
+      "id": 59,
+      "state_id": 4,
+      "name": "Colonia Tovar",
+      "capital": 0
+    },
+    {
+      "id": 60,
+      "state_id": 4,
+      "name": "El Consejo",
+      "capital": 0
+    },
+    {
+      "id": 61,
+      "state_id": 4,
+      "name": "La Victoria",
+      "capital": 0
+    },
+    {
+      "id": 62,
+      "state_id": 4,
+      "name": "Las Tejerías",
+      "capital": 0
+    },
+    {
+      "id": 63,
+      "state_id": 4,
+      "name": "Magdaleno",
+      "capital": 0
+    },
+    {
+      "id": 64,
+      "state_id": 4,
+      "name": "Maracay",
+      "capital": 1
+    },
+    {
+      "id": 65,
+      "state_id": 4,
+      "name": "Ocumare de La Costa",
+      "capital": 0
+    },
+    {
+      "id": 66,
+      "state_id": 4,
+      "name": "Palo Negro",
+      "capital": 0
+    },
+    {
+      "id": 67,
+      "state_id": 4,
+      "name": "San Casimiro",
+      "capital": 0
+    },
+    {
+      "id": 68,
+      "state_id": 4,
+      "name": "San Mateo",
+      "capital": 0
+    },
+    {
+      "id": 69,
+      "state_id": 4,
+      "name": "San Sebastián",
+      "capital": 0
+    },
+    {
+      "id": 70,
+      "state_id": 4,
+      "name": "Santa Cruz de Aragua",
+      "capital": 0
+    },
+    {
+      "id": 71,
+      "state_id": 4,
+      "name": "Tocorón",
+      "capital": 0
+    },
+    {
+      "id": 72,
+      "state_id": 4,
+      "name": "Turmero",
+      "capital": 0
+    },
+    {
+      "id": 73,
+      "state_id": 4,
+      "name": "Villa de Cura",
+      "capital": 0
+    },
+    {
+      "id": 74,
+      "state_id": 4,
+      "name": "Zuata",
+      "capital": 0
+    },
+    {
+      "id": 75,
+      "state_id": 5,
+      "name": "Barinas",
+      "capital": 1
+    },
+    {
+      "id": 76,
+      "state_id": 5,
+      "name": "Barinitas",
+      "capital": 0
+    },
+    {
+      "id": 77,
+      "state_id": 5,
+      "name": "Barrancas",
+      "capital": 0
+    },
+    {
+      "id": 78,
+      "state_id": 5,
+      "name": "Calderas",
+      "capital": 0
+    },
+    {
+      "id": 79,
+      "state_id": 5,
+      "name": "Capitanejo",
+      "capital": 0
+    },
+    {
+      "id": 80,
+      "state_id": 5,
+      "name": "Ciudad Bolivia",
+      "capital": 0
+    },
+    {
+      "id": 81,
+      "state_id": 5,
+      "name": "El Cantón",
+      "capital": 0
+    },
+    {
+      "id": 82,
+      "state_id": 5,
+      "name": "Las Veguitas",
+      "capital": 0
+    },
+    {
+      "id": 83,
+      "state_id": 5,
+      "name": "Libertad de Barinas",
+      "capital": 0
+    },
+    {
+      "id": 84,
+      "state_id": 5,
+      "name": "Sabaneta",
+      "capital": 0
+    },
+    {
+      "id": 85,
+      "state_id": 5,
+      "name": "Santa Bárbara de Barinas",
+      "capital": 0
+    },
+    {
+      "id": 86,
+      "state_id": 5,
+      "name": "Socopó",
+      "capital": 0
+    },
+    {
+      "id": 87,
+      "state_id": 6,
+      "name": "Caicara del Orinoco",
+      "capital": 0
+    },
+    {
+      "id": 88,
+      "state_id": 6,
+      "name": "Canaima",
+      "capital": 0
+    },
+    {
+      "id": 89,
+      "state_id": 6,
+      "name": "Ciudad Bolívar",
+      "capital": 1
+    },
+    {
+      "id": 90,
+      "state_id": 6,
+      "name": "Ciudad Piar",
+      "capital": 0
+    },
+    {
+      "id": 91,
+      "state_id": 6,
+      "name": "El Callao",
+      "capital": 0
+    },
+    {
+      "id": 92,
+      "state_id": 6,
+      "name": "El Dorado",
+      "capital": 0
+    },
+    {
+      "id": 93,
+      "state_id": 6,
+      "name": "El Manteco",
+      "capital": 0
+    },
+    {
+      "id": 94,
+      "state_id": 6,
+      "name": "El Palmar",
+      "capital": 0
+    },
+    {
+      "id": 95,
+      "state_id": 6,
+      "name": "El Pao",
+      "capital": 0
+    },
+    {
+      "id": 96,
+      "state_id": 6,
+      "name": "Guasipati",
+      "capital": 0
+    },
+    {
+      "id": 97,
+      "state_id": 6,
+      "name": "Guri",
+      "capital": 0
+    },
+    {
+      "id": 98,
+      "state_id": 6,
+      "name": "La Paragua",
+      "capital": 0
+    },
+    {
+      "id": 99,
+      "state_id": 6,
+      "name": "Matanzas",
+      "capital": 0
+    },
+    {
+      "id": 100,
+      "state_id": 6,
+      "name": "Puerto Ordaz",
+      "capital": 0
+    },
+    {
+      "id": 101,
+      "state_id": 6,
+      "name": "San Félix",
+      "capital": 0
+    },
+    {
+      "id": 102,
+      "state_id": 6,
+      "name": "Santa Elena de Uairén",
+      "capital": 0
+    },
+    {
+      "id": 103,
+      "state_id": 6,
+      "name": "Tumeremo",
+      "capital": 0
+    },
+    {
+      "id": 104,
+      "state_id": 6,
+      "name": "Unare",
+      "capital": 0
+    },
+    {
+      "id": 105,
+      "state_id": 6,
+      "name": "Upata",
+      "capital": 0
+    },
+    {
+      "id": 106,
+      "state_id": 7,
+      "name": "Bejuma",
+      "capital": 0
+    },
+    {
+      "id": 107,
+      "state_id": 7,
+      "name": "Belén",
+      "capital": 0
+    },
+    {
+      "id": 108,
+      "state_id": 7,
+      "name": "Campo de Carabobo",
+      "capital": 0
+    },
+    {
+      "id": 109,
+      "state_id": 7,
+      "name": "Canoabo",
+      "capital": 0
+    },
+    {
+      "id": 110,
+      "state_id": 7,
+      "name": "Central Tacarigua",
+      "capital": 0
+    },
+    {
+      "id": 111,
+      "state_id": 7,
+      "name": "Chirgua",
+      "capital": 0
+    },
+    {
+      "id": 112,
+      "state_id": 7,
+      "name": "Ciudad Alianza",
+      "capital": 0
+    },
+    {
+      "id": 113,
+      "state_id": 7,
+      "name": "El Palito",
+      "capital": 0
+    },
+    {
+      "id": 114,
+      "state_id": 7,
+      "name": "Guacara",
+      "capital": 0
+    },
+    {
+      "id": 115,
+      "state_id": 7,
+      "name": "Guigue",
+      "capital": 0
+    },
+    {
+      "id": 116,
+      "state_id": 7,
+      "name": "Las Trincheras",
+      "capital": 0
+    },
+    {
+      "id": 117,
+      "state_id": 7,
+      "name": "Los Guayos",
+      "capital": 0
+    },
+    {
+      "id": 118,
+      "state_id": 7,
+      "name": "Mariara",
+      "capital": 0
+    },
+    {
+      "id": 119,
+      "state_id": 7,
+      "name": "Miranda",
+      "capital": 0
+    },
+    {
+      "id": 120,
+      "state_id": 7,
+      "name": "Montalbán",
+      "capital": 0
+    },
+    {
+      "id": 121,
+      "state_id": 7,
+      "name": "Morón",
+      "capital": 0
+    },
+    {
+      "id": 122,
+      "state_id": 7,
+      "name": "Naguanagua",
+      "capital": 0
+    },
+    {
+      "id": 123,
+      "state_id": 7,
+      "name": "Puerto Cabello",
+      "capital": 0
+    },
+    {
+      "id": 124,
+      "state_id": 7,
+      "name": "San Joaquín",
+      "capital": 0
+    },
+    {
+      "id": 125,
+      "state_id": 7,
+      "name": "Tocuyito",
+      "capital": 0
+    },
+    {
+      "id": 126,
+      "state_id": 7,
+      "name": "Urama",
+      "capital": 0
+    },
+    {
+      "id": 127,
+      "state_id": 7,
+      "name": "Valencia",
+      "capital": 1
+    },
+    {
+      "id": 128,
+      "state_id": 7,
+      "name": "Vigirimita",
+      "capital": 0
+    },
+    {
+      "id": 129,
+      "state_id": 8,
+      "name": "Aguirre",
+      "capital": 0
+    },
+    {
+      "id": 130,
+      "state_id": 8,
+      "name": "Apartaderos Cojedes",
+      "capital": 0
+    },
+    {
+      "id": 131,
+      "state_id": 8,
+      "name": "Arismendi",
+      "capital": 0
+    },
+    {
+      "id": 132,
+      "state_id": 8,
+      "name": "Camuriquito",
+      "capital": 0
+    },
+    {
+      "id": 133,
+      "state_id": 8,
+      "name": "El Baúl",
+      "capital": 0
+    },
+    {
+      "id": 134,
+      "state_id": 8,
+      "name": "El Limón",
+      "capital": 0
+    },
+    {
+      "id": 135,
+      "state_id": 8,
+      "name": "El Pao Cojedes",
+      "capital": 0
+    },
+    {
+      "id": 136,
+      "state_id": 8,
+      "name": "El Socorro",
+      "capital": 0
+    },
+    {
+      "id": 137,
+      "state_id": 8,
+      "name": "La Aguadita",
+      "capital": 0
+    },
+    {
+      "id": 138,
+      "state_id": 8,
+      "name": "Las Vegas",
+      "capital": 0
+    },
+    {
+      "id": 139,
+      "state_id": 8,
+      "name": "Libertad de Cojedes",
+      "capital": 0
+    },
+    {
+      "id": 140,
+      "state_id": 8,
+      "name": "Mapuey",
+      "capital": 0
+    },
+    {
+      "id": 141,
+      "state_id": 8,
+      "name": "Piñedo",
+      "capital": 0
+    },
+    {
+      "id": 142,
+      "state_id": 8,
+      "name": "Samancito",
+      "capital": 0
+    },
+    {
+      "id": 143,
+      "state_id": 8,
+      "name": "San Carlos",
+      "capital": 1
+    },
+    {
+      "id": 144,
+      "state_id": 8,
+      "name": "Sucre",
+      "capital": 0
+    },
+    {
+      "id": 145,
+      "state_id": 8,
+      "name": "Tinaco",
+      "capital": 0
+    },
+    {
+      "id": 146,
+      "state_id": 8,
+      "name": "Tinaquillo",
+      "capital": 0
+    },
+    {
+      "id": 147,
+      "state_id": 8,
+      "name": "Vallecito",
+      "capital": 0
+    },
+    {
+      "id": 148,
+      "state_id": 9,
+      "name": "Tucupita",
+      "capital": 1
+    },
+    {
+      "id": 149,
+      "state_id": 24,
+      "name": "Caracas",
+      "capital": 1
+    },
+    {
+      "id": 150,
+      "state_id": 24,
+      "name": "El Junquito",
+      "capital": 0
+    },
+    {
+      "id": 151,
+      "state_id": 10,
+      "name": "Adícora",
+      "capital": 0
+    },
+    {
+      "id": 152,
+      "state_id": 10,
+      "name": "Boca de Aroa",
+      "capital": 0
+    },
+    {
+      "id": 153,
+      "state_id": 10,
+      "name": "Cabure",
+      "capital": 0
+    },
+    {
+      "id": 154,
+      "state_id": 10,
+      "name": "Capadare",
+      "capital": 0
+    },
+    {
+      "id": 155,
+      "state_id": 10,
+      "name": "Capatárida",
+      "capital": 0
+    },
+    {
+      "id": 156,
+      "state_id": 10,
+      "name": "Chichiriviche",
+      "capital": 0
+    },
+    {
+      "id": 157,
+      "state_id": 10,
+      "name": "Churuguara",
+      "capital": 0
+    },
+    {
+      "id": 158,
+      "state_id": 10,
+      "name": "Coro",
+      "capital": 1
+    },
+    {
+      "id": 159,
+      "state_id": 10,
+      "name": "Cumarebo",
+      "capital": 0
+    },
+    {
+      "id": 160,
+      "state_id": 10,
+      "name": "Dabajuro",
+      "capital": 0
+    },
+    {
+      "id": 161,
+      "state_id": 10,
+      "name": "Judibana",
+      "capital": 0
+    },
+    {
+      "id": 162,
+      "state_id": 10,
+      "name": "La Cruz de Taratara",
+      "capital": 0
+    },
+    {
+      "id": 163,
+      "state_id": 10,
+      "name": "La Vela de Coro",
+      "capital": 0
+    },
+    {
+      "id": 164,
+      "state_id": 10,
+      "name": "Los Taques",
+      "capital": 0
+    },
+    {
+      "id": 165,
+      "state_id": 10,
+      "name": "Maparari",
+      "capital": 0
+    },
+    {
+      "id": 166,
+      "state_id": 10,
+      "name": "Mene de Mauroa",
+      "capital": 0
+    },
+    {
+      "id": 167,
+      "state_id": 10,
+      "name": "Mirimire",
+      "capital": 0
+    },
+    {
+      "id": 168,
+      "state_id": 10,
+      "name": "Pedregal",
+      "capital": 0
+    },
+    {
+      "id": 169,
+      "state_id": 10,
+      "name": "Píritu Falcón",
+      "capital": 0
+    },
+    {
+      "id": 170,
+      "state_id": 10,
+      "name": "Pueblo Nuevo Falcón",
+      "capital": 0
+    },
+    {
+      "id": 171,
+      "state_id": 10,
+      "name": "Puerto Cumarebo",
+      "capital": 0
+    },
+    {
+      "id": 172,
+      "state_id": 10,
+      "name": "Punta Cardón",
+      "capital": 0
+    },
+    {
+      "id": 173,
+      "state_id": 10,
+      "name": "Punto Fijo",
+      "capital": 0
+    },
+    {
+      "id": 174,
+      "state_id": 10,
+      "name": "San Juan de Los Cayos",
+      "capital": 0
+    },
+    {
+      "id": 175,
+      "state_id": 10,
+      "name": "San Luis",
+      "capital": 0
+    },
+    {
+      "id": 176,
+      "state_id": 10,
+      "name": "Santa Ana Falcón",
+      "capital": 0
+    },
+    {
+      "id": 177,
+      "state_id": 10,
+      "name": "Santa Cruz De Bucaral",
+      "capital": 0
+    },
+    {
+      "id": 178,
+      "state_id": 10,
+      "name": "Tocopero",
+      "capital": 0
+    },
+    {
+      "id": 179,
+      "state_id": 10,
+      "name": "Tocuyo de La Costa",
+      "capital": 0
+    },
+    {
+      "id": 180,
+      "state_id": 10,
+      "name": "Tucacas",
+      "capital": 0
+    },
+    {
+      "id": 181,
+      "state_id": 10,
+      "name": "Yaracal",
+      "capital": 0
+    },
+    {
+      "id": 182,
+      "state_id": 11,
+      "name": "Altagracia de Orituco",
+      "capital": 0
+    },
+    {
+      "id": 183,
+      "state_id": 11,
+      "name": "Cabruta",
+      "capital": 0
+    },
+    {
+      "id": 184,
+      "state_id": 11,
+      "name": "Calabozo",
+      "capital": 0
+    },
+    {
+      "id": 185,
+      "state_id": 11,
+      "name": "Camaguán",
+      "capital": 0
+    },
+    {
+      "id": 196,
+      "state_id": 11,
+      "name": "Chaguaramas Guárico",
+      "capital": 0
+    },
+    {
+      "id": 197,
+      "state_id": 11,
+      "name": "El Socorro",
+      "capital": 0
+    },
+    {
+      "id": 198,
+      "state_id": 11,
+      "name": "El Sombrero",
+      "capital": 0
+    },
+    {
+      "id": 199,
+      "state_id": 11,
+      "name": "Las Mercedes de Los Llanos",
+      "capital": 0
+    },
+    {
+      "id": 200,
+      "state_id": 11,
+      "name": "Lezama",
+      "capital": 0
+    },
+    {
+      "id": 201,
+      "state_id": 11,
+      "name": "Onoto",
+      "capital": 0
+    },
+    {
+      "id": 202,
+      "state_id": 11,
+      "name": "Ortíz",
+      "capital": 0
+    },
+    {
+      "id": 203,
+      "state_id": 11,
+      "name": "San José de Guaribe",
+      "capital": 0
+    },
+    {
+      "id": 204,
+      "state_id": 11,
+      "name": "San Juan de Los Morros",
+      "capital": 1
+    },
+    {
+      "id": 205,
+      "state_id": 11,
+      "name": "San Rafael de Laya",
+      "capital": 0
+    },
+    {
+      "id": 206,
+      "state_id": 11,
+      "name": "Santa María de Ipire",
+      "capital": 0
+    },
+    {
+      "id": 207,
+      "state_id": 11,
+      "name": "Tucupido",
+      "capital": 0
+    },
+    {
+      "id": 208,
+      "state_id": 11,
+      "name": "Valle de La Pascua",
+      "capital": 0
+    },
+    {
+      "id": 209,
+      "state_id": 11,
+      "name": "Zaraza",
+      "capital": 0
+    },
+    {
+      "id": 210,
+      "state_id": 12,
+      "name": "Aguada Grande",
+      "capital": 0
+    },
+    {
+      "id": 211,
+      "state_id": 12,
+      "name": "Atarigua",
+      "capital": 0
+    },
+    {
+      "id": 212,
+      "state_id": 12,
+      "name": "Barquisimeto",
+      "capital": 1
+    },
+    {
+      "id": 213,
+      "state_id": 12,
+      "name": "Bobare",
+      "capital": 0
+    },
+    {
+      "id": 214,
+      "state_id": 12,
+      "name": "Cabudare",
+      "capital": 0
+    },
+    {
+      "id": 215,
+      "state_id": 12,
+      "name": "Carora",
+      "capital": 0
+    },
+    {
+      "id": 216,
+      "state_id": 12,
+      "name": "Cubiro",
+      "capital": 0
+    },
+    {
+      "id": 217,
+      "state_id": 12,
+      "name": "Cují",
+      "capital": 0
+    },
+    {
+      "id": 218,
+      "state_id": 12,
+      "name": "Duaca",
+      "capital": 0
+    },
+    {
+      "id": 219,
+      "state_id": 12,
+      "name": "El Manzano",
+      "capital": 0
+    },
+    {
+      "id": 220,
+      "state_id": 12,
+      "name": "El Tocuyo",
+      "capital": 0
+    },
+    {
+      "id": 221,
+      "state_id": 12,
+      "name": "Guaríco",
+      "capital": 0
+    },
+    {
+      "id": 222,
+      "state_id": 12,
+      "name": "Humocaro Alto",
+      "capital": 0
+    },
+    {
+      "id": 223,
+      "state_id": 12,
+      "name": "Humocaro Bajo",
+      "capital": 0
+    },
+    {
+      "id": 224,
+      "state_id": 12,
+      "name": "La Miel",
+      "capital": 0
+    },
+    {
+      "id": 225,
+      "state_id": 12,
+      "name": "Moroturo",
+      "capital": 0
+    },
+    {
+      "id": 226,
+      "state_id": 12,
+      "name": "Quíbor",
+      "capital": 0
+    },
+    {
+      "id": 227,
+      "state_id": 12,
+      "name": "Río Claro",
+      "capital": 0
+    },
+    {
+      "id": 228,
+      "state_id": 12,
+      "name": "Sanare",
+      "capital": 0
+    },
+    {
+      "id": 229,
+      "state_id": 12,
+      "name": "Santa Inés",
+      "capital": 0
+    },
+    {
+      "id": 230,
+      "state_id": 12,
+      "name": "Sarare",
+      "capital": 0
+    },
+    {
+      "id": 231,
+      "state_id": 12,
+      "name": "Siquisique",
+      "capital": 0
+    },
+    {
+      "id": 232,
+      "state_id": 12,
+      "name": "Tintorero",
+      "capital": 0
+    },
+    {
+      "id": 233,
+      "state_id": 13,
+      "name": "Apartaderos Mérida",
+      "capital": 0
+    },
+    {
+      "id": 234,
+      "state_id": 13,
+      "name": "Arapuey",
+      "capital": 0
+    },
+    {
+      "id": 235,
+      "state_id": 13,
+      "name": "Bailadores",
+      "capital": 0
+    },
+    {
+      "id": 236,
+      "state_id": 13,
+      "name": "Caja Seca",
+      "capital": 0
+    },
+    {
+      "id": 237,
+      "state_id": 13,
+      "name": "Canaguá",
+      "capital": 0
+    },
+    {
+      "id": 238,
+      "state_id": 13,
+      "name": "Chachopo",
+      "capital": 0
+    },
+    {
+      "id": 239,
+      "state_id": 13,
+      "name": "Chiguara",
+      "capital": 0
+    },
+    {
+      "id": 240,
+      "state_id": 13,
+      "name": "Ejido",
+      "capital": 0
+    },
+    {
+      "id": 241,
+      "state_id": 13,
+      "name": "El Vigía",
+      "capital": 0
+    },
+    {
+      "id": 242,
+      "state_id": 13,
+      "name": "La Azulita",
+      "capital": 0
+    },
+    {
+      "id": 243,
+      "state_id": 13,
+      "name": "La Playa",
+      "capital": 0
+    },
+    {
+      "id": 244,
+      "state_id": 13,
+      "name": "Lagunillas Mérida",
+      "capital": 0
+    },
+    {
+      "id": 245,
+      "state_id": 13,
+      "name": "Mérida",
+      "capital": 1
+    },
+    {
+      "id": 246,
+      "state_id": 13,
+      "name": "Mesa de Bolívar",
+      "capital": 0
+    },
+    {
+      "id": 247,
+      "state_id": 13,
+      "name": "Mucuchíes",
+      "capital": 0
+    },
+    {
+      "id": 248,
+      "state_id": 13,
+      "name": "Mucujepe",
+      "capital": 0
+    },
+    {
+      "id": 249,
+      "state_id": 13,
+      "name": "Mucuruba",
+      "capital": 0
+    },
+    {
+      "id": 250,
+      "state_id": 13,
+      "name": "Nueva Bolivia",
+      "capital": 0
+    },
+    {
+      "id": 251,
+      "state_id": 13,
+      "name": "Palmarito",
+      "capital": 0
+    },
+    {
+      "id": 252,
+      "state_id": 13,
+      "name": "Pueblo Llano",
+      "capital": 0
+    },
+    {
+      "id": 253,
+      "state_id": 13,
+      "name": "Santa Cruz de Mora",
+      "capital": 0
+    },
+    {
+      "id": 254,
+      "state_id": 13,
+      "name": "Santa Elena de Arenales",
+      "capital": 0
+    },
+    {
+      "id": 255,
+      "state_id": 13,
+      "name": "Santo Domingo",
+      "capital": 0
+    },
+    {
+      "id": 256,
+      "state_id": 13,
+      "name": "Tabáy",
+      "capital": 0
+    },
+    {
+      "id": 257,
+      "state_id": 13,
+      "name": "Timotes",
+      "capital": 0
+    },
+    {
+      "id": 258,
+      "state_id": 13,
+      "name": "Torondoy",
+      "capital": 0
+    },
+    {
+      "id": 259,
+      "state_id": 13,
+      "name": "Tovar",
+      "capital": 0
+    },
+    {
+      "id": 260,
+      "state_id": 13,
+      "name": "Tucani",
+      "capital": 0
+    },
+    {
+      "id": 261,
+      "state_id": 13,
+      "name": "Zea",
+      "capital": 0
+    },
+    {
+      "id": 262,
+      "state_id": 14,
+      "name": "Araguita",
+      "capital": 0
+    },
+    {
+      "id": 263,
+      "state_id": 14,
+      "name": "Carrizal",
+      "capital": 0
+    },
+    {
+      "id": 264,
+      "state_id": 14,
+      "name": "Caucagua",
+      "capital": 0
+    },
+    {
+      "id": 265,
+      "state_id": 14,
+      "name": "Chaguaramas Miranda",
+      "capital": 0
+    },
+    {
+      "id": 266,
+      "state_id": 14,
+      "name": "Charallave",
+      "capital": 0
+    },
+    {
+      "id": 267,
+      "state_id": 14,
+      "name": "Chirimena",
+      "capital": 0
+    },
+    {
+      "id": 268,
+      "state_id": 14,
+      "name": "Chuspa",
+      "capital": 0
+    },
+    {
+      "id": 269,
+      "state_id": 14,
+      "name": "Cúa",
+      "capital": 0
+    },
+    {
+      "id": 270,
+      "state_id": 14,
+      "name": "Cupira",
+      "capital": 0
+    },
+    {
+      "id": 271,
+      "state_id": 14,
+      "name": "Curiepe",
+      "capital": 0
+    },
+    {
+      "id": 272,
+      "state_id": 14,
+      "name": "El Guapo",
+      "capital": 0
+    },
+    {
+      "id": 273,
+      "state_id": 14,
+      "name": "El Jarillo",
+      "capital": 0
+    },
+    {
+      "id": 274,
+      "state_id": 14,
+      "name": "Filas de Mariche",
+      "capital": 0
+    },
+    {
+      "id": 275,
+      "state_id": 14,
+      "name": "Guarenas",
+      "capital": 0
+    },
+    {
+      "id": 276,
+      "state_id": 14,
+      "name": "Guatire",
+      "capital": 0
+    },
+    {
+      "id": 277,
+      "state_id": 14,
+      "name": "Higuerote",
+      "capital": 0
+    },
+    {
+      "id": 278,
+      "state_id": 14,
+      "name": "Los Anaucos",
+      "capital": 0
+    },
+    {
+      "id": 279,
+      "state_id": 14,
+      "name": "Los Teques",
+      "capital": 1
+    },
+    {
+      "id": 280,
+      "state_id": 14,
+      "name": "Ocumare del Tuy",
+      "capital": 0
+    },
+    {
+      "id": 281,
+      "state_id": 14,
+      "name": "Panaquire",
+      "capital": 0
+    },
+    {
+      "id": 282,
+      "state_id": 14,
+      "name": "Paracotos",
+      "capital": 0
+    },
+    {
+      "id": 283,
+      "state_id": 14,
+      "name": "Río Chico",
+      "capital": 0
+    },
+    {
+      "id": 284,
+      "state_id": 14,
+      "name": "San Antonio de Los Altos",
+      "capital": 0
+    },
+    {
+      "id": 285,
+      "state_id": 14,
+      "name": "San Diego de Los Altos",
+      "capital": 0
+    },
+    {
+      "id": 286,
+      "state_id": 14,
+      "name": "San Fernando del Guapo",
+      "capital": 0
+    },
+    {
+      "id": 287,
+      "state_id": 14,
+      "name": "San Francisco de Yare",
+      "capital": 0
+    },
+    {
+      "id": 288,
+      "state_id": 14,
+      "name": "San José de Los Altos",
+      "capital": 0
+    },
+    {
+      "id": 289,
+      "state_id": 14,
+      "name": "San José de Río Chico",
+      "capital": 0
+    },
+    {
+      "id": 290,
+      "state_id": 14,
+      "name": "San Pedro de Los Altos",
+      "capital": 0
+    },
+    {
+      "id": 291,
+      "state_id": 14,
+      "name": "Santa Lucía",
+      "capital": 0
+    },
+    {
+      "id": 292,
+      "state_id": 14,
+      "name": "Santa Teresa",
+      "capital": 0
+    },
+    {
+      "id": 293,
+      "state_id": 14,
+      "name": "Tacarigua de La Laguna",
+      "capital": 0
+    },
+    {
+      "id": 294,
+      "state_id": 14,
+      "name": "Tacarigua de Mamporal",
+      "capital": 0
+    },
+    {
+      "id": 295,
+      "state_id": 14,
+      "name": "Tácata",
+      "capital": 0
+    },
+    {
+      "id": 296,
+      "state_id": 14,
+      "name": "Turumo",
+      "capital": 0
+    },
+    {
+      "id": 297,
+      "state_id": 15,
+      "name": "Aguasay",
+      "capital": 0
+    },
+    {
+      "id": 298,
+      "state_id": 15,
+      "name": "Aragua de Maturín",
+      "capital": 0
+    },
+    {
+      "id": 299,
+      "state_id": 15,
+      "name": "Barrancas del Orinoco",
+      "capital": 0
+    },
+    {
+      "id": 300,
+      "state_id": 15,
+      "name": "Caicara de Maturín",
+      "capital": 0
+    },
+    {
+      "id": 301,
+      "state_id": 15,
+      "name": "Caripe",
+      "capital": 0
+    },
+    {
+      "id": 302,
+      "state_id": 15,
+      "name": "Caripito",
+      "capital": 0
+    },
+    {
+      "id": 303,
+      "state_id": 15,
+      "name": "Chaguaramal",
+      "capital": 0
+    },
+    {
+      "id": 305,
+      "state_id": 15,
+      "name": "Chaguaramas Monagas",
+      "capital": 0
+    },
+    {
+      "id": 307,
+      "state_id": 15,
+      "name": "El Furrial",
+      "capital": 0
+    },
+    {
+      "id": 308,
+      "state_id": 15,
+      "name": "El Tejero",
+      "capital": 0
+    },
+    {
+      "id": 309,
+      "state_id": 15,
+      "name": "Jusepín",
+      "capital": 0
+    },
+    {
+      "id": 310,
+      "state_id": 15,
+      "name": "La Toscana",
+      "capital": 0
+    },
+    {
+      "id": 311,
+      "state_id": 15,
+      "name": "Maturín",
+      "capital": 1
+    },
+    {
+      "id": 312,
+      "state_id": 15,
+      "name": "Miraflores",
+      "capital": 0
+    },
+    {
+      "id": 313,
+      "state_id": 15,
+      "name": "Punta de Mata",
+      "capital": 0
+    },
+    {
+      "id": 314,
+      "state_id": 15,
+      "name": "Quiriquire",
+      "capital": 0
+    },
+    {
+      "id": 315,
+      "state_id": 15,
+      "name": "San Antonio de Maturín",
+      "capital": 0
+    },
+    {
+      "id": 316,
+      "state_id": 15,
+      "name": "San Vicente Monagas",
+      "capital": 0
+    },
+    {
+      "id": 317,
+      "state_id": 15,
+      "name": "Santa Bárbara",
+      "capital": 0
+    },
+    {
+      "id": 318,
+      "state_id": 15,
+      "name": "Temblador",
+      "capital": 0
+    },
+    {
+      "id": 319,
+      "state_id": 15,
+      "name": "Teresen",
+      "capital": 0
+    },
+    {
+      "id": 320,
+      "state_id": 15,
+      "name": "Uracoa",
+      "capital": 0
+    },
+    {
+      "id": 321,
+      "state_id": 16,
+      "name": "Altagracia",
+      "capital": 0
+    },
+    {
+      "id": 322,
+      "state_id": 16,
+      "name": "Boca de Pozo",
+      "capital": 0
+    },
+    {
+      "id": 323,
+      "state_id": 16,
+      "name": "Boca de Río",
+      "capital": 0
+    },
+    {
+      "id": 324,
+      "state_id": 16,
+      "name": "El Espinal",
+      "capital": 0
+    },
+    {
+      "id": 325,
+      "state_id": 16,
+      "name": "El Valle del Espíritu Santo",
+      "capital": 0
+    },
+    {
+      "id": 326,
+      "state_id": 16,
+      "name": "El Yaque",
+      "capital": 0
+    },
+    {
+      "id": 327,
+      "state_id": 16,
+      "name": "Juangriego",
+      "capital": 0
+    },
+    {
+      "id": 328,
+      "state_id": 16,
+      "name": "La Asunción",
+      "capital": 1
+    },
+    {
+      "id": 329,
+      "state_id": 16,
+      "name": "La Guardia",
+      "capital": 0
+    },
+    {
+      "id": 330,
+      "state_id": 16,
+      "name": "Pampatar",
+      "capital": 0
+    },
+    {
+      "id": 331,
+      "state_id": 16,
+      "name": "Porlamar",
+      "capital": 0
+    },
+    {
+      "id": 332,
+      "state_id": 16,
+      "name": "Puerto Fermín",
+      "capital": 0
+    },
+    {
+      "id": 333,
+      "state_id": 16,
+      "name": "Punta de Piedras",
+      "capital": 0
+    },
+    {
+      "id": 334,
+      "state_id": 16,
+      "name": "San Francisco de Macanao",
+      "capital": 0
+    },
+    {
+      "id": 335,
+      "state_id": 16,
+      "name": "San Juan Bautista",
+      "capital": 0
+    },
+    {
+      "id": 336,
+      "state_id": 16,
+      "name": "San Pedro de Coche",
+      "capital": 0
+    },
+    {
+      "id": 337,
+      "state_id": 16,
+      "name": "Santa Ana de Nueva Esparta",
+      "capital": 0
+    },
+    {
+      "id": 338,
+      "state_id": 16,
+      "name": "Villa Rosa",
+      "capital": 0
+    },
+    {
+      "id": 339,
+      "state_id": 17,
+      "name": "Acarigua",
+      "capital": 0
+    },
+    {
+      "id": 340,
+      "state_id": 17,
+      "name": "Agua Blanca",
+      "capital": 0
+    },
+    {
+      "id": 341,
+      "state_id": 17,
+      "name": "Araure",
+      "capital": 0
+    },
+    {
+      "id": 342,
+      "state_id": 17,
+      "name": "Biscucuy",
+      "capital": 0
+    },
+    {
+      "id": 343,
+      "state_id": 17,
+      "name": "Boconoito",
+      "capital": 0
+    },
+    {
+      "id": 344,
+      "state_id": 17,
+      "name": "Campo Elías",
+      "capital": 0
+    },
+    {
+      "id": 345,
+      "state_id": 17,
+      "name": "Chabasquén",
+      "capital": 0
+    },
+    {
+      "id": 346,
+      "state_id": 17,
+      "name": "Guanare",
+      "capital": 1
+    },
+    {
+      "id": 347,
+      "state_id": 17,
+      "name": "Guanarito",
+      "capital": 0
+    },
+    {
+      "id": 348,
+      "state_id": 17,
+      "name": "La Aparición",
+      "capital": 0
+    },
+    {
+      "id": 349,
+      "state_id": 17,
+      "name": "La Misión",
+      "capital": 0
+    },
+    {
+      "id": 350,
+      "state_id": 17,
+      "name": "Mesa de Cavacas",
+      "capital": 0
+    },
+    {
+      "id": 351,
+      "state_id": 17,
+      "name": "Ospino",
+      "capital": 0
+    },
+    {
+      "id": 352,
+      "state_id": 17,
+      "name": "Papelón",
+      "capital": 0
+    },
+    {
+      "id": 353,
+      "state_id": 17,
+      "name": "Payara",
+      "capital": 0
+    },
+    {
+      "id": 354,
+      "state_id": 17,
+      "name": "Pimpinela",
+      "capital": 0
+    },
+    {
+      "id": 355,
+      "state_id": 17,
+      "name": "Píritu de Portuguesa",
+      "capital": 0
+    },
+    {
+      "id": 356,
+      "state_id": 17,
+      "name": "San Rafael de Onoto",
+      "capital": 0
+    },
+    {
+      "id": 357,
+      "state_id": 17,
+      "name": "Santa Rosalía",
+      "capital": 0
+    },
+    {
+      "id": 358,
+      "state_id": 17,
+      "name": "Turén",
+      "capital": 0
+    },
+    {
+      "id": 359,
+      "state_id": 18,
+      "name": "Altos de Sucre",
+      "capital": 0
+    },
+    {
+      "id": 360,
+      "state_id": 18,
+      "name": "Araya",
+      "capital": 0
+    },
+    {
+      "id": 361,
+      "state_id": 18,
+      "name": "Cariaco",
+      "capital": 0
+    },
+    {
+      "id": 362,
+      "state_id": 18,
+      "name": "Carúpano",
+      "capital": 0
+    },
+    {
+      "id": 363,
+      "state_id": 18,
+      "name": "Casanay",
+      "capital": 0
+    },
+    {
+      "id": 364,
+      "state_id": 18,
+      "name": "Cumaná",
+      "capital": 1
+    },
+    {
+      "id": 365,
+      "state_id": 18,
+      "name": "Cumanacoa",
+      "capital": 0
+    },
+    {
+      "id": 366,
+      "state_id": 18,
+      "name": "El Morro Puerto Santo",
+      "capital": 0
+    },
+    {
+      "id": 367,
+      "state_id": 18,
+      "name": "El Pilar",
+      "capital": 0
+    },
+    {
+      "id": 368,
+      "state_id": 18,
+      "name": "El Poblado",
+      "capital": 0
+    },
+    {
+      "id": 369,
+      "state_id": 18,
+      "name": "Guaca",
+      "capital": 0
+    },
+    {
+      "id": 370,
+      "state_id": 18,
+      "name": "Guiria",
+      "capital": 0
+    },
+    {
+      "id": 371,
+      "state_id": 18,
+      "name": "Irapa",
+      "capital": 0
+    },
+    {
+      "id": 372,
+      "state_id": 18,
+      "name": "Manicuare",
+      "capital": 0
+    },
+    {
+      "id": 373,
+      "state_id": 18,
+      "name": "Mariguitar",
+      "capital": 0
+    },
+    {
+      "id": 374,
+      "state_id": 18,
+      "name": "Río Caribe",
+      "capital": 0
+    },
+    {
+      "id": 375,
+      "state_id": 18,
+      "name": "San Antonio del Golfo",
+      "capital": 0
+    },
+    {
+      "id": 376,
+      "state_id": 18,
+      "name": "San José de Aerocuar",
+      "capital": 0
+    },
+    {
+      "id": 377,
+      "state_id": 18,
+      "name": "San Vicente de Sucre",
+      "capital": 0
+    },
+    {
+      "id": 378,
+      "state_id": 18,
+      "name": "Santa Fe de Sucre",
+      "capital": 0
+    },
+    {
+      "id": 379,
+      "state_id": 18,
+      "name": "Tunapuy",
+      "capital": 0
+    },
+    {
+      "id": 380,
+      "state_id": 18,
+      "name": "Yaguaraparo",
+      "capital": 0
+    },
+    {
+      "id": 381,
+      "state_id": 18,
+      "name": "Yoco",
+      "capital": 0
+    },
+    {
+      "id": 382,
+      "state_id": 19,
+      "name": "Abejales",
+      "capital": 0
+    },
+    {
+      "id": 383,
+      "state_id": 19,
+      "name": "Borota",
+      "capital": 0
+    },
+    {
+      "id": 384,
+      "state_id": 19,
+      "name": "Bramon",
+      "capital": 0
+    },
+    {
+      "id": 385,
+      "state_id": 19,
+      "name": "Capacho",
+      "capital": 0
+    },
+    {
+      "id": 386,
+      "state_id": 19,
+      "name": "Colón",
+      "capital": 0
+    },
+    {
+      "id": 387,
+      "state_id": 19,
+      "name": "Coloncito",
+      "capital": 0
+    },
+    {
+      "id": 388,
+      "state_id": 19,
+      "name": "Cordero",
+      "capital": 0
+    },
+    {
+      "id": 389,
+      "state_id": 19,
+      "name": "El Cobre",
+      "capital": 0
+    },
+    {
+      "id": 390,
+      "state_id": 19,
+      "name": "El Pinal",
+      "capital": 0
+    },
+    {
+      "id": 391,
+      "state_id": 19,
+      "name": "Independencia",
+      "capital": 0
+    },
+    {
+      "id": 392,
+      "state_id": 19,
+      "name": "La Fría",
+      "capital": 0
+    },
+    {
+      "id": 393,
+      "state_id": 19,
+      "name": "La Grita",
+      "capital": 0
+    },
+    {
+      "id": 394,
+      "state_id": 19,
+      "name": "La Pedrera",
+      "capital": 0
+    },
+    {
+      "id": 395,
+      "state_id": 19,
+      "name": "La Tendida",
+      "capital": 0
+    },
+    {
+      "id": 396,
+      "state_id": 19,
+      "name": "Las Delicias",
+      "capital": 0
+    },
+    {
+      "id": 397,
+      "state_id": 19,
+      "name": "Las Hernández",
+      "capital": 0
+    },
+    {
+      "id": 398,
+      "state_id": 19,
+      "name": "Lobatera",
+      "capital": 0
+    },
+    {
+      "id": 399,
+      "state_id": 19,
+      "name": "Michelena",
+      "capital": 0
+    },
+    {
+      "id": 400,
+      "state_id": 19,
+      "name": "Palmira",
+      "capital": 0
+    },
+    {
+      "id": 401,
+      "state_id": 19,
+      "name": "Pregonero",
+      "capital": 0
+    },
+    {
+      "id": 402,
+      "state_id": 19,
+      "name": "Queniquea",
+      "capital": 0
+    },
+    {
+      "id": 403,
+      "state_id": 19,
+      "name": "Rubio",
+      "capital": 0
+    },
+    {
+      "id": 404,
+      "state_id": 19,
+      "name": "San Antonio del Tachira",
+      "capital": 0
+    },
+    {
+      "id": 405,
+      "state_id": 19,
+      "name": "San Cristobal",
+      "capital": 1
+    },
+    {
+      "id": 406,
+      "state_id": 19,
+      "name": "San José de Bolívar",
+      "capital": 0
+    },
+    {
+      "id": 407,
+      "state_id": 19,
+      "name": "San Josecito",
+      "capital": 0
+    },
+    {
+      "id": 408,
+      "state_id": 19,
+      "name": "San Pedro del Río",
+      "capital": 0
+    },
+    {
+      "id": 409,
+      "state_id": 19,
+      "name": "Santa Ana Táchira",
+      "capital": 0
+    },
+    {
+      "id": 410,
+      "state_id": 19,
+      "name": "Seboruco",
+      "capital": 0
+    },
+    {
+      "id": 411,
+      "state_id": 19,
+      "name": "Táriba",
+      "capital": 0
+    },
+    {
+      "id": 412,
+      "state_id": 19,
+      "name": "Umuquena",
+      "capital": 0
+    },
+    {
+      "id": 413,
+      "state_id": 19,
+      "name": "Ureña",
+      "capital": 0
+    },
+    {
+      "id": 414,
+      "state_id": 20,
+      "name": "Batatal",
+      "capital": 0
+    },
+    {
+      "id": 415,
+      "state_id": 20,
+      "name": "Betijoque",
+      "capital": 0
+    },
+    {
+      "id": 416,
+      "state_id": 20,
+      "name": "Boconó",
+      "capital": 0
+    },
+    {
+      "id": 417,
+      "state_id": 20,
+      "name": "Carache",
+      "capital": 0
+    },
+    {
+      "id": 418,
+      "state_id": 20,
+      "name": "Chejende",
+      "capital": 0
+    },
+    {
+      "id": 419,
+      "state_id": 20,
+      "name": "Cuicas",
+      "capital": 0
+    },
+    {
+      "id": 420,
+      "state_id": 20,
+      "name": "El Dividive",
+      "capital": 0
+    },
+    {
+      "id": 421,
+      "state_id": 20,
+      "name": "El Jaguito",
+      "capital": 0
+    },
+    {
+      "id": 422,
+      "state_id": 20,
+      "name": "Escuque",
+      "capital": 0
+    },
+    {
+      "id": 423,
+      "state_id": 20,
+      "name": "Isnotú",
+      "capital": 0
+    },
+    {
+      "id": 424,
+      "state_id": 20,
+      "name": "Jajó",
+      "capital": 0
+    },
+    {
+      "id": 425,
+      "state_id": 20,
+      "name": "La Ceiba",
+      "capital": 0
+    },
+    {
+      "id": 426,
+      "state_id": 20,
+      "name": "La Concepción de Trujllo",
+      "capital": 0
+    },
+    {
+      "id": 427,
+      "state_id": 20,
+      "name": "La Mesa de Esnujaque",
+      "capital": 0
+    },
+    {
+      "id": 428,
+      "state_id": 20,
+      "name": "La Puerta",
+      "capital": 0
+    },
+    {
+      "id": 429,
+      "state_id": 20,
+      "name": "La Quebrada",
+      "capital": 0
+    },
+    {
+      "id": 430,
+      "state_id": 20,
+      "name": "Mendoza Fría",
+      "capital": 0
+    },
+    {
+      "id": 431,
+      "state_id": 20,
+      "name": "Meseta de Chimpire",
+      "capital": 0
+    },
+    {
+      "id": 432,
+      "state_id": 20,
+      "name": "Monay",
+      "capital": 0
+    },
+    {
+      "id": 433,
+      "state_id": 20,
+      "name": "Motatán",
+      "capital": 0
+    },
+    {
+      "id": 434,
+      "state_id": 20,
+      "name": "Pampán",
+      "capital": 0
+    },
+    {
+      "id": 435,
+      "state_id": 20,
+      "name": "Pampanito",
+      "capital": 0
+    },
+    {
+      "id": 436,
+      "state_id": 20,
+      "name": "Sabana de Mendoza",
+      "capital": 0
+    },
+    {
+      "id": 437,
+      "state_id": 20,
+      "name": "San Lázaro",
+      "capital": 0
+    },
+    {
+      "id": 438,
+      "state_id": 20,
+      "name": "Santa Ana de Trujillo",
+      "capital": 0
+    },
+    {
+      "id": 439,
+      "state_id": 20,
+      "name": "Tostós",
+      "capital": 0
+    },
+    {
+      "id": 440,
+      "state_id": 20,
+      "name": "Trujillo",
+      "capital": 1
+    },
+    {
+      "id": 441,
+      "state_id": 20,
+      "name": "Valera",
+      "capital": 0
+    },
+    {
+      "id": 442,
+      "state_id": 21,
+      "name": "Carayaca",
+      "capital": 0
+    },
+    {
+      "id": 443,
+      "state_id": 21,
+      "name": "Litoral",
+      "capital": 0
+    },
+    {
+      "id": 444,
+      "state_id": 25,
+      "name": "Archipiélago Los Roques",
+      "capital": 0
+    },
+    {
+      "id": 445,
+      "state_id": 22,
+      "name": "Aroa",
+      "capital": 0
+    },
+    {
+      "id": 446,
+      "state_id": 22,
+      "name": "Boraure",
+      "capital": 0
+    },
+    {
+      "id": 447,
+      "state_id": 22,
+      "name": "Campo Elías de Yaracuy",
+      "capital": 0
+    },
+    {
+      "id": 448,
+      "state_id": 22,
+      "name": "Chivacoa",
+      "capital": 0
+    },
+    {
+      "id": 449,
+      "state_id": 22,
+      "name": "Cocorote",
+      "capital": 0
+    },
+    {
+      "id": 450,
+      "state_id": 22,
+      "name": "Farriar",
+      "capital": 0
+    },
+    {
+      "id": 451,
+      "state_id": 22,
+      "name": "Guama",
+      "capital": 0
+    },
+    {
+      "id": 452,
+      "state_id": 22,
+      "name": "Marín",
+      "capital": 0
+    },
+    {
+      "id": 453,
+      "state_id": 22,
+      "name": "Nirgua",
+      "capital": 0
+    },
+    {
+      "id": 454,
+      "state_id": 22,
+      "name": "Sabana de Parra",
+      "capital": 0
+    },
+    {
+      "id": 455,
+      "state_id": 22,
+      "name": "Salom",
+      "capital": 0
+    },
+    {
+      "id": 456,
+      "state_id": 22,
+      "name": "San Felipe",
+      "capital": 1
+    },
+    {
+      "id": 457,
+      "state_id": 22,
+      "name": "San Pablo de Yaracuy",
+      "capital": 0
+    },
+    {
+      "id": 458,
+      "state_id": 22,
+      "name": "Urachiche",
+      "capital": 0
+    },
+    {
+      "id": 459,
+      "state_id": 22,
+      "name": "Yaritagua",
+      "capital": 0
+    },
+    {
+      "id": 460,
+      "state_id": 22,
+      "name": "Yumare",
+      "capital": 0
+    },
+    {
+      "id": 461,
+      "state_id": 23,
+      "name": "Bachaquero",
+      "capital": 0
+    },
+    {
+      "id": 462,
+      "state_id": 23,
+      "name": "Bobures",
+      "capital": 0
+    },
+    {
+      "id": 463,
+      "state_id": 23,
+      "name": "Cabimas",
+      "capital": 0
+    },
+    {
+      "id": 464,
+      "state_id": 23,
+      "name": "Campo Concepción",
+      "capital": 0
+    },
+    {
+      "id": 465,
+      "state_id": 23,
+      "name": "Campo Mara",
+      "capital": 0
+    },
+    {
+      "id": 466,
+      "state_id": 23,
+      "name": "Campo Rojo",
+      "capital": 0
+    },
+    {
+      "id": 467,
+      "state_id": 23,
+      "name": "Carrasquero",
+      "capital": 0
+    },
+    {
+      "id": 468,
+      "state_id": 23,
+      "name": "Casigua",
+      "capital": 0
+    },
+    {
+      "id": 469,
+      "state_id": 23,
+      "name": "Chiquinquirá",
+      "capital": 0
+    },
+    {
+      "id": 470,
+      "state_id": 23,
+      "name": "Ciudad Ojeda",
+      "capital": 0
+    },
+    {
+      "id": 471,
+      "state_id": 23,
+      "name": "El Batey",
+      "capital": 0
+    },
+    {
+      "id": 472,
+      "state_id": 23,
+      "name": "El Carmelo",
+      "capital": 0
+    },
+    {
+      "id": 473,
+      "state_id": 23,
+      "name": "El Chivo",
+      "capital": 0
+    },
+    {
+      "id": 474,
+      "state_id": 23,
+      "name": "El Guayabo",
+      "capital": 0
+    },
+    {
+      "id": 475,
+      "state_id": 23,
+      "name": "El Mene",
+      "capital": 0
+    },
+    {
+      "id": 476,
+      "state_id": 23,
+      "name": "El Venado",
+      "capital": 0
+    },
+    {
+      "id": 477,
+      "state_id": 23,
+      "name": "Encontrados",
+      "capital": 0
+    },
+    {
+      "id": 478,
+      "state_id": 23,
+      "name": "Gibraltar",
+      "capital": 0
+    },
+    {
+      "id": 479,
+      "state_id": 23,
+      "name": "Isla de Toas",
+      "capital": 0
+    },
+    {
+      "id": 480,
+      "state_id": 23,
+      "name": "La Concepción del Zulia",
+      "capital": 0
+    },
+    {
+      "id": 481,
+      "state_id": 23,
+      "name": "La Paz",
+      "capital": 0
+    },
+    {
+      "id": 482,
+      "state_id": 23,
+      "name": "La Sierrita",
+      "capital": 0
+    },
+    {
+      "id": 483,
+      "state_id": 23,
+      "name": "Lagunillas del Zulia",
+      "capital": 0
+    },
+    {
+      "id": 484,
+      "state_id": 23,
+      "name": "Las Piedras de Perijá",
+      "capital": 0
+    },
+    {
+      "id": 485,
+      "state_id": 23,
+      "name": "Los Cortijos",
+      "capital": 0
+    },
+    {
+      "id": 486,
+      "state_id": 23,
+      "name": "Machiques",
+      "capital": 0
+    },
+    {
+      "id": 487,
+      "state_id": 23,
+      "name": "Maracaibo",
+      "capital": 1
+    },
+    {
+      "id": 488,
+      "state_id": 23,
+      "name": "Mene Grande",
+      "capital": 0
+    },
+    {
+      "id": 489,
+      "state_id": 23,
+      "name": "Palmarejo",
+      "capital": 0
+    },
+    {
+      "id": 490,
+      "state_id": 23,
+      "name": "Paraguaipoa",
+      "capital": 0
+    },
+    {
+      "id": 491,
+      "state_id": 23,
+      "name": "Potrerito",
+      "capital": 0
+    },
+    {
+      "id": 492,
+      "state_id": 23,
+      "name": "Pueblo Nuevo del Zulia",
+      "capital": 0
+    },
+    {
+      "id": 493,
+      "state_id": 23,
+      "name": "Puertos de Altagracia",
+      "capital": 0
+    },
+    {
+      "id": 494,
+      "state_id": 23,
+      "name": "Punta Gorda",
+      "capital": 0
+    },
+    {
+      "id": 495,
+      "state_id": 23,
+      "name": "Sabaneta de Palma",
+      "capital": 0
+    },
+    {
+      "id": 496,
+      "state_id": 23,
+      "name": "San Francisco",
+      "capital": 0
+    },
+    {
+      "id": 497,
+      "state_id": 23,
+      "name": "San José de Perijá",
+      "capital": 0
+    },
+    {
+      "id": 498,
+      "state_id": 23,
+      "name": "San Rafael del Moján",
+      "capital": 0
+    },
+    {
+      "id": 499,
+      "state_id": 23,
+      "name": "San Timoteo",
+      "capital": 0
+    },
+    {
+      "id": 500,
+      "state_id": 23,
+      "name": "Santa Bárbara Del Zulia",
+      "capital": 0
+    },
+    {
+      "id": 501,
+      "state_id": 23,
+      "name": "Santa Cruz de Mara",
+      "capital": 0
+    },
+    {
+      "id": 502,
+      "state_id": 23,
+      "name": "Santa Cruz del Zulia",
+      "capital": 0
+    },
+    {
+      "id": 503,
+      "state_id": 23,
+      "name": "Santa Rita",
+      "capital": 0
+    },
+    {
+      "id": 504,
+      "state_id": 23,
+      "name": "Sinamaica",
+      "capital": 0
+    },
+    {
+      "id": 505,
+      "state_id": 23,
+      "name": "Tamare",
+      "capital": 0
+    },
+    {
+      "id": 506,
+      "state_id": 23,
+      "name": "Tía Juana",
+      "capital": 0
+    },
+    {
+      "id": 507,
+      "state_id": 23,
+      "name": "Villa del Rosario",
+      "capital": 0
+    },
+    {
+      "id": 508,
+      "state_id": 21,
+      "name": "La Guaira",
+      "capital": 1
+    },
+    {
+      "id": 509,
+      "state_id": 21,
+      "name": "Catia La Mar",
+      "capital": 0
+    },
+    {
+      "id": 510,
+      "state_id": 21,
+      "name": "Macuto",
+      "capital": 0
+    },
+    {
+      "id": 511,
+      "state_id": 21,
+      "name": "Naiguatá",
+      "capital": 0
+    },
+    {
+      "id": 512,
+      "state_id": 25,
+      "name": "Archipiélago Los Monjes",
+      "capital": 0
+    },
+    {
+      "id": 513,
+      "state_id": 25,
+      "name": "Isla La Tortuga y Cayos adyacentes",
+      "capital": 0
+    },
+    {
+      "id": 514,
+      "state_id": 25,
+      "name": "Isla La Sola",
+      "capital": 0
+    },
+    {
+      "id": 515,
+      "state_id": 25,
+      "name": "Islas Los Testigos",
+      "capital": 0
+    },
+    {
+      "id": 516,
+      "state_id": 25,
+      "name": "Islas Los Frailes",
+      "capital": 0
+    },
+    {
+      "id": 517,
+      "state_id": 25,
+      "name": "Isla La Orchila",
+      "capital": 0
+    },
+    {
+      "id": 518,
+      "state_id": 25,
+      "name": "Archipiélago Las Aves",
+      "capital": 0
+    },
+    {
+      "id": 519,
+      "state_id": 25,
+      "name": "Isla de Aves",
+      "capital": 0
+    },
+    {
+      "id": 520,
+      "state_id": 25,
+      "name": "Isla La Blanquilla",
+      "capital": 0
+    },
+    {
+      "id": 521,
+      "state_id": 25,
+      "name": "Isla de Patos",
+      "capital": 0
+    },
+    {
+      "id": 522,
+      "state_id": 25,
+      "name": "Islas Los Hermanos",
+      "capital": 0
+    }
+]

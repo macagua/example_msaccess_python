@@ -21,79 +21,79 @@ CONNECTION_STRING = (
 ).format(DB_DRIVER, DB)
 
 
-ESTADOS_SQL_SCRIPTS = """
-    UPDATE estados
-    SET nombre = ?
+STATES_SQL_SCRIPTS = """
+    UPDATE states
+    SET name = ?
     WHERE id = ?;
 """
-ESTADOS_ONE_ROW = ["MÉRIDA", 13]
-ESTADOS_MULTIPLE_ROWS = [
+STATES_ONE_ROW = ["MÉRIDA", 13]
+STATES_MULTIPLE_ROWS = [
     ("ANZOÁTEQUI", 2),
     ("ZULIA", 23),
     ("LARA", 12)
 ]
 
-CIUDADES_SQL_SCRIPTS = """
-    UPDATE ciudades
-    SET nombre = ?
+CITIES_SQL_SCRIPTS = """
+    UPDATE cities
+    SET name = ?
     WHERE id = ?;
 """
-CIUDADES_ONE_ROW = ["MÉRIDA", 13]
-CIUDADES_MULTIPLE_ROWS = [
+CITIES_ONE_ROW = ["MÉRIDA", 13]
+CITIES_MULTIPLE_ROWS = [
     ("BARCELONA", 2),
     ("BACHAQUERO", 461),
     ("MARACAIBO", 487)
 ]
 
-CATEGORIAS_SQL_SCRIPTS = """
-    UPDATE categorias
-    SET nombre = ?
+CATEGORIES_SQL_SCRIPTS = """
+    UPDATE categories
+    SET name = ?
     WHERE id = ?;
 """
-CATEGORIAS_ONE_ROW = ["TECNOLOGÍA", 1]
-CATEGORIAS_MULTIPLE_ROWS = [
+CATEGORIES_ONE_ROW = ["TECNOLOGÍA", 1]
+CATEGORIES_MULTIPLE_ROWS = [
     ("ESTÉTICA", 3),
     ("HERRAMIENTAS", 4),
     ("ENTRETENIMIENTOS", 5)
 ]
 
-PRODUCTOS_SQL_SCRIPTS = """
-    UPDATE productos
+PRODUCTS_SQL_SCRIPTS = """
+    UPDATE products
     SET
-        descripcion = ?,
-        precio = ?
+        description = ?,
+        price = ?
     WHERE id = ?
 """
-PRODUCTOS_ONE_ROW = ["Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", '59.33', 1]
-PRODUCTOS_MULTIPLE_ROWS = [
+PRODUCTS_ONE_ROW = ["Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", '59.33', 1]
+PRODUCTS_MULTIPLE_ROWS = [
     ("Consola Play Station 5; Edición Gob Of War; Capacidad 825 GB; Memoria RAM de 16 GB; Tipo de consola de sobremesa, Wi-FI incluido; cantidad de controles incluidos 1. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", 829.00, 3),
     ("Caja de herramientas Stanley 99 piezas; Caja de herramientas Stanley, Cantidad de piezas incluidas 99 como dados, extensiones, destornillador y llaves. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", 180.30, 4),
     ("Zapatos Clarks; Talla 39, 40 y 41; Colores disponible  Negro, Marrón, Azul; 99% Cuero 1% Tela, Hecho en Londres. Producto 100% original, Producto importado de Inglaterra. Envíos a todo el país.", 120.00, 5)
 ]
 
-CLIENTES_SQL_SCRIPTS = """
-    UPDATE clientes
+CUSTOMERS_SQL_SCRIPTS = """
+    UPDATE customers
     SET
-        nombre = ?,
-        apellido = ?
+        name = ?,
+        lastname = ?
     WHERE id = ?;
 """
-CLIENTES_ONE_ROW = ["Leonardo", "Caballero", 1]
-CLIENTES_MULTIPLE_ROWS = [
+CUSTOMERS_ONE_ROW = ["Leonardo", "Caballero", 1]
+CUSTOMERS_MULTIPLE_ROWS = [
     ("Ana", "Poleo", 3),
     ("Rafael", "Lugo", 4),
     ("Maximiliano", "Vilchez", 5)
 ]
 
-PEDIDOS_SQL_SCRIPTS = """
-    UPDATE pedidos
+ORDERS_SQL_SCRIPTS = """
+    UPDATE orders
     SET
-        fecha = ?,
+        made_at = ?,
         status = ?
     WHERE id = ?;
 """
-PEDIDOS_ONE_ROW = ["12/02/2022 11:23:34 PM", False, 1]
-PEDIDOS_MULTIPLE_ROWS = [
+ORDERS_ONE_ROW = ["12/02/2022 11:23:34 PM", False, 1]
+ORDERS_MULTIPLE_ROWS = [
     ("02/18/2023 10:22:33 AM", False, 3),
     ("04/22/2023 09:22:03 AM", False, 4),
     ("03/12/2023 12:26:54 AM", False, 5)
@@ -141,15 +141,15 @@ def update_records(sql="", rows=[], size=""):
 
 
 if __name__ == "__main__":
-    update_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_ONE_ROW, size="one")
-    update_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_MULTIPLE_ROWS, size="many")
-    update_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_ONE_ROW, size="one")
-    update_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS, size="many")
-    update_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_ONE_ROW, size="one")
-    update_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS, size="many")
-    update_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_ONE_ROW, size="one")
-    update_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS, size="many")
-    update_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_ONE_ROW, size="one")
-    update_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS, size="many")
-    update_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_ONE_ROW, size="one")
-    update_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS, size="many")
+    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_ONE_ROW, size="one")
+    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_MULTIPLE_ROWS, size="many")
+    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_ONE_ROW, size="one")
+    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_MULTIPLE_ROWS, size="many")
+    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_ONE_ROW, size="one")
+    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_MULTIPLE_ROWS, size="many")
+    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_ONE_ROW, size="one")
+    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_MULTIPLE_ROWS, size="many")
+    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_ONE_ROW, size="one")
+    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_MULTIPLE_ROWS, size="many")
+    update_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_ONE_ROW, size="one")
+    update_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_MULTIPLE_ROWS, size="many")

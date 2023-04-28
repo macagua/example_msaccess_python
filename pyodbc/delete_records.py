@@ -20,61 +20,61 @@ CONNECTION_STRING = (
     r'DBQ={1};'
 ).format(DB_DRIVER, DB)
 
-ESTADOS_SQL_SCRIPTS = """
-    DELETE FROM estados
+STATES_SQL_SCRIPTS = """
+    DELETE FROM states
     WHERE id = ?;
 """
-ESTADOS_ONE_ROW = [3,]
-ESTADOS_MULTIPLE_ROWS = [
+STATES_ONE_ROW = [3,]
+STATES_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
-CIUDADES_SQL_SCRIPTS = """
-    DELETE FROM ciudades
+CITIES_SQL_SCRIPTS = """
+    DELETE FROM cities
     WHERE id = ?;
 """
-CIUDADES_ONE_ROW = [3,]
-CIUDADES_MULTIPLE_ROWS = [
+CITIES_ONE_ROW = [3,]
+CITIES_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
-CATEGORIAS_SQL_SCRIPTS = """
-    DELETE FROM categorias
+CATEGORIES_SQL_SCRIPTS = """
+    DELETE FROM categories
     WHERE id = ?;
 """
-CATEGORIAS_ONE_ROW = [3,]
-CATEGORIAS_MULTIPLE_ROWS = [
+CATEGORIES_ONE_ROW = [3,]
+CATEGORIES_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
-PRODUCTOS_SQL_SCRIPTS = """
-    DELETE FROM productos
+PRODUCTS_SQL_SCRIPTS = """
+    DELETE FROM products
     WHERE id = ?;
 """
-PRODUCTOS_ONE_ROW = [3,]
-PRODUCTOS_MULTIPLE_ROWS = [
+PRODUCTS_ONE_ROW = [3,]
+PRODUCTS_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
-CLIENTES_SQL_SCRIPTS = """
-    DELETE FROM clientes
+CUSTOMERS_SQL_SCRIPTS = """
+    DELETE FROM customers
     WHERE id = ?;
 """
-CLIENTES_ONE_ROW = [3,]
-CLIENTES_MULTIPLE_ROWS = [
+CUSTOMERS_ONE_ROW = [3,]
+CUSTOMERS_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
-PEDIDOS_SQL_SCRIPTS = """
-    DELETE FROM pedidos
+ORDERS_SQL_SCRIPTS = """
+    DELETE FROM orders
     WHERE id = ?
 """
-PEDIDOS_MULTIPLE_ROWS_SQL_SCRIPTS = """
-    DELETE FROM pedidos
+ORDERS_MULTIPLE_ROWS_SQL_SCRIPTS = """
+    DELETE FROM orders
     WHERE id IN (?, ?, ?)
 """
-PEDIDOS_ONE_ROW = [3,]
-PEDIDOS_MULTIPLE_ROWS = [
+ORDERS_ONE_ROW = [3,]
+ORDERS_MULTIPLE_ROWS = [
     (1,), (2,), (4,)
 ]
 
@@ -125,21 +125,21 @@ def delete_records(sql=[], rows=[], size="all", table=""):
             logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    delete_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_ONE_ROW, size="one")
-    delete_records(sql=PEDIDOS_SQL_SCRIPTS, rows=PEDIDOS_MULTIPLE_ROWS, size="many")
-    delete_records(sql=PEDIDOS_SQL_SCRIPTS, size="all", table="pedidos")
-    delete_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_ONE_ROW, size="one")
-    delete_records(sql=CLIENTES_SQL_SCRIPTS, rows=CLIENTES_MULTIPLE_ROWS, size="many")
-    delete_records(sql=CLIENTES_SQL_SCRIPTS, size="all", table="clientes")
-    delete_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_ONE_ROW, size="one")
-    delete_records(sql=PRODUCTOS_SQL_SCRIPTS, rows=PRODUCTOS_MULTIPLE_ROWS, size="many")
-    delete_records(sql=PRODUCTOS_SQL_SCRIPTS, size="all", table="productos")
-    delete_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_ONE_ROW, size="one")
-    delete_records(sql=CATEGORIAS_SQL_SCRIPTS, rows=CATEGORIAS_MULTIPLE_ROWS, size="many")
-    delete_records(sql=CATEGORIAS_SQL_SCRIPTS, size="all", table="categorias")
-    delete_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_ONE_ROW, size="one")
-    delete_records(sql=CIUDADES_SQL_SCRIPTS, rows=CIUDADES_MULTIPLE_ROWS, size="many")
-    delete_records(sql=CIUDADES_SQL_SCRIPTS, size="all", table="ciudades")
-    delete_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_ONE_ROW, size="one")
-    delete_records(sql=ESTADOS_SQL_SCRIPTS, rows=ESTADOS_MULTIPLE_ROWS, size="many")
-    delete_records(sql=ESTADOS_SQL_SCRIPTS, size="all", table="estados")
+    delete_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_ONE_ROW, size="one")
+    delete_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_MULTIPLE_ROWS, size="many")
+    delete_records(sql=ORDERS_SQL_SCRIPTS, size="all", table="orders")
+    delete_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_ONE_ROW, size="one")
+    delete_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_MULTIPLE_ROWS, size="many")
+    delete_records(sql=CUSTOMERS_SQL_SCRIPTS, size="all", table="customers")
+    delete_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_ONE_ROW, size="one")
+    delete_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_MULTIPLE_ROWS, size="many")
+    delete_records(sql=PRODUCTS_SQL_SCRIPTS, size="all", table="products")
+    delete_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_ONE_ROW, size="one")
+    delete_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_MULTIPLE_ROWS, size="many")
+    delete_records(sql=CATEGORIES_SQL_SCRIPTS, size="all", table="categories")
+    delete_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_ONE_ROW, size="one")
+    delete_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_MULTIPLE_ROWS, size="many")
+    delete_records(sql=CITIES_SQL_SCRIPTS, size="all", table="cities")
+    delete_records(sql=STATES_SQL_SCRIPTS, rows=STATES_ONE_ROW, size="one")
+    delete_records(sql=STATES_SQL_SCRIPTS, rows=STATES_MULTIPLE_ROWS, size="many")
+    delete_records(sql=STATES_SQL_SCRIPTS, size="all", table="states")

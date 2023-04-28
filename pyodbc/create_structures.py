@@ -21,114 +21,114 @@ connection = pyodbc.connect(CONNECTION_STRING)
 print("\nConnected to Microsoft Access database!\n")
 cursor = connection.cursor()
 
-# If The 'estados' Table exists!
-if cursor.tables(table="estados").fetchone():
-    print("The 'estados' Table exists!\n")
+# If The 'states' Table exists!
+if cursor.tables(table="states").fetchone():
+    print("The 'states' Table exists!\n")
 else:
-    print("The 'estados' Table don't exists!\n")
+    print("The 'states' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE estados (
+        CREATE TABLE states (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,nombre VARCHAR(25) NOT NULL
+                ,name VARCHAR(25) NOT NULL
                 ,iso_3166_2 VARCHAR(4) NOT NULL
         );
     """)
     connection.commit()
-    print("The 'estados' Table Created!\n")
+    print("The 'states' Table Created!\n")
 
-# If The 'ciudades' Table exists!
-if cursor.tables(table="ciudades").fetchone():
-    print("The 'ciudades' Table exists!\n")
+# If The 'cities' Table exists!
+if cursor.tables(table="cities").fetchone():
+    print("The 'cities' Table exists!\n")
 else:
-    print("The 'ciudades' Table don't exists!\n")
+    print("The 'cities' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE ciudades (
+        CREATE TABLE cities (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,estado_id INTEGER NOT NULL
-                ,nombre VARCHAR(200) NOT NULL
+                ,state_id INTEGER NOT NULL
+                ,name VARCHAR(200) NOT NULL
                 ,capital SMALLINT NOT NULL
-                ,CONSTRAINT [fk_estado_id] FOREIGN KEY (estado_id) REFERENCES estados(id)
+                ,CONSTRAINT [fk_state_id] FOREIGN KEY (state_id) REFERENCES states(id)
         );
     """)
     connection.commit()
-    print("The 'ciudades' Table Created!\n")
+    print("The 'cities' Table Created!\n")
 
-# If The 'categorias' Table exists!
-if cursor.tables(table="categorias").fetchone():
-    print("The 'categorias' Table exists!\n")
+# If The 'categories' Table exists!
+if cursor.tables(table="categories").fetchone():
+    print("The 'categories' Table exists!\n")
 else:
-    print("The 'categorias' Table don't exists!\n")
+    print("The 'categories' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE categorias (
+        CREATE TABLE categories (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,nombre VARCHAR(25) NOT NULL
+                ,name VARCHAR(25) NOT NULL
                 ,status BIT NOT NULL
         );
     """)
     connection.commit()
-    print("The 'categorias' Table Created!\n")
+    print("The 'categories' Table Created!\n")
 
-# If The 'productos' Table exists!
-if cursor.tables(table="productos").fetchone():
-    print("The 'productos' Table exists!\n")
+# If The 'products' Table exists!
+if cursor.tables(table="products").fetchone():
+    print("The 'products' Table exists!\n")
 else:
-    print("The 'productos' Table don't exists!\n")
+    print("The 'products' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE productos (
+        CREATE TABLE products (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,nombre VARCHAR(50) NOT NULL
-                ,descripcion VARCHAR(250) NOT NULL
-                ,categoria_id INTEGER NOT NULL
-                ,precio SINGLE NOT NULL
+                ,name VARCHAR(50) NOT NULL
+                ,description VARCHAR(250) NOT NULL
+                ,category_id INTEGER NOT NULL
+                ,price SINGLE NOT NULL
                 ,status BIT NOT NULL
-                ,CONSTRAINT [fk_categoria_id] FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+                ,CONSTRAINT [fk_category_id] FOREIGN KEY (category_id) REFERENCES categories(id)
         );
     """)
     connection.commit()
-    print("The 'productos' Table Created!\n")
+    print("The 'products' Table Created!\n")
 
-# If The 'clientes' Table exists!
-if cursor.tables(table="clientes").fetchone():
-    print("The 'clientes' Table exists!\n")
+# If The 'customers' Table exists!
+if cursor.tables(table="customers").fetchone():
+    print("The 'customers' Table exists!\n")
 else:
-    print("The 'clientes' Table don't exists!\n")
+    print("The 'customers' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE clientes (
+        CREATE TABLE customers (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,nombre VARCHAR(25) NOT NULL
-                ,apellido VARCHAR(25) NOT NULL
-                ,codigo_postal INTEGER NOT NULL
-                ,telefono VARCHAR(11) NOT NULL
-                ,CONSTRAINT [fk_ciudad_id] FOREIGN KEY (codigo_postal) REFERENCES ciudades(id)
+                ,name VARCHAR(25) NOT NULL
+                ,lastname VARCHAR(25) NOT NULL
+                ,zip_code INTEGER NOT NULL
+                ,phone VARCHAR(11) NOT NULL
+                ,CONSTRAINT [fk_city_id] FOREIGN KEY (zip_code) REFERENCES cities(id)
         );
     """)
     connection.commit()
-    print("The 'clientes' Table Created!\n")
+    print("The 'customers' Table Created!\n")
 
-# If The 'pedidos' Table exists!
-if cursor.tables(table="pedidos").fetchone():
-    print("The 'pedidos' Table exists!\n")
+# If The 'orders' Table exists!
+if cursor.tables(table="orders").fetchone():
+    print("The 'orders' Table exists!\n")
 else:
-    print("The 'pedidos' Table don't exists!\n")
+    print("The 'orders' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
     cursor.execute("""
-        CREATE TABLE pedidos (
+        CREATE TABLE orders (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
-                ,cliente_id INTEGER NOT NULL
-                ,fecha DATETIME NOT NULL
-                ,producto_id INTEGER NOT NULL
+                ,customer_id INTEGER NOT NULL
+                ,made_at DATETIME NOT NULL
+                ,product_id INTEGER NOT NULL
                 ,status BIT NOT NULL
-                ,CONSTRAINT [fk_cliente_id] FOREIGN KEY (cliente_id) REFERENCES clientes(id)
-                ,CONSTRAINT [fk_producto_id] FOREIGN KEY (producto_id) REFERENCES productos(id)
+                ,CONSTRAINT [fk_customer_id] FOREIGN KEY (customer_id) REFERENCES customers(id)
+                ,CONSTRAINT [fk_product_id] FOREIGN KEY (product_id) REFERENCES products(id)
         );
     """)
     connection.commit()
-    print("The 'pedidos' Table Created!\n")
+    print("The 'orders' Table Created!\n")
 
 
 if connection:

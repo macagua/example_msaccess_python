@@ -21,62 +21,62 @@ CONNECTION_STRING = (
 ).format(DB_DRIVER, DB)
 
 
-ESTADOS_SQL_SCRIPTS = """
+STATES_SQL_SCRIPTS = """
     SELECT *
-    FROM estados
-    ORDER BY nombre;
+    FROM states
+    ORDER BY name;
 """
 
-CIUDADES_SQL_SCRIPTS = """
+CITIES_SQL_SCRIPTS = """
     SELECT
-        ciu.id, ciu.nombre, ciu.capital,
-        edo.nombre
+        cit.id, cit.name, cit.capital,
+        sta.name
     FROM
-        estados AS edo,
-        ciudades AS ciu
-    WHERE ciu.estado_id = edo.id
-    ORDER BY ciu.nombre;
+        states AS edo,
+        cities AS ciu
+    WHERE cit.state_id = sta.id
+    ORDER BY cit.name;
 """
 
-CATEGORIAS_SQL_SCRIPTS = """
+CATEGORIES_SQL_SCRIPTS = """
     SELECT *
-    FROM categorias
-    ORDER BY nombre;
+    FROM categories
+    ORDER BY name;
 """
 
-PRODUCTOS_SQL_SCRIPTS = """
+PRODUCTS_SQL_SCRIPTS = """
     SELECT
-        pro.id, pro.nombre, pro.descripcion,
-        cat.nombre, pro.precio, pro.status
+        pro.id, pro.name, pro.description,
+        cat.name, pro.price, pro.status
     FROM
-        categorias AS cat,
-        productos AS pro
-    WHERE pro.categoria_id = cat.id
-    ORDER BY pro.nombre;
+        categories AS cat,
+        products AS pro
+    WHERE pro.category_id = cat.id
+    ORDER BY pro.name;
 """
 
-CLIENTES_SQL_SCRIPTS = """
+CUSTOMERS_SQL_SCRIPTS = """
     SELECT
-        cli.id, cli.nombre & ' ' & cli.apellido AS nombre_completo,
-        ciu.nombre, cli.telefono
+        cus.id, cus.name & ' ' & cus.lastname AS name_full,
+        cit.name, cus.phone
     FROM
-        ciudades AS ciu,
-        clientes AS cli
-    WHERE cli.codigo_postal = ciu.id
-    ORDER BY cli.id;
+        cities AS cit,
+        customers AS cus
+    WHERE cus.zip_code = cit.id
+    ORDER BY cus.id;
 """
 
-PEDIDOS_SQL_SCRIPTS = """
+ORDERS_SQL_SCRIPTS = """
     SELECT
-        ped.id, cli.nombre & ' ' & cli.apellido AS nombre_completo,
-        ped.fecha, pro.nombre, ped.status
+        ord.id, cus.name & ' ' & cus.lastname AS name_full,
+        ord.made_at, pro.name, ord.status
     FROM
-        clientes AS cli,
-        productos AS pro,
-        pedidos AS ped
-    WHERE ped.cliente_id = cli.id
-    AND ped.producto_id = pro.id
-    ORDER BY ped.fecha;
+        customers AS cus,
+        products AS pro,
+        orders AS ord
+    WHERE ord.customer_id = cus.id
+    AND ord.product_id = pro.id
+    ORDER BY ord.made_at;
 """
 
 def select_records(sql=""):
@@ -121,9 +121,9 @@ def select_records(sql=""):
             logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    select_records(sql=ESTADOS_SQL_SCRIPTS)
-    select_records(sql=CIUDADES_SQL_SCRIPTS)
-    select_records(sql=CATEGORIAS_SQL_SCRIPTS)
-    select_records(sql=PRODUCTOS_SQL_SCRIPTS)
-    select_records(sql=CLIENTES_SQL_SCRIPTS)
-    select_records(sql=PEDIDOS_SQL_SCRIPTS)
+    select_records(sql=STATES_SQL_SCRIPTS)
+    select_records(sql=CITIES_SQL_SCRIPTS)
+    select_records(sql=CATEGORIES_SQL_SCRIPTS)
+    select_records(sql=PRODUCTS_SQL_SCRIPTS)
+    select_records(sql=CUSTOMERS_SQL_SCRIPTS)
+    select_records(sql=ORDERS_SQL_SCRIPTS)
