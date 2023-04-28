@@ -6,6 +6,7 @@ import logging
 import os
 import pyodbc
 
+# logging INFO object
 logging.basicConfig(level=logging.INFO)
 
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"

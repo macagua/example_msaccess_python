@@ -21,7 +21,6 @@ from sqlalchemy import create_engine, desc, MetaData,\
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
-
 # locales faker object
 locales = OrderedDict([
     ('es_AR', 1),

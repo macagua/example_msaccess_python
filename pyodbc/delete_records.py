@@ -4,8 +4,9 @@ import logging
 import os
 import pyodbc
 
+# logging INFO object
 logging.basicConfig(level=logging.INFO)
- 
+
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
