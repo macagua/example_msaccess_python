@@ -49,6 +49,12 @@ python update_records.py
 python delete_records.py
 ```
 
+### Delete structures (tables)
+
+```console
+python delete_structures.py
+```
+
 ### Delete database file
 
 ```console
