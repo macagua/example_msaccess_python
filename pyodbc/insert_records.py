@@ -120,7 +120,7 @@ def insert_records(sql="", rows=[], file_name=None):
                     records_total = records_total + 1
 
         if 'ciudades' in sql:
-            with open(file_name) as json_file:
+            with open(file_name, 'r', encoding='utf-8') as json_file:
                 rows = json.load(json_file)
                 records_total = 0
                 for row in rows:
