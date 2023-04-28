@@ -1,0 +1,127 @@
+[
+    {
+      "id": 1,
+      "nombre": "Amazonas",
+      "iso_3166_2": "VE-X"
+    },
+    {
+      "id": 2,
+      "nombre": "Anzoátegui",
+      "iso_3166_2": "VE-B"
+    },
+    {
+      "id": 3,
+      "nombre": "Apure",
+      "iso_3166_2": "VE-C"
+    },
+    {
+      "id": 4,
+      "nombre": "Aragua",
+      "iso_3166_2": "VE-D"
+    },
+    {
+      "id": 5,
+      "nombre": "Barinas",
+      "iso_3166_2": "VE-E"
+    },
+    {
+      "id": 6,
+      "nombre": "Bolívar",
+      "iso_3166_2": "VE-F"
+    },
+    {
+      "id": 7,
+      "nombre": "Carabobo",
+      "iso_3166_2": "VE-G"
+    },
+    {
+      "id": 8,
+      "nombre": "Cojedes",
+      "iso_3166_2": "VE-H"
+    },
+    {
+      "id": 9,
+      "nombre": "Delta Amacuro",
+      "iso_3166_2": "VE-Y"
+    },
+    {
+      "id": 10,
+      "nombre": "Falcón",
+      "iso_3166_2": "VE-I"
+    },
+    {
+      "id": 11,
+      "nombre": "Guárico",
+      "iso_3166_2": "VE-J"
+    },
+    {
+      "id": 12,
+      "nombre": "Lara",
+      "iso_3166_2": "VE-K"
+    },
+    {
+      "id": 13,
+      "nombre": "Mérida",
+      "iso_3166_2": "VE-L"
+    },
+    {
+      "id": 14,
+      "nombre": "Miranda",
+      "iso_3166_2": "VE-M"
+    },
+    {
+      "id": 15,
+      "nombre": "Monagas",
+      "iso_3166_2": "VE-N"
+    },
+    {
+      "id": 16,
+      "nombre": "Nueva Esparta",
+      "iso_3166_2": "VE-O"
+    },
+    {
+      "id": 17,
+      "nombre": "Portuguesa",
+      "iso_3166_2": "VE-P"
+    },
+    {
+      "id": 18,
+      "nombre": "Sucre",
+      "iso_3166_2": "VE-R"
+    },
+    {
+      "id": 19,
+      "nombre": "Táchira",
+      "iso_3166_2": "VE-S"
+    },
+    {
+      "id": 20,
+      "nombre": "Trujillo",
+      "iso_3166_2": "VE-T"
+    },
+    {
+      "id": 21,
+      "nombre": "La Guaira",
+      "iso_3166_2": "VE-W"
+    },
+    {
+      "id": 22,
+      "nombre": "Yaracuy",
+      "iso_3166_2": "VE-U"
+    },
+    {
+      "id": 23,
+      "nombre": "Zulia",
+      "iso_3166_2": "VE-V"
+    },
+    {
+      "id": 24,
+      "nombre": "Distrito Capital",
+      "iso_3166_2": "VE-A"
+    },
+    {
+      "id": 25,
+      "nombre": "Dependencias Federales",
+      "iso_3166_2": "VE-Z"
+    }
+]

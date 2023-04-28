@@ -5,15 +5,20 @@ Source:
     https://seraph13.medium.com/generar-datos-falsos-con-faker-4d4313ff8205
 """
 
-from collections import OrderedDict
-from faker import Faker
-from sqlalchemy import create_engine, desc, MetaData,\
-    insert, select
+import csv
 import os
+import logging
 import pyodbc
 import urllib
 import random
 import sys
+from collections import OrderedDict
+from faker import Faker
+from sqlalchemy import create_engine, desc, MetaData,\
+    insert, select
+
+# logging INFO object
+logging.basicConfig(level=logging.INFO)
 
 
 # locales faker object
@@ -31,7 +36,9 @@ DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
 ) + os.sep + "data" + os.sep
 DB_FILE = 'database.accdb'
+ESTADOS_FILE = 'estados.json'
 DB = DB_PATH + DB_FILE
+ESTADOS = DB_PATH + ESTADOS_FILE
 
 # Make DNS string
 CONNECTION_STRING = (
@@ -55,35 +62,6 @@ categorias = metadata.tables["categorias"]
 productos = metadata.tables["productos"]
 clientes = metadata.tables["clientes"]
 pedidos = metadata.tables["pedidos"]
-
-# 'estados' list
-ESTADOS_MULTIPLE_ROWS = [
-    (1, 'Amazonas', 'VE-X'),
-    (2, 'Anzoátegui', 'VE-B'),
-    (3, 'Apure', 'VE-C'),
-    (4, 'Aragua', 'VE-D'),
-    (5, 'Barinas', 'VE-E'),
-    (6, 'Bolívar', 'VE-F'),
-    (7, 'Carabobo', 'VE-G'),
-    (8, 'Cojedes', 'VE-H'),
-    (9, 'Delta Amacuro', 'VE-Y'),
-    (10, 'Falcón', 'VE-I'),
-    (11, 'Guárico', 'VE-J'),
-    (12, 'Lara', 'VE-K'),
-    (13, 'Mérida', 'VE-L'),
-    (14, 'Miranda', 'VE-M'),
-    (15, 'Monagas', 'VE-N'),
-    (16, 'Nueva Esparta', 'VE-O'),
-    (17, 'Portuguesa', 'VE-P'),
-    (18, 'Sucre', 'VE-R'),
-    (19, 'Táchira', 'VE-S'),
-    (20, 'Trujillo', 'VE-T'),
-    (21, 'La Guaira', 'VE-W'),
-    (22, 'Yaracuy', 'VE-U'),
-    (23, 'Zulia', 'VE-V'),
-    (24, 'Distrito Capital', 'VE-A'),
-    (25, 'Dependencias Federales', 'VE-Z')
-]
 
 # 'ciudades' list
 CIUDADES_MULTIPLE_ROWS = [
@@ -668,14 +646,22 @@ class GenerateData:
 
         if self.table_name == "estados" and self.num_records == 0:
             with engine.begin() as conn:
-                for fila in ESTADOS_MULTIPLE_ROWS:
-                    insert_stmt = estados.insert().values(
-                        id=fila[0],
-                        nombre=fila[1],
-                        iso_3166_2=fila[2],
-                    )
-                    conn.execute(insert_stmt)
-                print(f"\n'{len(ESTADOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
+
+                with open(ESTADOS, 'r', encoding='utf-8') as json_file:
+                    rows = json.load(json_file)
+                    records_total = 0
+                    for row in rows:
+                        statement = estados.insert().values(
+                            id=row['id'],
+                            nombre=row['nombre'],
+                            iso_3166_2=row['iso_3166_2'],
+                        )
+                        conn.execute(statement)
+                        records_total = records_total + 1
+
+                conn.commit()
+                print()
+                logging.info(f"'{records_total}' record(s) were successfully inserted into the table!")
         else:
             pass
 
