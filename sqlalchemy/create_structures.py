@@ -28,60 +28,60 @@ CONNECTION_STRING = (
 engine = create_engine(f"access+pyodbc:///?odbc_connect={urllib.parse.quote(CONNECTION_STRING)}")
 metadata = MetaData()
 
-# DDL for estados, ciudades, categorias, productos, clientes and pedidos 
-estados_tbl = Table(
-    "estados",
+# DDL for states, cities, categories, products, customers and orders 
+states_tbl = Table(
+    "states",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("nombre", String(25), nullable=False),
+    Column("name", String(25), nullable=False),
     Column("iso_3166_2", String(4), nullable=False),
 )
 
-ciudades_tbl = Table(
-    "ciudades",
+cities_tbl = Table(
+    "cities",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("estado_id", ForeignKey("estados.id"), nullable=False),
-    Column("nombre", String(200), nullable=False),
+    Column("state_id", ForeignKey("states.id"), nullable=False),
+    Column("name", String(200), nullable=False),
     Column("capital", SmallInteger, nullable=False)
 )
 
-categorias_tbl = Table(
-    "categorias",
+categories_tbl = Table(
+    "categories",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("nombre", String(25), nullable=True),
+    Column("name", String(25), nullable=True),
     Column("status", Boolean, nullable=True)
 )
 
-productos_tbl = Table(
-    "productos",
+products_tbl = Table(
+    "products",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("nombre", String(50), nullable=True),
-    Column("descripcion", String(250), nullable=True),
-    Column("categoria_id", ForeignKey("categorias.id"), nullable=False),
-    Column("precio", Numeric(10,2), nullable=False),
+    Column("name", String(50), nullable=True),
+    Column("description", String(250), nullable=True),
+    Column("category_id", ForeignKey("categories.id"), nullable=False),
+    Column("price", Numeric(10,2), nullable=False),
     Column("status", Boolean, nullable=True)
 )
 
-clientes_tbl = Table(
-    "clientes",
+customers_tbl = Table(
+    "customers",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("nombre", String(25), nullable=True),
-    Column("apellido", String(25), nullable=True),
-    Column("codigo_postal", ForeignKey("ciudades.id"), nullable=False),
-    Column("telefono", String(20), nullable=True)
+    Column("name", String(25), nullable=True),
+    Column("lastname", String(25), nullable=True),
+    Column("zip_code", ForeignKey("cities.id"), nullable=False),
+    Column("phone", String(20), nullable=True)
 )
 
-pedidos_tbl = Table(
-    "pedidos",
+orders_tbl = Table(
+    "orders",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("cliente_id", ForeignKey("clientes.id"), nullable=False),
-    Column("fecha", Date, nullable=False),
-    Column("producto_id", ForeignKey("productos.id"), nullable=False),
+    Column("customer_id", ForeignKey("customers.id"), nullable=False),
+    Column("made_at", Date, nullable=False),
+    Column("product_id", ForeignKey("products.id"), nullable=False),
     Column("status", Boolean, nullable=True)
 )
 

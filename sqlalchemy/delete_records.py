@@ -4,10 +4,11 @@ import logging
 import os
 import pyodbc
 import urllib
-from sqlalchemy import create_engine, bindparam, exc, MetaData
+from sqlalchemy import create_engine, bindparam, exc, func, text, MetaData
 
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
+
 
 # Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
@@ -24,55 +25,55 @@ CONNECTION_STRING = (
     'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
-ESTADOS_ONE_ROW = [
+STATES_ONE_ROW = [
     {"id": 3},
 ]
-ESTADOS_MULTIPLE_ROWS = [
+STATES_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
 ]
 
-CIUDADES_ONE_ROW = [
+CITIES_ONE_ROW = [
     {"id": 3},
 ]
-CIUDADES_MULTIPLE_ROWS = [
+CITIES_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
 ]
 
-CATEGORIAS_ONE_ROW = [
+CATEGORIES_ONE_ROW = [
     {"id": 3},
 ]
-CATEGORIAS_MULTIPLE_ROWS = [
+CATEGORIES_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
 ]
 
-PRODUCTOS_ONE_ROW = [
+PRODUCTS_ONE_ROW = [
     {"id": 3},
 ]
-PRODUCTOS_MULTIPLE_ROWS = [
+PRODUCTS_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
 ]
 
-CLIENTES_ONE_ROW = [
+CUSTOMERS_ONE_ROW = [
     {"id": 3},
 ]
-CLIENTES_MULTIPLE_ROWS = [
+CUSTOMERS_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
 ]
 
-PEDIDOS_ONE_ROW = [
+ORDERS_ONE_ROW = [
     {"id": 3},
 ]
-PEDIDOS_MULTIPLE_ROWS = [
+ORDERS_MULTIPLE_ROWS = [
     {"id": 1},
     {"id": 2},
     {"id": 4},
@@ -91,12 +92,12 @@ logging.info(f"Connected to Microsoft Access database '{DB_FILE}'!\n")
 with engine.connect() as conn:
     metadata.reflect(conn)
 
-estados = metadata.tables["estados"]
-ciudades = metadata.tables["ciudades"]
-categorias = metadata.tables["categorias"]
-productos = metadata.tables["productos"]
-clientes = metadata.tables["clientes"]
-pedidos = metadata.tables["pedidos"]
+states = metadata.tables["states"]
+cities = metadata.tables["cities"]
+categories = metadata.tables["categories"]
+products = metadata.tables["products"]
+customers = metadata.tables["customers"]
+orders = metadata.tables["orders"]
 
 
 def delete_records(rows=[], size="all", table=""):
@@ -116,39 +117,39 @@ def delete_records(rows=[], size="all", table=""):
             if size == "one":
                 if table in tables:
                     result = 0
-                    if table == "pedidos":
-                        where_clause = pedidos.columns.id.in_(id_param)
-                        statement = pedidos.delete().where(where_clause)
+                    if table == "orders":
+                        where_clause = orders.columns.id.in_(id_param)
+                        statement = orders.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "clientes":
-                        where_clause = clientes.c.id.in_(id_param)
-                        statement = clientes.delete().where(where_clause)
+                    if table == "customers":
+                        where_clause = customers.c.id.in_(id_param)
+                        statement = customers.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "productos":
-                        where_clause = productos.c.id.in_(id_param)
-                        statement = productos.delete().where(where_clause)
+                    if table == "products":
+                        where_clause = products.c.id.in_(id_param)
+                        statement = products.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "categorias":
-                        where_clause = categorias.c.id.in_(id_param)
-                        statement = categorias.delete().where(where_clause)
+                    if table == "categories":
+                        where_clause = categories.c.id.in_(id_param)
+                        statement = categories.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "ciudades":
-                        where_clause = ciudades.c.id.in_(id_param)
-                        statement = ciudades.delete().where(where_clause)
+                    if table == "cities":
+                        where_clause = cities.c.id.in_(id_param)
+                        statement = cities.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "estados":
-                        where_clause = estados.c.id.in_(id_param)
-                        statement = estados.delete().where(where_clause)
+                    if table == "states":
+                        where_clause = states.c.id.in_(id_param)
+                        statement = states.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
@@ -158,39 +159,39 @@ def delete_records(rows=[], size="all", table=""):
             if size == "many" and len(rows) > 0:
                 if table in tables:
                     result = 0
-                    if table == "pedidos":
-                        where_clause = pedidos.c.id.in_(id_param)
-                        statement = pedidos.delete().where(where_clause)
+                    if table == "orders":
+                        where_clause = orders.c.id.in_(id_param)
+                        statement = orders.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "clientes":
-                        where_clause = clientes.c.id.in_(id_param)
-                        statement = clientes.delete().where(where_clause)
+                    if table == "customers":
+                        where_clause = customers.c.id.in_(id_param)
+                        statement = customers.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "productos":
-                        where_clause = productos.c.id.in_(id_param)
-                        statement = productos.delete().where(where_clause)
+                    if table == "products":
+                        where_clause = products.c.id.in_(id_param)
+                        statement = products.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "categorias":
-                        where_clause = categorias.c.id.in_(id_param)
-                        statement = categorias.delete().where(where_clause)
+                    if table == "categories":
+                        where_clause = categories.c.id.in_(id_param)
+                        statement = categories.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "ciudades":
-                        where_clause = ciudades.c.id.in_(id_param)
-                        statement = ciudades.delete().where(where_clause)
+                    if table == "cities":
+                        where_clause = cities.c.id.in_(id_param)
+                        statement = cities.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "estados":
-                        where_clause = estados.c.id.in_(id_param)
-                        statement = estados.delete().where(where_clause)
+                    if table == "states":
+                        where_clause = states.c.id.in_(id_param)
+                        statement = states.delete().where(where_clause)
                         print(statement)
                         print()
                         result = connection.execute(statement, rows)
@@ -200,28 +201,28 @@ def delete_records(rows=[], size="all", table=""):
             if size == "all":
                 if table in tables:
                     result = 0
-                    if table == "pedidos":
-                        statement = pedidos.delete()
+                    if table == "orders":
+                        statement = orders.delete()
                         print(statement)
                         result = connection.execute(statement)
-                    if table == "clientes":
-                        statement = clientes.delete()
+                    if table == "customers":
+                        statement = customers.delete()
                         print(statement)
                         result = connection.execute(statement)
-                    if table == "productos":
-                        statement = productos.delete()
+                    if table == "products":
+                        statement = products.delete()
                         print(statement)
                         result = connection.execute(statement)
-                    if table == "categorias":
-                        statement = categorias.delete()
+                    if table == "categories":
+                        statement = categories.delete()
                         print(statement)
                         result = connection.execute(statement)
-                    if table == "ciudades":
-                        statement = ciudades.delete()
+                    if table == "cities":
+                        statement = cities.delete()
                         print(statement)
                         result = connection.execute(statement)
-                    if table == "estados":
-                        statement = estados.delete()
+                    if table == "states":
+                        statement = states.delete()
                         print(statement)
                         result = connection.execute(statement)
                     logging.info(f"All '{result.rowcount}' record(s) deleted successfully from '{table}' table!")
@@ -230,27 +231,27 @@ def delete_records(rows=[], size="all", table=""):
         print("Delete record(s) in table failed!", error)
     except exc.IntegrityError as error:
         print("Delete record(s) not possible for id!", error)
-    finally:
-        if connection:
-            connection.close()
-            logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
+    # finally:
+    #     if connection:
+    #         connection.close()
+    #         logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    delete_records(rows=PEDIDOS_ONE_ROW, size="one", table="pedidos")
-    delete_records(rows=PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
-    delete_records(size="all", table="pedidos")
-    delete_records(rows=CLIENTES_ONE_ROW, size="one", table="clientes")
-    delete_records(rows=CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
-    delete_records(size="all", table="clientes")
-    delete_records(rows=PRODUCTOS_ONE_ROW, size="one", table="productos")
-    delete_records(rows=PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
-    delete_records(size="all", table="productos")
-    delete_records(rows=CATEGORIAS_ONE_ROW, size="one", table="categorias")
-    delete_records(rows=CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
-    delete_records(size="all", table="categorias")
-    delete_records(rows=CIUDADES_ONE_ROW, size="one", table="ciudades")
-    delete_records(rows=CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
-    delete_records(size="all", table="ciudades")
-    delete_records(rows=ESTADOS_ONE_ROW, size="one", table="estados")
-    delete_records(rows=ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
-    delete_records(size="all", table="estados")
+    delete_records(rows=ORDERS_ONE_ROW, size="one", table="orders")
+    delete_records(rows=ORDERS_MULTIPLE_ROWS, size="many", table="orders")
+    delete_records(size="all", table="orders")
+    delete_records(rows=CUSTOMERS_ONE_ROW, size="one", table="customers")
+    delete_records(rows=CUSTOMERS_MULTIPLE_ROWS, size="many", table="customers")
+    delete_records(size="all", table="customers")
+    delete_records(rows=PRODUCTS_ONE_ROW, size="one", table="products")
+    delete_records(rows=PRODUCTS_MULTIPLE_ROWS, size="many", table="products")
+    delete_records(size="all", table="products")
+    delete_records(rows=CATEGORIES_ONE_ROW, size="one", table="categories")
+    delete_records(rows=CATEGORIES_MULTIPLE_ROWS, size="many", table="categories")
+    delete_records(size="all", table="categories")
+    delete_records(rows=CITIES_ONE_ROW, size="one", table="cities")
+    delete_records(rows=CITIES_MULTIPLE_ROWS, size="many", table="cities")
+    delete_records(size="all", table="cities")
+    delete_records(rows=STATES_ONE_ROW, size="one", table="states")
+    delete_records(rows=STATES_MULTIPLE_ROWS, size="many", table="states")
+    delete_records(size="all", table="states")

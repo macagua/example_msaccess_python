@@ -24,79 +24,79 @@ CONNECTION_STRING = (
     'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
-ESTADOS_VALUES = {
-    "nombre": bindparam('nombre'),
+STATES_VALUES = {
+    "name": bindparam('name'),
 }
-ESTADOS_ONE_ROW = [
-    {"nombre": "MÉRIDA", "_id": 13},
+STATES_ONE_ROW = [
+    {"name": "MÉRIDA", "_id": 13},
 ]
-ESTADOS_MULTIPLE_ROWS = [
-    {"nombre": "ANZOÁTEQUI", "_id": 2},
-    {"nombre": "LARA", "_id": 12},
-    {"nombre": "ZULIA", "_id": 23},
+STATES_MULTIPLE_ROWS = [
+    {"name": "ANZOÁTEQUI", "_id": 2},
+    {"name": "LARA", "_id": 12},
+    {"name": "ZULIA", "_id": 23},
 ]
 
-CIUDADES_VALUES = {
-    "nombre": bindparam('nombre'),
+CITIES_VALUES = {
+    "name": bindparam('name'),
 }
-CIUDADES_ONE_ROW = [
-    {"nombre": "MÉRIDA", "_id": 13},
+CITIES_ONE_ROW = [
+    {"name": "MÉRIDA", "_id": 13},
 ]
-CIUDADES_MULTIPLE_ROWS = [
-    {"nombre": "BARCELONA", "_id": 2},
-    {"nombre": "BACHAQUERO", "_id": 461},
-    {"nombre": "MARACAIBO", "_id": 487},
+CITIES_MULTIPLE_ROWS = [
+    {"name": "BARCELONA", "_id": 2},
+    {"name": "BACHAQUERO", "_id": 461},
+    {"name": "MARACAIBO", "_id": 487},
 ]
 
-CATEGORIAS_VALUES = {
-    "nombre": bindparam('nombre'),
+CATEGORIES_VALUES = {
+    "name": bindparam('name'),
 }
-CATEGORIAS_ONE_ROW = [
-    {"nombre": "TECNOLOGÍA", "_id": 1},
+CATEGORIES_ONE_ROW = [
+    {"name": "TECNOLOGÍA", "_id": 1},
 ]
-CATEGORIAS_MULTIPLE_ROWS = [
-    {"nombre": "ESTÉTICA", "_id": 3},
-    {"nombre": "HERRAMIENTAS", "_id": 4},
-    {"nombre": "ENTRETENIMIENTOS", "_id": 5},
+CATEGORIES_MULTIPLE_ROWS = [
+    {"name": "ESTÉTICA", "_id": 3},
+    {"name": "HERRAMIENTAS", "_id": 4},
+    {"name": "ENTRETENIMIENTOS", "_id": 5},
 ]
 
-PRODUCTOS_VALUES = {
-    "descripcion": bindparam('descripcion'),
-    "precio": bindparam('precio'),
+PRODUCTS_VALUES = {
+    "description": bindparam('description'),
+    "price": bindparam('price'),
 }
-PRODUCTOS_ONE_ROW = [
-    {"descripcion": "Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "precio": 59.33, "_id": 1},
+PRODUCTS_ONE_ROW = [
+    {"description": "Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "price": 59.33, "_id": 1},
 ]
-PRODUCTOS_MULTIPLE_ROWS = [
-    {"descripcion": "Consola Play Station 5; Edición Gob Of War; Capacidad 825 GB; Memoria RAM de 16 GB; Tipo de consola de sobremesa, Wi-FI incluido; cantidad de controles incluidos 1. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "precio": 829.00, "_id": 3},
-    {"descripcion": "Caja de herramientas Stanley 99 piezas; Caja de herramientas Stanley, Cantidad de piezas incluidas 99 como dados, extensiones, destornillador y llaves. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "precio": 180.30, "_id": 4},
-    {"descripcion": "Zapatos Clarks; Talla 39, 40 y 41; Colores disponible  Negro, Marrón, Azul; 99% Cuero 1% Tela, Hecho en Londres. Producto 100% original, Producto importado de Inglaterra. Envíos a todo el país.", "precio": 120.00, "_id": 5}
+PRODUCTS_MULTIPLE_ROWS = [
+    {"description": "Consola Play Station 5; Edición Gob Of War; Capacidad 825 GB; Memoria RAM de 16 GB; Tipo de consola de sobremesa, Wi-FI incluido; cantidad de controles incluidos 1. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "price": 829.00, "_id": 3},
+    {"description": "Caja de herramientas Stanley 99 piezas; Caja de herramientas Stanley, Cantidad de piezas incluidas 99 como dados, extensiones, destornillador y llaves. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", "price": 180.30, "_id": 4},
+    {"description": "Zapatos Clarks; Talla 39, 40 y 41; Colores disponible  Negro, Marrón, Azul; 99% Cuero 1% Tela, Hecho en Londres. Producto 100% original, Producto importado de Inglaterra. Envíos a todo el país.", "price": 120.00, "_id": 5}
 ]
 
-CLIENTES_VALUES = {
-    "nombre": bindparam('nombre'),
-    "apellido": bindparam('apellido'),
+CUSTOMERS_VALUES = {
+    "name": bindparam('name'),
+    "lastname": bindparam('lastname'),
 }
-CLIENTES_ONE_ROW = [
-    {"nombre": "Leonardo", "apellido": "Caballero", "_id": 1},
+CUSTOMERS_ONE_ROW = [
+    {"name": "Leonardo", "lastname": "Caballero", "_id": 1},
 ]
-CLIENTES_MULTIPLE_ROWS = [
-    {"nombre": "Ana", "apellido": "Poleo", "_id": 3},
-    {"nombre": "Rafael", "apellido": "Lugo", "_id": 4},
-    {"nombre": "Maximiliano", "apellido": "Vilchez", "_id": 5},
+CUSTOMERS_MULTIPLE_ROWS = [
+    {"name": "Ana", "lastname": "Poleo", "_id": 3},
+    {"name": "Rafael", "lastname": "Lugo", "_id": 4},
+    {"name": "Maximiliano", "lastname": "Vilchez", "_id": 5},
 ]
 
-PEDIDOS_VALUES = {
-    "fecha": bindparam('fecha'),
+ORDERS_VALUES = {
+    "made_at": bindparam('made_at'),
     "status": bindparam('status'),
 }
-PEDIDOS_ONE_ROW = [
-    {"fecha": "12/02/2022 11:23:34 PM", "status": False, "_id": 1},
+ORDERS_ONE_ROW = [
+    {"made_at": "12/02/2022 11:23:34 PM", "status": False, "_id": 1},
 ]
-PEDIDOS_MULTIPLE_ROWS = [
-    {"fecha": "02/18/2023 10:22:33 AM", "status": False, "_id": 3},
-    {"fecha": "04/22/2023 09:22:03 AM", "status": False, "_id": 4},
-    {"fecha": "03/12/2023 12:26:54 AM", "status": False, "_id": 5},
+ORDERS_MULTIPLE_ROWS = [
+    {"made_at": "02/18/2023 10:22:33 AM", "status": False, "_id": 3},
+    {"made_at": "04/22/2023 09:22:03 AM", "status": False, "_id": 4},
+    {"made_at": "03/12/2023 12:26:54 AM", "status": False, "_id": 5},
 ]
 
 # Set up connections between sqlalchemy and access+pyodbc
@@ -112,12 +112,12 @@ logging.info(f"Connected to Microsoft Access database '{DB_FILE}'!\n")
 with engine.connect() as conn:
     metadata.reflect(conn)
 
-estados = metadata.tables["estados"]
-ciudades = metadata.tables["ciudades"]
-categorias = metadata.tables["categorias"]
-productos = metadata.tables["productos"]
-clientes = metadata.tables["clientes"]
-pedidos = metadata.tables["pedidos"]
+states = metadata.tables["states"]
+cities = metadata.tables["cities"]
+categories = metadata.tables["categories"]
+products = metadata.tables["products"]
+customers = metadata.tables["customers"]
+orders = metadata.tables["orders"]
 
 
 def update_records(values={}, rows=[], size="all", table=""):
@@ -138,39 +138,39 @@ def update_records(values={}, rows=[], size="all", table=""):
             if size == "one":
                 if table in tables:
                     result = 0
-                    if table == "pedidos":
-                        where_clause = pedidos.c.id == bindparam('_id')
-                        statement = pedidos.update().where(where_clause).values(values)
+                    if table == "orders":
+                        where_clause = orders.c.id == bindparam('_id')
+                        statement = orders.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "clientes":
-                        where_clause = clientes.c.id == bindparam('_id')
-                        statement = clientes.update().where(where_clause).values(values)
+                    if table == "customers":
+                        where_clause = customers.c.id == bindparam('_id')
+                        statement = customers.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "productos":
-                        where_clause = productos.c.id == bindparam('_id')
-                        statement = productos.update().where(where_clause).values(values)
+                    if table == "products":
+                        where_clause = products.c.id == bindparam('_id')
+                        statement = products.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "categorias":
-                        where_clause = categorias.c.id == bindparam('_id')
-                        statement = categorias.update().where(where_clause).values(values)
+                    if table == "categories":
+                        where_clause = categories.c.id == bindparam('_id')
+                        statement = categories.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "ciudades":
-                        where_clause = ciudades.c.id == bindparam('_id')
-                        statement = ciudades.update().where(where_clause).values(values)
+                    if table == "cities":
+                        where_clause = cities.c.id == bindparam('_id')
+                        statement = cities.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "estados":
-                        where_clause = estados.c.id == bindparam('_id')
-                        statement = estados.update().where(where_clause).values(values)
+                    if table == "states":
+                        where_clause = states.c.id == bindparam('_id')
+                        statement = states.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
@@ -180,39 +180,39 @@ def update_records(values={}, rows=[], size="all", table=""):
             if size == "many" and len(rows) > 0:
                 if table in tables:
                     result = 0
-                    if table == "pedidos":
-                        where_clause = pedidos.c.id == bindparam('_id')
-                        statement = pedidos.update().where(where_clause).values(values)
+                    if table == "orders":
+                        where_clause = orders.c.id == bindparam('_id')
+                        statement = orders.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "clientes":
-                        where_clause = clientes.c.id == bindparam('_id')
-                        statement = clientes.update().where(where_clause).values(values)
+                    if table == "customers":
+                        where_clause = customers.c.id == bindparam('_id')
+                        statement = customers.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "productos":
-                        where_clause = productos.c.id == bindparam('_id')
-                        statement = productos.update().where(where_clause).values(values)
+                    if table == "products":
+                        where_clause = products.c.id == bindparam('_id')
+                        statement = products.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "categorias":
-                        where_clause = categorias.c.id == bindparam('_id')
-                        statement = categorias.update().where(where_clause).values(values)
+                    if table == "categories":
+                        where_clause = categories.c.id == bindparam('_id')
+                        statement = categories.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "ciudades":
-                        where_clause = ciudades.c.id == bindparam('_id')
-                        statement = ciudades.update().where(where_clause).values(values)
+                    if table == "cities":
+                        where_clause = cities.c.id == bindparam('_id')
+                        statement = cities.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
-                    if table == "estados":
-                        where_clause = estados.c.id == bindparam('_id')
-                        statement = estados.update().where(where_clause).values(values)
+                    if table == "states":
+                        where_clause = states.c.id == bindparam('_id')
+                        statement = states.update().where(where_clause).values(values)
                         print(statement, rows)
                         print()
                         result = connection.execute(statement, rows)
@@ -228,15 +228,15 @@ def update_records(values={}, rows=[], size="all", table=""):
     #         logging.info(f"The connection to the Microsoft Access database '{DB_FILE}' was closed!\n")
 
 if __name__ == "__main__":
-    update_records(values=PEDIDOS_VALUES, rows=PEDIDOS_ONE_ROW, size="one", table="pedidos")
-    update_records(values=PEDIDOS_VALUES, rows=PEDIDOS_MULTIPLE_ROWS, size="many", table="pedidos")
-    update_records(values=CLIENTES_VALUES, rows=CLIENTES_ONE_ROW, size="one", table="clientes")
-    update_records(values=CLIENTES_VALUES, rows=CLIENTES_MULTIPLE_ROWS, size="many", table="clientes")
-    update_records(values=PRODUCTOS_VALUES, rows=PRODUCTOS_ONE_ROW, size="one", table="productos")
-    update_records(values=PRODUCTOS_VALUES, rows=PRODUCTOS_MULTIPLE_ROWS, size="many", table="productos")
-    update_records(values=CATEGORIAS_VALUES, rows=CATEGORIAS_ONE_ROW, size="one", table="categorias")
-    update_records(values=CATEGORIAS_VALUES, rows=CATEGORIAS_MULTIPLE_ROWS, size="many", table="categorias")
-    update_records(values=CIUDADES_VALUES, rows=CIUDADES_ONE_ROW, size="one", table="ciudades")
-    update_records(values=CIUDADES_VALUES, rows=CIUDADES_MULTIPLE_ROWS, size="many", table="ciudades")
-    update_records(values=ESTADOS_VALUES, rows=ESTADOS_ONE_ROW, size="one", table="estados")
-    update_records(values=ESTADOS_VALUES, rows=ESTADOS_MULTIPLE_ROWS, size="many", table="estados")
+    update_records(values=ORDERS_VALUES, rows=ORDERS_ONE_ROW, size="one", table="orders")
+    update_records(values=ORDERS_VALUES, rows=ORDERS_MULTIPLE_ROWS, size="many", table="orders")
+    update_records(values=CUSTOMERS_VALUES, rows=CUSTOMERS_ONE_ROW, size="one", table="customers")
+    update_records(values=CUSTOMERS_VALUES, rows=CUSTOMERS_MULTIPLE_ROWS, size="many", table="customers")
+    update_records(values=PRODUCTS_VALUES, rows=PRODUCTS_ONE_ROW, size="one", table="products")
+    update_records(values=PRODUCTS_VALUES, rows=PRODUCTS_MULTIPLE_ROWS, size="many", table="products")
+    update_records(values=CATEGORIES_VALUES, rows=CATEGORIES_ONE_ROW, size="one", table="categories")
+    update_records(values=CATEGORIES_VALUES, rows=CATEGORIES_MULTIPLE_ROWS, size="many", table="categories")
+    update_records(values=CITIES_VALUES, rows=CITIES_ONE_ROW, size="one", table="cities")
+    update_records(values=CITIES_VALUES, rows=CITIES_MULTIPLE_ROWS, size="many", table="cities")
+    update_records(values=STATES_VALUES, rows=STATES_ONE_ROW, size="one", table="states")
+    update_records(values=STATES_VALUES, rows=STATES_MULTIPLE_ROWS, size="many", table="states")

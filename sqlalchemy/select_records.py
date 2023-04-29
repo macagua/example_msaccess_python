@@ -31,85 +31,85 @@ metadata = MetaData()
 with engine.connect() as conn:
     metadata.reflect(conn)
 
-estados = metadata.tables["estados"]
-ciudades = metadata.tables["ciudades"]
-categorias = metadata.tables["categorias"]
-productos = metadata.tables["productos"]
-clientes = metadata.tables["clientes"]
-pedidos = metadata.tables["pedidos"]
+states = metadata.tables["states"]
+cities = metadata.tables["cities"]
+categories = metadata.tables["categories"]
+products = metadata.tables["products"]
+customers = metadata.tables["customers"]
+orders = metadata.tables["orders"]
 
 '''
-SELECT nombre, precio, status
-FROM productos
+SELECT name, price, status
+FROM products
 WHERE status = True
-AND precio >= 150
+AND price >= 150
 '''
 with engine.begin() as conn:
     statement = text("""
-        SELECT nombre, precio, status
-        FROM productos
+        SELECT name, price, status
+        FROM products
         WHERE status = :status
-        AND precio >= :precio
+        AND price >= :price
         """)
     args = {
         'status': True,
-        'precio': 150,
+        'price': 150,
     }
     print(str(statement) + "\n\t" + str(args) + "\n")
     result = conn.execute(statement, args)
     rows = result.fetchall()
     for row in rows:
         print(row)
-    print("Records from 'productos' table!")
+    print("Records from 'products' table!")
     print("----")
 
 '''
-SELECT * FROM estados
+SELECT * FROM states
 '''
 with engine.begin() as conn:
-    statement = estados.select()
+    statement = states.select()
     print("\n" + str(statement) + "\n")
     result = conn.execute(statement)
     rows = result.fetchone()
     print(rows)
-    print("Only '1' record from 'estados' table!\n")
+    print("Only '1' record from 'states' table!\n")
 
     rows = result.fetchmany(5)
     for row in rows:
         print(row)
-    print("Only '5' records' from 'estados' table!\n")
+    print("Only '5' records' from 'states' table!\n")
 
     rows = result.fetchall()
     for row in rows:
         print(row)
-    print("All records from 'estados' table!")
+    print("All records from 'states' table!")
     print("----")
 
 '''
-SELECT * FROM cuidades
-WHERE estado_id = 13
+SELECT * FROM cities
+WHERE state_id = 13
 '''
 with engine.begin() as conn:
-    statement = ciudades.select().where(ciudades.columns.estado_id == '13')
+    statement = cities.select().where(cities.columns.state_id == '13')
     print("\n" + str(statement) + "\n")
     result = conn.execute(statement)
     rows = result.fetchall()
     for row in rows:
         print(row)
     print("----")
-    print("All records with 'estado_id' iqual to '13' from 'ciudades' table!")
+    print("All records with 'state_id' iqual to '13' from 'cities' table!")
 
 '''
-SELECT nombre, iso_3166_2
-FROM estados
-WHERE nombre IN (Mérida, Zulia)
+SELECT name, iso_3166_2
+FROM states
+WHERE name IN (Mérida, Zulia)
 '''
 with engine.begin() as conn:
     statement = select(
-        estados.columns.nombre,
-        estados.columns.iso_3166_2
+        states.columns.name,
+        states.columns.iso_3166_2
         ).where(
-        estados.c.nombre.in_([
+        states.c.name.in_([
             'Mérida',
             'Zulia'
         ])
@@ -120,17 +120,17 @@ with engine.begin() as conn:
     for row in rows:
         print(row)
     print("----")
-    print("All records with 'nombre' be 'Mérida' and 'Zulia' from 'estados' table!")
+    print("All records with 'name' be 'Mérida' and 'Zulia' from 'states' table!")
 
 '''
-SELECT * FROM ciudades
-WHERE estado_id = 23 AND NOT capital = 1
+SELECT * FROM cities
+WHERE state_id = 23 AND NOT capital = 1
 '''
 with engine.begin() as conn:
-    statement = ciudades.select().where(
+    statement = cities.select().where(
         and_(
-            ciudades.columns.estado_id == 23,
-            ciudades.columns.capital != 1
+            cities.columns.state_id == 23,
+            cities.columns.capital != 1
         )
     )
     print("\n" + str(statement) + "\n")
@@ -139,16 +139,16 @@ with engine.begin() as conn:
     for row in rows:
         print(row)
     print("----")
-    print("All records with 'estado' iqual to 'Zulia' and be a 'capital' from 'ciudades' table!")
+    print("All records with 'state' iqual to 'Zulia' and be a 'capital' from 'cities' table!")
 
 '''
-SELECT * FROM categorias
-ORDER BY nombre DESC, status
+SELECT * FROM categories
+ORDER BY name DESC, status
 '''
 with engine.begin() as conn:
-    statement = categorias.select().order_by(
-        desc(categorias.columns.nombre),
-        categorias.columns.status
+    statement = categories.select().order_by(
+        desc(categories.columns.name),
+        categories.columns.status
     )
     print("\n" + str(statement) + "\n")
     result = conn.execute(statement)
@@ -159,22 +159,22 @@ with engine.begin() as conn:
 
 '''
 SELECT
-    COUNT(precio) AS 'Cantidad_precios',
-    AVG(precio) AS 'Average_precios',
-    SUM(precio) AS 'Total_precios',
-    MIN(precio) AS 'Minimo_precio',
-    MAX(precio) AS 'Maximo_precio',
-    NOW() AS 'Fecha_hora_actual'
-FROM productos
+    COUNT(price) AS 'Quantity_prices',
+    AVG(price) AS 'Average_prices',
+    SUM(price) AS 'Total_prices',
+    MIN(price) AS 'Minimum_price',
+    MAX(price) AS 'Maximum_price',
+    NOW() AS 'Date_time_current'
+FROM products
 '''
 with engine.begin() as conn:
     statement = select(
-        func.count(productos.columns.precio).label('Cantidad_precios'),
-        func.avg(productos.columns.precio).label('Average_precios'),
-        func.sum(productos.columns.precio).label('Total_precios'),
-        func.min(productos.columns.precio).label('Minimo_precio'),
-        func.max(productos.columns.precio).label('Maximo_precio'),
-        func.now().label('Fecha_hora_actual')
+        func.count(products.columns.price).label('Quantity_prices'),
+        func.avg(products.columns.price).label('Average_prices'),
+        func.sum(products.columns.price).label('Total_prices'),
+        func.min(products.columns.price).label('Minimum_price'),
+        func.max(products.columns.price).label('Maximum_price'),
+        func.now().label('Date_time_current')
     )
     print("\n" + str(statement) + "\n")
     result = conn.execute(statement)
@@ -184,15 +184,15 @@ with engine.begin() as conn:
     print("----")
 
 '''
-SELECT SUM(precio) as precio, status
-FROM productos
+SELECT SUM(price) as price, status
+FROM products
 '''
 with engine.begin() as conn:
     statement = select(
-        func.sum(productos.columns.precio).label('precio'),
-        productos.columns.status
+        func.sum(products.columns.price).label('price'),
+        products.columns.status
     ).group_by(
-        productos.columns.status
+        products.columns.status
     )
     print("\n" + str(statement) + "\n")
     result = conn.execute(statement)

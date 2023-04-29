@@ -21,6 +21,7 @@ from sqlalchemy import create_engine, desc, MetaData,\
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
+
 # locales faker object
 locales = OrderedDict([
     ('es_AR', 1),
@@ -36,11 +37,11 @@ DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
 ) + os.sep + "data" + os.sep
 DB_FILE = 'database.accdb'
-ESTADOS_FILE = 'estados.json'
-CIUDADES_FILE = 'ciudades.csv'
+STATES_FILE = 'states.json'
+CITIES_FILE = 'cities.csv'
 DB = DB_PATH + DB_FILE
-ESTADOS = DB_PATH + ESTADOS_FILE
-CIUDADES = DB_PATH + CIUDADES_FILE
+STATES = DB_PATH + STATES_FILE
+CITIES = DB_PATH + CITIES_FILE
 
 # Make DNS string
 CONNECTION_STRING = (
@@ -58,15 +59,15 @@ metadata = MetaData()
 with engine.connect() as conn:
     metadata.reflect(conn)
 
-estados = metadata.tables["estados"]
-ciudades = metadata.tables["ciudades"]
-categorias = metadata.tables["categorias"]
-productos = metadata.tables["productos"]
-clientes = metadata.tables["clientes"]
-pedidos = metadata.tables["pedidos"]
+states = metadata.tables["states"]
+cities = metadata.tables["cities"]
+categories = metadata.tables["categories"]
+products = metadata.tables["products"]
+customers = metadata.tables["customers"]
+orders = metadata.tables["orders"]
 
-# 'categorias' list
-CATEGORIAS_MULTIPLE_ROWS = [
+# 'categories' list
+CATEGORIES_MULTIPLE_ROWS = [
     (1, 'Tecnología', True),
     (2, 'Ropa', False),
     (3, 'Estética', True),
@@ -74,8 +75,8 @@ CATEGORIAS_MULTIPLE_ROWS = [
     (5, 'Entretenimientos', True)
 ]
 
-# 'productos' list
-PRODUCTOS_MULTIPLE_ROWS = [
+# 'products' list
+PRODUCTS_MULTIPLE_ROWS = [
     (1, "Pantalón Jean LEVI'S 511", "Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", 2, 59.33, True),
     (2, 'Teléfono iPhone 13 Pro Max', 'Producto 2 detallado', 1, 1045.56, False),
     (3, 'Consola Play Station 5', 'Consola Play Station 5; Edición Gob Of War; Capacidad 825 GB; Memoria RAM de 16 GB; Tipo de consola de sobremesa, Wi-FI incluido; cantidad de controles incluidos 1. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.', 5, 829.00, True),
@@ -83,8 +84,8 @@ PRODUCTOS_MULTIPLE_ROWS = [
     (5, 'Zapatos Clarks', 'Zapatos Clarks; Talla 39, 40 y 41; Colores disponible  Negro, Marrón, Azul; 99% Cuero 1% Tela, Hecho en Londres. Producto 100% original, Producto importado de Inglaterra. Envíos a todo el país.', 2, 120.00, True)
 ]
 
-# 'clientes' list
-CLIENTES_MULTIPLE_ROWS = [
+# 'customers' list
+CUSTOMERS_MULTIPLE_ROWS = [
     (1, 'Leonardo', 'Caballero', 245, '04144567239'),
     (2, 'Ana', 'Poleo', 6, '04249804536'),
     (3, 'Rafa', 'Lugo', 461, '04121894605'),
@@ -92,8 +93,8 @@ CLIENTES_MULTIPLE_ROWS = [
     (5, 'Maximiliano', 'Vilchez', 245, '04264893321')
 ]
 
-# 'pedidos' list
-PEDIDOS_MULTIPLE_ROWS = [
+# 'orders' list
+ORDERS_MULTIPLE_ROWS = [
     (1, 1, '12/02/2022 10:23:45 AM', 2, True),
     (2, 3, '01/06/2023 03:55:51 PM', 1, True),
     (3, 4, '02/18/2023 12:48:33 AM', 2, True),
@@ -144,16 +145,16 @@ class GenerateData:
         if self.table_name not in metadata.tables.keys():
             return print(f"{self.table_name} does not exist")
 
-        if self.table_name == "estados" and self.num_records == 0:
+        if self.table_name == "states" and self.num_records == 0:
             with engine.begin() as conn:
 
-                with open(ESTADOS, 'r', encoding='utf-8') as json_file:
+                with open(STATES, 'r', encoding='utf-8') as json_file:
                     rows = json.load(json_file)
                     records_total = 0
                     for row in rows:
-                        statement = estados.insert().values(
+                        statement = states.insert().values(
                             id=row['id'],
-                            nombre=row['nombre'],
+                            name=row['name'],
                             iso_3166_2=row['iso_3166_2'],
                         )
                         conn.execute(statement)
@@ -165,19 +166,19 @@ class GenerateData:
         else:
             pass
 
-        if self.table_name == "ciudades" and self.num_records == 0:
+        if self.table_name == "cities" and self.num_records == 0:
             with engine.begin() as conn:
 
-                with open(CIUDADES, 'r', encoding='utf-8') as csv_file:
+                with open(CITIES, 'r', encoding='utf-8') as csv_file:
                     rows = csv.reader(csv_file, delimiter=',')
                     next(rows)
                     records_total = 0
 
                     for row in rows:
-                        statement = ciudades.insert().values(
+                        statement = cities.insert().values(
                             id=row[0],
-                            estado_id=row[1],
-                            nombre=row[2],
+                            state_id=row[1],
+                            name=row[2],
                             capital=row[3],
                         )
                         conn.execute(statement)
@@ -187,132 +188,132 @@ class GenerateData:
         else:
             pass
 
-        if self.table_name == "categorias" and self.num_records == 0:
+        if self.table_name == "categories" and self.num_records == 0:
             with engine.begin() as conn:
-                for fila in CATEGORIAS_MULTIPLE_ROWS:
-                    insert_stmt = categorias.insert().values(
+                for fila in CATEGORIES_MULTIPLE_ROWS:
+                    statement = categories.insert().values(
                         id=fila[0],
-                        nombre=fila[1],
+                        name=fila[1],
                         status=fila[2],
                     )
-                    conn.execute(insert_stmt)
-                print(f"\n'{len(CATEGORIAS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
+                    conn.execute(statement)
+                print(f"\n'{len(CATEGORIES_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
-        if self.table_name == "productos" and self.num_records == 0:
+        if self.table_name == "products" and self.num_records == 0:
             with engine.begin() as conn:
-                for fila in PRODUCTOS_MULTIPLE_ROWS:
-                    insert_stmt = productos.insert().values(
+                for fila in PRODUCTS_MULTIPLE_ROWS:
+                    statement = products.insert().values(
                         id=fila[0],
-                        nombre=fila[1],
-                        descripcion=fila[2],
-                        categoria_id=fila[3],
-                        precio=fila[4],
+                        name=fila[1],
+                        description=fila[2],
+                        category_id=fila[3],
+                        price=fila[4],
                         status=fila[5],
                     )
-                    conn.execute(insert_stmt)
-                print(f"\n'{len(PRODUCTOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
-        elif self.table_name == "productos" and self.num_records > 0:
+                    conn.execute(statement)
+                print(f"\n'{len(PRODUCTS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
+        elif self.table_name == "products" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
-                    insert_stmt = productos.insert().values(
+                    statement = products.insert().values(
                         id=int(
                             conn.execute(
-                                productos.select().order_by(
-                                    desc(productos.c.id)
+                                products.select().order_by(
+                                    desc(products.c.id)
                                 )
                             ).first()[0]
                         ) + 1,
-                        nombre=" ".join(self.capitalize_list(list(fake.words()))),
-                        descripcion=fake.sentence(nb_words=10),
-                        categoria_id=random.choice(
+                        name=" ".join(self.capitalize_list(list(fake.words()))),
+                        description=fake.sentence(nb_words=10),
+                        category_id=random.choice(
                             conn.execute(
-                                categorias.select()
+                                categories.select()
                             ).fetchall()
                         )[0],
-                        precio=fake.random_int(1,100000) / 100.0,
+                        price=fake.random_int(1,100000) / 100.0,
                         status=random.choice([True, False]),
                     )
-                    conn.execute(insert_stmt)
+                    conn.execute(statement)
                 print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
-        if self.table_name == "clientes" and self.num_records == 0:
+        if self.table_name == "customers" and self.num_records == 0:
             with engine.begin() as conn:
-                for fila in CLIENTES_MULTIPLE_ROWS:
-                    insert_stmt = clientes.insert().values(
+                for fila in CUSTOMERS_MULTIPLE_ROWS:
+                    statement = customers.insert().values(
                         id=fila[0],
-                        nombre=fila[1],
-                        apellido=fila[2],
-                        codigo_postal=fila[3],
-                        telefono=fila[4],
+                        name=fila[1],
+                        lastname=fila[2],
+                        zip_code=fila[3],
+                        phone=fila[4],
                     )
-                    conn.execute(insert_stmt)
-                print(f"\n'{len(CLIENTES_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
-        elif self.table_name == "clientes" and self.num_records > 0:
+                    conn.execute(statement)
+                print(f"\n'{len(CUSTOMERS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
+        elif self.table_name == "customers" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
-                    insert_stmt = clientes.insert().values(
+                    statement = customers.insert().values(
                         id=int(
                             conn.execute(
-                                clientes.select().order_by(
-                                    desc(clientes.c.id)
+                                customers.select().order_by(
+                                    desc(customers.c.id)
                                 )
                             ).first()[0]
                         ) + 1,
-                        nombre=fake.first_name(),
-                        apellido=fake.last_name(),
-                        codigo_postal=random.choice(
+                        name=fake.first_name(),
+                        lastname=fake.last_name(),
+                        zip_code=random.choice(
                             conn.execute(
-                                ciudades.select()
+                                cities.select()
                             ).fetchall()
                         )[0],
-                        telefono=fake.unique.phone_number(),
+                        phone=fake.unique.phone_number(),
                     )
-                    conn.execute(insert_stmt)
+                    conn.execute(statement)
                 print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
 
-        if self.table_name == "pedidos" and self.num_records == 0:
+        if self.table_name == "orders" and self.num_records == 0:
             with engine.begin() as conn:
-                for fila in PEDIDOS_MULTIPLE_ROWS:
-                    insert_stmt = pedidos.insert().values(
+                for fila in ORDERS_MULTIPLE_ROWS:
+                    statement = orders.insert().values(
                         id=fila[0],
-                        cliente_id=fila[1],
-                        fecha=fila[2],
-                        producto_id=fila[3],
+                        customer_id=fila[1],
+                        made_at=fila[2],
+                        product_id=fila[3],
                         status=fila[4],
                     )
-                    conn.execute(insert_stmt)
-                print(f"\n'{len(PEDIDOS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
-        elif self.table_name == "pedidos" and self.num_records > 0:
+                    conn.execute(statement)
+                print(f"\n'{len(ORDERS_MULTIPLE_ROWS)}' row(s) inserted into '{self.table_name}' table!")
+        elif self.table_name == "orders" and self.num_records > 0:
             with engine.begin() as conn:
                 for _ in range(self.num_records):
-                    insert_stmt = pedidos.insert().values(
+                    statement = orders.insert().values(
                         id=int(
                             conn.execute(
-                                pedidos.select().order_by(
-                                    desc(pedidos.c.id)
+                                orders.select().order_by(
+                                    desc(orders.c.id)
                                 )
                             ).first()[0]
                         ) + 1,
-                        cliente_id=random.choice(
+                        customer_id=random.choice(
                             conn.execute(
-                                clientes.select()
+                                customers.select()
                             ).fetchall()
                         )[0],
-                        fecha=fake.date_time().strftime("%Y/%m/%d %H:%M:%S %p"),
-                        producto_id=random.choice(
+                        made_at=fake.date_time().strftime("%Y/%m/%d %H:%M:%S %p"),
+                        product_id=random.choice(
                             conn.execute(
-                                productos.select()
+                                products.select()
                             ).fetchall()
                         )[0],
                         status=fake.pybool(),
                     )
-                    conn.execute(insert_stmt)
+                    conn.execute(statement)
                 print(f"\n'{self.num_records}' row(s) inserted into '{self.table_name}' table!")
         else:
             pass
@@ -335,7 +336,7 @@ if __name__ == "__main__":
         else:
             num_records = 0
 
-    if table_name in ['estados', 'cuidades', 'categorias']:
+    if table_name in ['states', 'cities', 'categories']:
         generate_data = GenerateData(table_name)
         generate_data.create_data()
     else:

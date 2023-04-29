@@ -40,13 +40,12 @@ python insert_records.py table_name num_records
 #### Insert default records
 
 ```console
-python insert_records.py estados
-python insert_records.py estados
-python insert_records.py ciudades
-python insert_records.py categorias
-python insert_records.py productos
-python insert_records.py clientes
-python insert_records.py pedidos
+python insert_records.py states
+python insert_records.py cities
+python insert_records.py categories
+python insert_records.py products
+python insert_records.py customers
+python insert_records.py orders
 ```
 
 #### Insert fake records
@@ -54,9 +53,9 @@ python insert_records.py pedidos
 For generate the fake records use the [Faker](https://pypi.org/project/Faker/) library.
 
 ```console
-python insert_records.py productos 10
-python insert_records.py clientes 10
-python insert_records.py pedidos 10
+python insert_records.py products 10
+python insert_records.py customers 10
+python insert_records.py orders 10
 ```
 
 ### Select records

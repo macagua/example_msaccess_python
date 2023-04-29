@@ -1,127 +1,127 @@
 [
     {
       "id": 1,
-      "nombre": "Amazonas",
+      "name": "Amazonas",
       "iso_3166_2": "VE-X"
     },
     {
       "id": 2,
-      "nombre": "Anzoátegui",
+      "name": "Anzoátegui",
       "iso_3166_2": "VE-B"
     },
     {
       "id": 3,
-      "nombre": "Apure",
+      "name": "Apure",
       "iso_3166_2": "VE-C"
     },
     {
       "id": 4,
-      "nombre": "Aragua",
+      "name": "Aragua",
       "iso_3166_2": "VE-D"
     },
     {
       "id": 5,
-      "nombre": "Barinas",
+      "name": "Barinas",
       "iso_3166_2": "VE-E"
     },
     {
       "id": 6,
-      "nombre": "Bolívar",
+      "name": "Bolívar",
       "iso_3166_2": "VE-F"
     },
     {
       "id": 7,
-      "nombre": "Carabobo",
+      "name": "Carabobo",
       "iso_3166_2": "VE-G"
     },
     {
       "id": 8,
-      "nombre": "Cojedes",
+      "name": "Cojedes",
       "iso_3166_2": "VE-H"
     },
     {
       "id": 9,
-      "nombre": "Delta Amacuro",
+      "name": "Delta Amacuro",
       "iso_3166_2": "VE-Y"
     },
     {
       "id": 10,
-      "nombre": "Falcón",
+      "name": "Falcón",
       "iso_3166_2": "VE-I"
     },
     {
       "id": 11,
-      "nombre": "Guárico",
+      "name": "Guárico",
       "iso_3166_2": "VE-J"
     },
     {
       "id": 12,
-      "nombre": "Lara",
+      "name": "Lara",
       "iso_3166_2": "VE-K"
     },
     {
       "id": 13,
-      "nombre": "Mérida",
+      "name": "Mérida",
       "iso_3166_2": "VE-L"
     },
     {
       "id": 14,
-      "nombre": "Miranda",
+      "name": "Miranda",
       "iso_3166_2": "VE-M"
     },
     {
       "id": 15,
-      "nombre": "Monagas",
+      "name": "Monagas",
       "iso_3166_2": "VE-N"
     },
     {
       "id": 16,
-      "nombre": "Nueva Esparta",
+      "name": "Nueva Esparta",
       "iso_3166_2": "VE-O"
     },
     {
       "id": 17,
-      "nombre": "Portuguesa",
+      "name": "Portuguesa",
       "iso_3166_2": "VE-P"
     },
     {
       "id": 18,
-      "nombre": "Sucre",
+      "name": "Sucre",
       "iso_3166_2": "VE-R"
     },
     {
       "id": 19,
-      "nombre": "Táchira",
+      "name": "Táchira",
       "iso_3166_2": "VE-S"
     },
     {
       "id": 20,
-      "nombre": "Trujillo",
+      "name": "Trujillo",
       "iso_3166_2": "VE-T"
     },
     {
       "id": 21,
-      "nombre": "La Guaira",
+      "name": "La Guaira",
       "iso_3166_2": "VE-W"
     },
     {
       "id": 22,
-      "nombre": "Yaracuy",
+      "name": "Yaracuy",
       "iso_3166_2": "VE-U"
     },
     {
       "id": 23,
-      "nombre": "Zulia",
+      "name": "Zulia",
       "iso_3166_2": "VE-V"
     },
     {
       "id": 24,
-      "nombre": "Distrito Capital",
+      "name": "Distrito Capital",
       "iso_3166_2": "VE-A"
     },
     {
       "id": 25,
-      "nombre": "Dependencias Federales",
+      "name": "Dependencias Federales",
       "iso_3166_2": "VE-Z"
     }
 ]
