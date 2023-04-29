@@ -27,13 +27,14 @@ if cursor.tables(table="states").fetchone():
 else:
     print("The 'states' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE states (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,name VARCHAR(25) NOT NULL
                 ,iso_3166_2 VARCHAR(4) NOT NULL
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'states' Table Created!\n")
 
@@ -43,7 +44,7 @@ if cursor.tables(table="cities").fetchone():
 else:
     print("The 'cities' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE cities (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,state_id INTEGER NOT NULL
@@ -51,7 +52,8 @@ else:
                 ,capital SMALLINT NOT NULL
                 ,CONSTRAINT [fk_state_id] FOREIGN KEY (state_id) REFERENCES states(id)
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'cities' Table Created!\n")
 
@@ -61,13 +63,14 @@ if cursor.tables(table="categories").fetchone():
 else:
     print("The 'categories' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE categories (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,name VARCHAR(25) NOT NULL
                 ,status BIT NOT NULL
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'categories' Table Created!\n")
 
@@ -77,7 +80,7 @@ if cursor.tables(table="products").fetchone():
 else:
     print("The 'products' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE products (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,name VARCHAR(50) NOT NULL
@@ -87,7 +90,8 @@ else:
                 ,status BIT NOT NULL
                 ,CONSTRAINT [fk_category_id] FOREIGN KEY (category_id) REFERENCES categories(id)
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'products' Table Created!\n")
 
@@ -97,7 +101,7 @@ if cursor.tables(table="customers").fetchone():
 else:
     print("The 'customers' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE customers (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,name VARCHAR(25) NOT NULL
@@ -106,7 +110,8 @@ else:
                 ,phone VARCHAR(11) NOT NULL
                 ,CONSTRAINT [fk_city_id] FOREIGN KEY (zip_code) REFERENCES cities(id)
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'customers' Table Created!\n")
 
@@ -116,7 +121,7 @@ if cursor.tables(table="orders").fetchone():
 else:
     print("The 'orders' Table don't exists!\n")
     # Run CREATE TABLE SQL statement
-    cursor.execute("""
+    statement = """
         CREATE TABLE orders (
                 id AUTOINCREMENT PRIMARY KEY NOT NULL
                 ,customer_id INTEGER NOT NULL
@@ -126,7 +131,8 @@ else:
                 ,CONSTRAINT [fk_customer_id] FOREIGN KEY (customer_id) REFERENCES customers(id)
                 ,CONSTRAINT [fk_product_id] FOREIGN KEY (product_id) REFERENCES products(id)
         );
-    """)
+    """
+    cursor.execute(statement)
     connection.commit()
     print("The 'orders' Table Created!\n")
 
