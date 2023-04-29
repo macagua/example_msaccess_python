@@ -3,6 +3,5 @@ sqlalchemy-access==2.0.1
 msaccessdb==1.0.0
 pyodbc==4.0.35
 
-Faker==18.4.0
-# Install the Faker es_VE branch from github repo.
-#-e git+https://github.com/macagua/faker.git@es_VE#egg=Faker
+Faker==18.6.0
+faker-commerce==1.0.3

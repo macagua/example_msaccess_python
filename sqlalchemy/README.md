@@ -25,7 +25,15 @@ python create_database.py
 python create_structures.py
 ```
 
-### Insert records
+#### Insert default records
+
+```console
+python insert_records.py
+```
+
+#### Insert fake records
+
+For generate the fake records use the [Faker](https://pypi.org/project/Faker/) library.
 
 This script have two parameters to execute it:
 
@@ -34,28 +42,16 @@ This script have two parameters to execute it:
 - **num_records**, records number to generate and insert into the table.
 
 ```console
-python insert_records.py table_name num_records
+python populate_tables.py table_name num_records
 ```
 
-#### Insert default records
+The following it is possible use to generate 10 records for  the products, customers and orders tables.
 
 ```console
-python insert_records.py states
-python insert_records.py cities
-python insert_records.py categories
-python insert_records.py products
-python insert_records.py customers
-python insert_records.py orders
-```
-
-#### Insert fake records
-
-For generate the fake records use the [Faker](https://pypi.org/project/Faker/) library.
-
-```console
-python insert_records.py products 10
-python insert_records.py customers 10
-python insert_records.py orders 10
+python populate_tables.py categories 10
+python populate_tables.py products 10
+python populate_tables.py customers 10
+python populate_tables.py orders 10
 ```
 
 ### Select records
