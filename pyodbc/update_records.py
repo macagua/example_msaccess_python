@@ -1,4 +1,4 @@
-""" Program to update the record(s) of the table """
+"""Program to update the record(s) of the table"""
 
 import logging
 import os
@@ -7,6 +7,7 @@ import pyodbc
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -18,14 +19,15 @@ DB = DB_PATH + DB_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
-
 
 STATES_SQL_SCRIPTS = """
     UPDATE states
     SET name = ?
     WHERE id = ?;
 """
+# 'states' list
 STATES_ONE_ROW = ["MÉRIDA", 13]
 STATES_MULTIPLE_ROWS = [
     ("ANZOÁTEQUI", 2),
@@ -38,6 +40,7 @@ CITIES_SQL_SCRIPTS = """
     SET name = ?
     WHERE id = ?;
 """
+# 'cities' list
 CITIES_ONE_ROW = ["MÉRIDA", 13]
 CITIES_MULTIPLE_ROWS = [
     ("BARCELONA", 2),
@@ -50,6 +53,7 @@ CATEGORIES_SQL_SCRIPTS = """
     SET name = ?
     WHERE id = ?;
 """
+# 'categories' list
 CATEGORIES_ONE_ROW = ["TECNOLOGÍA", 1]
 CATEGORIES_MULTIPLE_ROWS = [
     ("ESTÉTICA", 3),
@@ -64,6 +68,7 @@ PRODUCTS_SQL_SCRIPTS = """
         price = ?
     WHERE id = ?
 """
+# 'products' list
 PRODUCTS_ONE_ROW = ["Pantalón Jean LEVI'S 511 Slim Fit, Talla 34x32 y 34x34, Color disponible Pumped Up, 99% Algodón y 1% Elastane, Hecho en Bangladesh. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", '59.33', 1]
 PRODUCTS_MULTIPLE_ROWS = [
     ("Consola Play Station 5; Edición Gob Of War; Capacidad 825 GB; Memoria RAM de 16 GB; Tipo de consola de sobremesa, Wi-FI incluido; cantidad de controles incluidos 1. Producto 100% original, Producto importado de EE.UU. Envíos a todo el país.", 829.00, 3),
@@ -78,6 +83,7 @@ CUSTOMERS_SQL_SCRIPTS = """
         lastname = ?
     WHERE id = ?;
 """
+# 'customers' list
 CUSTOMERS_ONE_ROW = ["Leonardo", "Caballero", 1]
 CUSTOMERS_MULTIPLE_ROWS = [
     ("Ana", "Poleo", 3),
@@ -92,6 +98,7 @@ ORDERS_SQL_SCRIPTS = """
         status = ?
     WHERE id = ?;
 """
+# 'orders' list
 ORDERS_ONE_ROW = ["12/02/2022 11:23:34 PM", False, 1]
 ORDERS_MULTIPLE_ROWS = [
     ("02/18/2023 10:22:33 AM", False, 3),
@@ -109,6 +116,7 @@ def update_records(sql="", rows=[], size=""):
     """
 
     try:
+        # Set up connections between pyodbc and microsoft access
         connection = pyodbc.connect(CONNECTION_STRING)
         cursor = connection.cursor()
         print("\n")
@@ -141,15 +149,15 @@ def update_records(sql="", rows=[], size=""):
 
 
 if __name__ == "__main__":
-    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_ONE_ROW, size="one")
-    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_MULTIPLE_ROWS, size="many")
-    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_ONE_ROW, size="one")
-    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_MULTIPLE_ROWS, size="many")
-    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_ONE_ROW, size="one")
-    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_MULTIPLE_ROWS, size="many")
-    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_ONE_ROW, size="one")
-    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_MULTIPLE_ROWS, size="many")
-    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_ONE_ROW, size="one")
-    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_MULTIPLE_ROWS, size="many")
     update_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_ONE_ROW, size="one")
     update_records(sql=ORDERS_SQL_SCRIPTS, rows=ORDERS_MULTIPLE_ROWS, size="many")
+    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_ONE_ROW, size="one")
+    update_records(sql=CUSTOMERS_SQL_SCRIPTS, rows=CUSTOMERS_MULTIPLE_ROWS, size="many")
+    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_ONE_ROW, size="one")
+    update_records(sql=PRODUCTS_SQL_SCRIPTS, rows=PRODUCTS_MULTIPLE_ROWS, size="many")
+    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_ONE_ROW, size="one")
+    update_records(sql=CATEGORIES_SQL_SCRIPTS, rows=CATEGORIES_MULTIPLE_ROWS, size="many")
+    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_ONE_ROW, size="one")
+    update_records(sql=CITIES_SQL_SCRIPTS, rows=CITIES_MULTIPLE_ROWS, size="many")
+    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_ONE_ROW, size="one")
+    update_records(sql=STATES_SQL_SCRIPTS, rows=STATES_MULTIPLE_ROWS, size="many")
