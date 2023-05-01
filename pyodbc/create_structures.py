@@ -1,9 +1,10 @@
-""" Program to create the database tables """
+"""Program to create the database tables"""
 
 import os
 import pyodbc
 
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -15,8 +16,10 @@ DB = DB_PATH + DB_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
+# Set up connections between pyodbc and microsoft access
 connection = pyodbc.connect(CONNECTION_STRING)
 print("\nConnected to Microsoft Access database!\n")
 cursor = connection.cursor()

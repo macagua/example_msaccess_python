@@ -4,9 +4,11 @@ import logging
 import os
 import pyodbc
 
+
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -18,6 +20,7 @@ DB = DB_PATH + DB_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
 STATES_SQL_SCRIPTS = """
@@ -90,25 +93,26 @@ def delete_records(sql=[], rows=[], size="all", table=""):
     """
 
     try:
+        # Set up connections between pyodbc and microsoft access
         connection = pyodbc.connect(CONNECTION_STRING)
         cursor = connection.cursor()
         print("\n")
         logging.info(f"Connected to Microsoft Access database '{DB_FILE}'!\n")
 
+        # Delete a simple record
         if size == "one":
-            # Delete a simple record
             count = cursor.execute(sql, rows).rowcount
             connection.commit()
             logging.info(f"Row(s) deleted: {count}\n")
 
+        # Delete a many records
         if size == "many":
-            # Delete many records
             cursor.executemany(sql, rows)
             connection.commit()
             logging.info("Three Rows Deleted!\n")
 
+        # Delete all records
         if size == "all":
-            # Delete all records
             cursor.execute(f"DELETE FROM {table}")
             connection.commit()
             logging.info("All record(s) deleted successfully!\n")

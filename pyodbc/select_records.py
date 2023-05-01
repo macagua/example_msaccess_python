@@ -1,4 +1,4 @@
-""" Program to query the record(s) of the table """
+"""Program to query the record(s) of the table"""
 
 import logging
 import os
@@ -7,6 +7,7 @@ import pyodbc
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -18,8 +19,8 @@ DB = DB_PATH + DB_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
-
 
 STATES_SQL_SCRIPTS = """
     SELECT *
@@ -87,6 +88,7 @@ def select_records(sql=""):
     """
 
     try:
+        # Set up connections between pyodbc and microsoft access
         connection = pyodbc.connect(CONNECTION_STRING)
         cursor = connection.cursor()
         print("\n")

@@ -1,4 +1,4 @@
-""" Program to perform the insertion of the record(s) of the table """
+"""Program to perform the insertion of the record(s) of the table"""
 
 import csv
 import json
@@ -6,9 +6,11 @@ import logging
 import os
 import pyodbc
 
+
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -24,6 +26,7 @@ CITIES = DB_PATH + CITIES_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
 STATES_SQL_SCRIPTS = """
@@ -40,6 +43,7 @@ CATEGORIES_SQL_SCRIPTS = """
     INSERT INTO categories (id, name, status)
     VALUES (?, ?, ?);
 """
+# 'categories' list
 CATEGORIES_MULTIPLE_ROWS = [
     (1, 'Tecnología', True),
     (2, 'Ropa', False),
@@ -52,6 +56,7 @@ PRODUCTS_SQL_SCRIPTS = """
     INSERT INTO products(id, name, description, category_id, price, status)
     VALUES (?, ?, ?, ?, ?, ?);
 """
+# 'products' list
 PRODUCTS_MULTIPLE_ROWS = [
     (1, "Pantalón Jean LEVI'S 511", "Producto 2 detallado", 2, 23.78, True),
     (2, 'Teléfono iPhone 13 Pro Max', 'Producto 2 detallado', 1, 1045.56, False),
@@ -64,6 +69,7 @@ CUSTOMERS_SQL_SCRIPTS = """
     INSERT INTO customers (id, name, lastname, zip_code, phone)
     VALUES (?, ?, ?, ?, ?);
 """
+# 'customers' list
 CUSTOMERS_MULTIPLE_ROWS = [
     (1, 'Leo', 'Garcia', 245, '04144567239'),
     (2, 'Carol', 'Guevarra', 6, '04249804536'),
@@ -76,6 +82,7 @@ ORDERS_SQL_SCRIPTS = """
     INSERT INTO orders (id, customer_id, made_at, product_id, status)
     VALUES (?, ?, ?, ?, ?);
 """
+# 'orders' list
 ORDERS_MULTIPLE_ROWS = [
     (1, 1, '12/02/2022 10:23:45 AM', 2, True),
     (2, 3, '01/06/2023 03:55:51 PM', 1, True),

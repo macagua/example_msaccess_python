@@ -1,9 +1,10 @@
-""" Program to delete tables from a database """
+"""Program to delete tables from a database"""
 
 import os
 import pyodbc
 
 
+# Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
 DB_PATH = os.path.dirname(
     os.path.abspath(__file__)
@@ -15,8 +16,10 @@ DB = DB_PATH + DB_FILE
 CONNECTION_STRING = (
     r'DRIVER={0};'
     r'DBQ={1};'
+    'ExtendedAnsiSQL=1;'
 ).format(DB_DRIVER, DB)
 
+# Set up connections between pyodbc and microsoft access
 connection = pyodbc.connect(CONNECTION_STRING, autocommit=True)
 print("\nConnected to Microsoft Access database!\n")
 cursor = connection.cursor()
@@ -82,7 +85,7 @@ if cursor.tables(table="states").fetchone():
     connection.commit()
     print("The 'states' Table was deleted!\n")
 
-print("{0} Table(s) Deleted!\n".format(total_count))
+print(f"{total_count} Table(s) Deleted!\n")
 
 connection.close()
 print("Desconnected to Microsoft Access database!")
