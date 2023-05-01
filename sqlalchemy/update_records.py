@@ -1,4 +1,4 @@
-""" Program to update the record(s) of the table """
+"""Program to update the record(s) of the table"""
 
 import logging
 import os
@@ -51,6 +51,7 @@ CITIES_MULTIPLE_ROWS = [
 CATEGORIES_VALUES = {
     "name": bindparam('name'),
 }
+# 'categories' list
 CATEGORIES_ONE_ROW = [
     {"name": "TECNOLOGÍA", "_id": 1},
 ]
@@ -60,6 +61,7 @@ CATEGORIES_MULTIPLE_ROWS = [
     {"name": "ENTRETENIMIENTOS", "_id": 5},
 ]
 
+# 'products' list
 PRODUCTS_VALUES = {
     "description": bindparam('description'),
     "price": bindparam('price'),
@@ -77,6 +79,7 @@ CUSTOMERS_VALUES = {
     "name": bindparam('name'),
     "lastname": bindparam('lastname'),
 }
+# 'customers' list
 CUSTOMERS_ONE_ROW = [
     {"name": "Leonardo", "lastname": "Caballero", "_id": 1},
 ]
@@ -90,6 +93,7 @@ ORDERS_VALUES = {
     "made_at": bindparam('made_at'),
     "status": bindparam('status'),
 }
+# 'orders' list
 ORDERS_ONE_ROW = [
     {"made_at": "12/02/2022 11:23:34 PM", "status": False, "_id": 1},
 ]
@@ -121,7 +125,7 @@ orders = metadata.tables["orders"]
 
 
 def update_records(values={}, rows=[], size="all", table=""):
-    """Function to update table records
+    """Function to perform the update of several records from the table
 
     Args:
         values (dict, optional): The bind param values. Defaults to {}.

@@ -1,3 +1,5 @@
+"""Program to delete tables from a database"""
+
 import os
 import pyodbc
 import urllib

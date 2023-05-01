@@ -11,8 +11,8 @@ DB = DB_PATH + DB_FILE
 
 # Delete Microsoft Access file
 if os.path.exists(DB):
-    print(f"\nExists the '{DB_FILE}' database file!")
+    print(f"\nExists the Microsoft Access database '{DB_FILE}' file!")
     os.remove(DB)
-    print(f"Deleted the '{DB_FILE}' database file!")
+    print(f"Deleted the Microsoft Access database '{DB_FILE}' file!")
 else:
-    print(f"\nDon't exists the '{DB_FILE}' database file!\n")
+    print(f"\nDon't exists the Microsoft Access database '{DB_FILE}' file!")

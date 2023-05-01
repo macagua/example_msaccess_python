@@ -2,8 +2,8 @@
 
 import csv
 import json
-import os
 import logging
+import os
 import pyodbc
 import urllib
 import random

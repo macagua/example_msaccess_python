@@ -1,4 +1,4 @@
-""" Program to create the database tables """
+"""Program to create the database tables"""
 
 import os
 import pyodbc

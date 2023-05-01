@@ -1,4 +1,4 @@
-""" Program to create the database """
+"""Program to create the database"""
 
 import msaccessdb
 import os

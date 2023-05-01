@@ -6,9 +6,9 @@ import pyodbc
 import urllib
 from sqlalchemy import create_engine, bindparam, exc, func, text, MetaData
 
+
 # logging INFO object
 logging.basicConfig(level=logging.INFO)
-
 
 # Define full path for database file
 DB_DRIVER = "{Microsoft Access Driver (*.mdb, *.accdb)}"
