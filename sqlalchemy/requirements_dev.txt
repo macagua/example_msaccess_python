@@ -1,7 +1,7 @@
 -r requirements.txt
 
 # Install the Faker es_VE branch from github repo.
-#-e git+https://github.com/macagua/faker.git@es_VE#egg=Faker
+-e git+https://github.com/macagua/faker.git@es_VE#egg=Faker
 
 # Install the sqlacodegen v3.0.0rc1 from github repo.
 -e git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen
