@@ -104,7 +104,7 @@ class GenerateData:
         """Using faker library, generate data and execute DML"""
 
         if self.table_name not in metadata.tables.keys():
-            return print(f"{self.table_name} does not exist")
+            return print(f"{self.table_name} does not exist!")
 
         if self.table_name == "categories" and self.num_records > 0:
             with engine.begin() as conn:
