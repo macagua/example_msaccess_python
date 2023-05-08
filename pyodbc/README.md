@@ -8,7 +8,7 @@ Examples for [Microsoft Access](https://en.wikipedia.org/wiki/Microsoft_Access) 
 virtualenv venv
 source venv/bin/activate
 cd pyodbc
-pip install -r requirements.txt
+pip install -r requirements/base.txt
 ```
 
 ## Run Exmaples

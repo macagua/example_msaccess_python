@@ -1,0 +1,4 @@
+-r base.txt
+
+# Install the sqlacodegen v3.0.0rc1 from github repo.
+-e git+https://github.com/agronholm/sqlacodegen.git@3.0.0rc1#egg=sqlacodegen

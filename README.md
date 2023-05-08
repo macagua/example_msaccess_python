@@ -25,3 +25,9 @@ Download the database documentation [here](./doc/doc_rptObjects.pdf).
 ## Tested it with
 
 - Microsoft Access Professional 2010.
+
+- Python 3.8
+
+## Development
+
+Checkout the Development notes at [DEVELOP.md](doc/DEVELOP.md).

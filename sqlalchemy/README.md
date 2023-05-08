@@ -8,7 +8,7 @@ Examples for [Microsoft Access](https://en.wikipedia.org/wiki/Microsoft_Access) 
 virtualenv venv
 source venv/bin/activate
 cd sqlalchemy
-pip install -r requirements.txt
+pip install -r requirements/sqlalchemy.txt
 ```
 
 ## Run Exmaples
@@ -25,7 +25,7 @@ python create_database.py
 python create_structures.py
 ```
 
-#### Insert default records
+### Insert records
 
 ```console
 python insert_records.py

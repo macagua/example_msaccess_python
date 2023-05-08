@@ -1,0 +1,4 @@
+-r base.txt
+
+SQLAlchemy>=1.4.36
+sqlalchemy-access==2.0.1
